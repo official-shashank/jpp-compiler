@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      </style>
+   <style>
+      .navigation{
+         justify-content: space-between;
+         padding: .5em;
+         margin-bottom: 1em;
+      }
+      .code{
+         font-family: "Courier Prime";
+      }
+   </style>
+    <title>jpp Documentation</title>
+</head>
+<body>
+
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+   <span class="sr-only">Open sidebar</span>
+   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+   </svg>
+</button>
+
+
+<!-- sidebar -->
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class=" h-full px-3 py-4 overflow-y-auto bg-blue-950 dark:bg-gray-800">
+      <ul id="sidebarTarg" class="space-y-2 font-medium">
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
+               <span class="ms-3">Dashboard</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+</aside>
+
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2  rounded-lg dark:border-gray-700">
+
+      <!-- Into HEad -->
+      <div class="flex flex-col items-center justify-center p-12 h-[70vh] mb-4 rounded  dark:bg-gray-800">
+         <h1 class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Learn Python and More</h1>
+         <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">Learn Python with our multilingual compiler and leverage your skills to shape the future. This documentation provides a hands-on approach to mastering any language effortlessly.</p>
+         <a href="#" class="inline-flex items-center justify-center px-5 py-3 mb-10 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+             Learn more
+             <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+             </svg>
+         </a>
+     </div>
+      <!-- navigation button -->
+      <div class="navigation flex  ">
+         <!-- Previous Button -->
+          <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            Home
+         </a>
+         <!-- Next Button -->
+         <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            Previous
+         </a>
+      </div>
+     <!-- Into Card -->
+      <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
+        
+         <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white">Learn Python</h1>
+         
+         <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400">Python is a popular programming language.</p>
+         <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
+         
+         
+         <button type="button" class="text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+         Start Learning
+         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+         </svg>
+         </button>
+      </div>
+
+      <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+
+      <div class="py-6 px-4 flex flex-col justify-center gap-4  h-auto mb-4   dark:bg-gray-800">
+         <h2 class="text-3xl font-extrabold text-gray-300 dark:text-white">Learning by Examples</h2>
+         <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and view the result.</p>
+
+         <!-- terminals -->
+         <div class="grid grid-cols-2 gap-4 mb-4 mt-4">
+            <div class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+               <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Python <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                      <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                        </li>
+                      </ul>
+                  </div>
+               <div class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+               <pr class="code text-left ">
+                  print("Hello world!")
+               </pre>
+               </div>
+            </div>
+            <div class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+               <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">JavaScript <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                      <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                        </li>
+                      </ul>
+                  </div>
+               <div class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+               <pr class="code text-left ">
+                  print("Hello world!")
+               </pre>
+               </div>
+            </div>
+         </div>
+      </div>
+</div>
+
+
+<!-- Flowbite attachments -->
+<link
+href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+rel="stylesheet"
+/>
+<script
+defer
+src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
+></script>
+<script src="../js/docs script/data.js"></script>
+<script src="../js/docs script/loader.js"></script>
+</body>
+</html>
