@@ -121,4 +121,9 @@ const TOKEN_TYPES = {
   const jsCode = compilePythonToJS(pythonCode);
   console.log("Python Code:", pythonCode);
   console.log("Generated JS Code:", jsCode);
+  console.log("Generated JS Code:", jsCode);
+  console.log("Generated JS Code:", jsCode);
+  console.log("Generated JS Code:", jsCode);
+
+
   
