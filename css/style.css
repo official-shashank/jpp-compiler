@@ -1,16 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 
 }
 
-:root{
-    --background-color:green;
-    --font1:fjfjfhf;
+:root {
+    --background-color: green;
+    --font1: fjfjfhf;
+    --bgc: #111828;
 }
 
+body {
+    background-color: var(--bgc);
+}
 
+.bg-transparent {
+    background-color: transparent;
+}
 
-
-
+.dark .bg-transparent {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* adjust the opacity to your liking */
+}
