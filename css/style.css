@@ -7,10 +7,17 @@
 
 :root{
     --background-color:green;
-    --font1:fjfjfhf;
+    --grey-font : rgb(169, 169, 172);
+    --main-bg-color: rgb(17, 24, 39);
 }
 
 
 
+body{
+    background-color: var(--main-bg-color);
+}
 
 
+#sidebarTarg li a {
+    color: var(--grey-font);
+}
