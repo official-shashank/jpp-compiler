@@ -36,49 +36,36 @@ const pythonSidebar = [
   "Python String Formatting",
 ];
 
-const matLangSidebar=[
+const matLangSidebar = [];
 
-]
+let sidebar = "";
 
-
-let sidebar=""
-
-function renderSidebar(sidebarData){
-
-
-
-  sidebarData.map((item,key)=>{
-
-      sidebar += `
+function renderSidebar(sidebarData) {
+  sidebarData.map((item, key) => {
+    sidebar += `
          <li key=${item} class="sidebar-item">
-            <a href="#" class="flex items-center p-2 text-gray-300 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
+            <a href="#" class="flex items-center p-2 text-gray-400 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
                <span class="ms-3">${item}</span>
             </a>
          </li>
       
-      `
-      document.getElementById("sidebarTarg").innerHTML=sidebar;
-  })
-
+      `;
+    document.getElementById("sidebarTarg").innerHTML = sidebar;
+  });
 }
 
-renderSidebar(pythonSidebar)
+renderSidebar(pythonSidebar);
 
+let sidebarItems = document.getElementsByClassName("sidebar-item");
 
-let sidebarItems=document.getElementsByClassName("sidebar-item");
-
-for(let i=0;i<sidebarItems.length;i++){
-  sidebarItems[i].addEventListener("click",(e)=>{
+for (let i = 0; i < sidebarItems.length; i++) {
+  sidebarItems[i].addEventListener("click", (e) => {
     console.log(e.target.innerText);
-    renderClickedContent(matLangData[e.target.innerText])
-  })
+    renderClickedContent(matLangData[e.target.innerText]);
+  });
 }
 
-function renderClickedContent(data){
-  document.getElementById("title").innerText=data["title"]
-  document.getElementById("subtitle").innerText=data["subtitle"]
-   
+function renderClickedContent(data) {
+  document.getElementById("title").innerText = data["title"];
+  document.getElementById("subtitle").innerText = data["subtitle"];
 }
-
-
-
