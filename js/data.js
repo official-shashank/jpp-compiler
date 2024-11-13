@@ -1,4 +1,4 @@
-const matLangData = {
+const PyhtonData = {
   "Python Getting Started": {
     title: "Python Getting Started",
     subtitle: "Introduction to Python Installation and Quickstart",
@@ -11,75 +11,73 @@ const matLangData = {
       {
         Ques: "",
         sol1: "To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):",
-        code1: [{
-          code:"C:\\Users\\Your Name> python --version"
-        }],
-       
-        
+        code1: [
+          {
+            code: "C:\\Users\\Your Name> python --version",
+          },
+        ],
       },
       {
         Ques: "",
         sol1: "To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:",
-        code1: [{
-          code:"python --version"
-        }],
-        
-       
-        
+        code1: [
+          {
+            code: "python --version",
+          },
+        ],
       },
       {
         Ques: "",
         sol1: "If you find that you do not have Python installed on your computer, then you can download it for free from the following website: https://www.python.org/",
         code1: [],
-        
-       
-        
       },
 
       {
         Ques: "Python Quickstart",
         sol1: "Python is an interpreted programming language, meaning that you write Python (.py) files in a text editor and then run those files in the Python interpreter to be executed",
-        code1: []
+        code1: [],
       },
       {
         Ques: "",
         sol1: "The way to run a python file is like this on the command line:",
-        code1: [{
-            code:`C:\Users\Your Name>python helloworld.py`
-        }],
-        
-       
-        
+        code1: [
+          {
+            code: `C:\Users\Your Name>python helloworld.py`,
+          },
+        ],
       },
       {
         Ques: "",
-        sol1:`Where "helloworld.py" is the name of your python file.
+        sol1: `Where "helloworld.py" is the name of your python file.
 
 Let's write our first Python file, called helloworld.py, which can be done in any text editor.`,
-        code1: [{
-            code:`print("Hello, World!")`
-        }],
-        
-       
-        
+        code1: [
+          {
+            code: `print("Hello, World!")`,
+          },
+        ],
       },
       {
         Ques: "",
-        sol1:`Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:`,
-        code1: [{
-            code:`C:\Users\Your Name>python helloworld.py`
-        }],
+        sol1: `Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:`,
+        code1: [
+          {
+            code: `C:\Users\Your Name>python helloworld.py`,
+          },
+        ],
       },
       {
         Ques: "",
-        sol1:`The output should read:`,
-        code1: [{
-            code:`Hello, World!`
-        }],
+        sol1: `The output should read:`,
+        code1: [
+          {
+            code: `Hello, World!`,
+          },
+        ],
       },
       {
         Ques: "",
-        sol1:`Congratulations, you have written and executed your first Python program.`,
+        sol1: `Congratulations, you have written and executed your first Python program.`,
         code1: [],
       },
       {
@@ -87,45 +85,45 @@ Let's write our first Python file, called helloworld.py, which can be done in an
         sol1: "We provide an online Python editor where you can execute Python code directly in your browser and view the results immediately. Try it by visiting the Python tutorial page and using the editor to run code examples, like printing 'Hello, World!'",
         code1: [
           {
-            code: "print('Hello, World!')"
-          }
-        ]
+            code: "print('Hello, World!')",
+          },
+        ],
       },
       {
         Ques: "Python Version",
         sol1: "You can check the Python version of the editor or your local Python installation by importing the `sys` module and printing the version:",
         code1: [
           {
-            code: "import sys\nprint(sys.version)"
-          }
-        ]
+            code: "import sys\nprint(sys.version)",
+          },
+        ],
       },
       {
         Ques: "The Python Command Line",
         sol1: "To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.",
         code1: [
           {
-            code: ">>> exit()"
-          }
-        ]
+            code: ">>> exit()",
+          },
+        ],
       },
       {
         Ques: "",
         sol1: "Type the following on the Windows, Mac or Linux command line:",
         code1: [
           {
-            code: `C:\Users\Your Name>python`
-          }
-        ]
+            code: `C:\Users\Your Name>python`,
+          },
+        ],
       },
       {
         Ques: "",
         sol1: `Or, if the "python" command did not work, you can try "py":`,
         code1: [
           {
-            code: `C:\Users\Your Name>py`
-          }
-        ]
+            code: `C:\Users\Your Name>py`,
+          },
+        ],
       },
       {
         Ques: "",
@@ -135,9 +133,9 @@ Let's write our first Python file, called helloworld.py, which can be done in an
             code: `C:\Users\Your Name>python
 Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>> print("Hello, World!")`
-          }
-        ]
+>>> print("Hello, World!")`,
+          },
+        ],
       },
       {
         Ques: "",
@@ -148,20 +146,20 @@ Type "help", "copyright", "credits" or "license" for more information.
 Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> print("Hello, World!")
-Hello, World!`
-          }
-        ]
+Hello, World!`,
+          },
+        ],
       },
       {
         Ques: "",
         sol1: `Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:`,
         code1: [
           {
-            code: `exit()`
-          }
-        ]
-      }
-    ]
+            code: `exit()`,
+          },
+        ],
+      },
+    ],
   },
   /*****************************************************************************************************/
 
@@ -864,199 +862,199 @@ x = memoryview(bytes(5))        # memoryview`,
         sol1: "Operators are used to perform operations on variables and values. Python supports a variety of operators, including arithmetic, assignment, comparison, logical, identity, membership, and bitwise operators.",
         code1: [
           {
-            code: "print(10 + 5)"
-          }
-        ]
+            code: "print(10 + 5)",
+          },
+        ],
       },
       {
         Ques: "Python Arithmetic Operators",
         sol1: "Arithmetic operators are used with numeric values to perform common mathematical operations.",
         code1: [
           {
-            code: "x + y  # Addition"
+            code: "x + y  # Addition",
           },
           {
-            code: "x - y  # Subtraction"
+            code: "x - y  # Subtraction",
           },
           {
-            code: "x * y  # Multiplication"
+            code: "x * y  # Multiplication",
           },
           {
-            code: "x / y  # Division"
+            code: "x / y  # Division",
           },
           {
-            code: "x % y  # Modulus"
+            code: "x % y  # Modulus",
           },
           {
-            code: "x ** y  # Exponentiation"
+            code: "x ** y  # Exponentiation",
           },
           {
-            code: "x // y  # Floor division"
-          }
-        ]
+            code: "x // y  # Floor division",
+          },
+        ],
       },
       {
         Ques: "Python Assignment Operators",
         sol1: "Assignment operators are used to assign values to variables.",
         code1: [
           {
-            code: "x = 5  # x gets the value 5"
+            code: "x = 5  # x gets the value 5",
           },
           {
-            code: "x += 3  # x = x + 3"
+            code: "x += 3  # x = x + 3",
           },
           {
-            code: "x -= 3  # x = x - 3"
+            code: "x -= 3  # x = x - 3",
           },
           {
-            code: "x *= 3  # x = x * 3"
+            code: "x *= 3  # x = x * 3",
           },
           {
-            code: "x /= 3  # x = x / 3"
+            code: "x /= 3  # x = x / 3",
           },
           {
-            code: "x %= 3  # x = x % 3"
+            code: "x %= 3  # x = x % 3",
           },
           {
-            code: "x //= 3  # x = x // 3"
+            code: "x //= 3  # x = x // 3",
           },
           {
-            code: "x **= 3  # x = x ** 3"
+            code: "x **= 3  # x = x ** 3",
           },
           {
-            code: "x &= 3  # x = x & 3"
+            code: "x &= 3  # x = x & 3",
           },
           {
-            code: "x |= 3  # x = x | 3"
+            code: "x |= 3  # x = x | 3",
           },
           {
-            code: "x ^= 3  # x = x ^ 3"
+            code: "x ^= 3  # x = x ^ 3",
           },
           {
-            code: "x >>= 3  # x = x >> 3"
+            code: "x >>= 3  # x = x >> 3",
           },
           {
-            code: "x <<= 3  # x = x << 3"
+            code: "x <<= 3  # x = x << 3",
           },
           {
-            code: "x := 3  # Assignment expression"
-          }
-        ]
+            code: "x := 3  # Assignment expression",
+          },
+        ],
       },
       {
         Ques: "Python Comparison Operators",
         sol1: "Comparison operators are used to compare two values.",
         code1: [
           {
-            code: "x == y  # Equal"
+            code: "x == y  # Equal",
           },
           {
-            code: "x != y  # Not equal"
+            code: "x != y  # Not equal",
           },
           {
-            code: "x > y  # Greater than"
+            code: "x > y  # Greater than",
           },
           {
-            code: "x < y  # Less than"
+            code: "x < y  # Less than",
           },
           {
-            code: "x >= y  # Greater than or equal to"
+            code: "x >= y  # Greater than or equal to",
           },
           {
-            code: "x <= y  # Less than or equal to"
-          }
-        ]
+            code: "x <= y  # Less than or equal to",
+          },
+        ],
       },
       {
         Ques: "Python Logical Operators",
         sol1: "Logical operators are used to combine conditional statements.",
         code1: [
           {
-            code: "x < 5 and x < 10  # Returns True if both conditions are true"
+            code: "x < 5 and x < 10  # Returns True if both conditions are true",
           },
           {
-            code: "x < 5 or x < 4  # Returns True if at least one condition is true"
+            code: "x < 5 or x < 4  # Returns True if at least one condition is true",
           },
           {
-            code: "not(x < 5 and x < 10)  # Returns False if both conditions are true"
-          }
-        ]
+            code: "not(x < 5 and x < 10)  # Returns False if both conditions are true",
+          },
+        ],
       },
       {
         Ques: "Python Identity Operators",
         sol1: "Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.",
         code1: [
           {
-            code: "x is y  # Returns True if x and y are the same object"
+            code: "x is y  # Returns True if x and y are the same object",
           },
           {
-            code: "x is not y  # Returns True if x and y are not the same object"
-          }
-        ]
+            code: "x is not y  # Returns True if x and y are not the same object",
+          },
+        ],
       },
       {
         Ques: "Python Membership Operators",
         sol1: "Membership operators are used to test if a sequence is present in an object.",
         code1: [
           {
-            code: "x in y  # Returns True if x is in y"
+            code: "x in y  # Returns True if x is in y",
           },
           {
-            code: "x not in y  # Returns True if x is not in y"
-          }
-        ]
+            code: "x not in y  # Returns True if x is not in y",
+          },
+        ],
       },
       {
         Ques: "Python Bitwise Operators",
         sol1: "Bitwise operators are used to compare (binary) numbers.",
         code1: [
           {
-            code: "x & y  # Bitwise AND"
+            code: "x & y  # Bitwise AND",
           },
           {
-            code: "x | y  # Bitwise OR"
+            code: "x | y  # Bitwise OR",
           },
           {
-            code: "x ^ y  # Bitwise XOR"
+            code: "x ^ y  # Bitwise XOR",
           },
           {
-            code: "~x  # Bitwise NOT"
+            code: "~x  # Bitwise NOT",
           },
           {
-            code: "x << 2  # Bitwise left shift"
+            code: "x << 2  # Bitwise left shift",
           },
           {
-            code: "x >> 2  # Bitwise right shift"
-          }
-        ]
+            code: "x >> 2  # Bitwise right shift",
+          },
+        ],
       },
       {
         Ques: "Operator Precedence",
         sol1: "Operator precedence describes the order in which operations are performed. Parentheses have the highest precedence, followed by exponentiation, unary operations, and so on.",
         code1: [
           {
-            code: "print((6 + 3) - (6 + 3))  # Parentheses first"
+            code: "print((6 + 3) - (6 + 3))  # Parentheses first",
           },
           {
-            code: "print(100 + 5 * 3)  # Multiplication before addition"
-          }
-        ]
+            code: "print(100 + 5 * 3)  # Multiplication before addition",
+          },
+        ],
       },
       {
         Ques: "Operator Precedence Table",
         sol1: "When operators have the same precedence, they are evaluated from left to right. Here is the order of precedence, starting from the highest.",
-        code1: []
+        code1: [],
       },
       {
         Ques: "Example of Left-to-Right Evaluation",
         sol1: "Addition and subtraction have the same precedence, so they are evaluated from left to right.",
         code1: [
           {
-            code: "print(5 + 4 - 7 + 3)"
-          }
-        ]
-      }
-    ]
+            code: "print(5 + 4 - 7 + 3)",
+          },
+        ],
+      },
+    ],
   },
   /*****************************************************************************************************/
   "Python Lists": {
@@ -1634,6 +1632,167 @@ dict1 = {"name": "John", "age": 36, "country": "Norway"}`,
       },
     ],
   },
-/*****************************************************************************************************/
-
+  /*****************************************************************************************************/
 };
+
+const exampleShowCaseMatLang = [
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+  {
+    title: "This is the title",
+    exp: "This is subheading",
+    href: "/docs.html",
+    code: `function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  };
+  highlightRef(curRef);
+}`,
+  },
+];
+
+const pythonSidebar = [
+  "Python Home",
+  "Python Intro",
+  "Python Getting Started",
+  "Python Syntax",
+  "Python Comments",
+  "Python Variable",
+  "Python Data Types",
+  "Python Numbers",
+  "Python Casting",
+  "Python Settings",
+  "Python Boolean",
+  "Python Operators",
+  "Python Lists",
+  "Python Tuples",
+  "Python Sets",
+  "Python Dictionaries",
+  "Python If....Else",
+  "Python While Loops",
+  "Python For Loops",
+  "Python Functions",
+  "Python Lamdba",
+  "Python Arrays",
+  "Python Classes/Objects",
+  "Python Inheritance",
+  "Python Iterators",
+  "Python Polymorphism",
+  "Python Scope",
+  "Python Modules",
+  "Python Dates",
+  "Python JSON",
+  "Python RegEx",
+  "Python PHP",
+  "Python Try...Except",
+  "Python User Input",
+  "Python String Formatting",
+];
+
+const matLangSidebar = [
+
+
+
+];
+
+
+const matLangData=[]

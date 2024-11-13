@@ -1,106 +1,72 @@
-const pythonSidebar = [
-  "Python Home",
-  "Python Intro",
-  "Python Getting Started",
-  "Python Syntax",
-  "Python Component",
-  "Python Variable",
-  "Python Data Types",
-  "Python Numbers",
-  "Python Casting",
-  "Python Settings",
-  "Python Boolean",
-  "Python Operators",
-  "Python Lists",
-  "Python Tuples",
-  "Python Sets",
-  "Python Dictionaries",
-  "Python If....Else",
-  "Python While Loops",
-  "Python For Loops",
-  "Python Functions",
-  "Python Lamdba",
-  "Python Arrays",
-  "Python Classes/Objects",
-  "Python Inheritance",
-  "Python Iterators",
-  "Python Polymorphism",
-  "Python Scope",
-  "Python Modules",
-  "Python Dates",
-  "Python JSON",
-  "Python RegEx",
-  "Python PHP",
-  "Python Try...Except",
-  "Python User Input",
-  "Python String Formatting",
-];
-
-const matLangSidebar = [];
-// --------------------------------------------------------------------------------
-// -----------------------------Only for Documentation Sid-------------------------------
-let curRef;
-let sidebar = "";
+// // --------------------------------------------------------------------------------
+// // -----------------------------Only for Documentation Sid-------------------------------
+  
 const sideBar = document.getElementById("sidebarTarg");
 
-renderSidebar(pythonSidebar);
+function renderSidebar(data) {
+  sideBar.innerHTML = "";
+    data.forEach((item, idx) => {
+      sideBar.innerHTML += `
+          <li class="sidebar-item">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
+                 <span class="ms-3">${item}</span>
+              </a>
+           </li>
+          `;
+    });
+}
 
-function renderSidebar(data) {}
+// MatLangCodeExamples
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   // sid-bar content loader
-//   sideBar.innerHTML = "";
-//   pythonSidebar.forEach((item, idx) => {
-//     console.log("rending");
-//     sideBar.innerHTML += `
-//         <li onclick="renderData(${idx})">
-//             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
-//                <span id="pyRef${idx}" class="ms-3">${item}</span>
-//             </a>
-//          </li>
-//         `;
-//   });
-// });
+function showExampleMatlang() {
+  let matres = "";
 
-// function renderData(id) {
-//   if (curRef) {
-//     const curRefEle = document.getElementById(curRef);
-//     curRefEle.classList.remove("highlight");
-//     console.log(id);
-//     console.log(curRefEle.innerText);
-//   }
-//   curRef = `pyRef${id}`;
-//   highlightRef(curRef);
-// }
-// function highlightRef(ele) {
-//   const pyReference = document.getElementById(ele);
-//   pyReference.classList.add("highlight");
-// }
+  exampleShowCaseMatLang.map((item) => {
+    matres += `
+  <a href="../pages/docs.html">
+  <h2 class="text-white">${item.title}</h2>
+  <span class="text-white">${item.exp}</span>
+  <aside class="bg-black text-white p-6 rounded-lg w-full max-w-md font-mono">
+    <div class="flex justify-between items-center">
+      <div class="flex space-x-2 text-red-500">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+      </div>
+      <p class="text-sm">bash</p>
+    </div>
+    <div class="mt-4">
+       ${item.code}
+    </div>
+  </aside>
+</a>
+  
+  `;
+  });
 
-// function renderSidebar(sidebarData) {
-//   sidebarData.map((item, key) => {
-//     sidebar += `
-//          <li onclick="renderData(${key}) class="sidebar-item">
-//             <a href="#" class="flex items-center p-2 text-gray-400 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
-//                <span id="pyRef${key}" class="ms-3">${item}</span>
-//             </a>
-//          </li>
 
-//       `;
-//     document.getElementById("sidebarTarg").innerHTML = sidebar;
-//   });
-// }
+  document.getElementById("MatLangCodeExamples").innerHTML = matres;
+}
 
-// let sidebarItems = document.getElementsByClassName("sidebar-item");
 
-// for (let i = 0; i < sidebarItems.length; i++) {
-//   sidebarItems[i].addEventListener("click", (e) => {
-//     console.log(e.target.innerText);
-//     renderClickedContent(matLangData[e.target.innerText]);
-//   });
-// }
 
-// function renderClickedContent(data) {
-//   document.getElementById("title").innerText = data["title"];
-//   document.getElementById("subtitle").innerText = data["subtitle"];
-// }
+document.addEventListener("DOMContentLoaded",()=>{
+
+  if(window.location.href.includes("/docs.html")){
+    renderSidebar(pythonSidebar);
+  }
+  if(window.location.href.includes("/index.html")){
+    showExampleMatlang()
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
