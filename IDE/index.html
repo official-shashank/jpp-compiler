@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Programming Language IDE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Toolbar Section -->
+    <header class="toolbar">
+        <button id="runCode">Run</button>
+        <button id="clearConsole">Clear Console</button>
+        <button id="toggleTheme">Toggle Theme</button> <!-- Theme Toggle Button -->
+    </header>
+
+    <!-- Editor and Console Container with Divider -->
+    <div class="container">
+        <!-- Editor Section -->
+        <div class="editor-container">
+            <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+        </div>
+        <!-- Resizable Divider -->
+        <div class="resizer"></div>
+        <!-- Console Output -->
+        <div class="console-output">
+            <div id="console" placeholder="Console output will appear here..."></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
