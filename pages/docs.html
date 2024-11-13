@@ -4,21 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-      </style>
-   <style>
-      .navigation{
-         justify-content: space-between;
-         padding: .5em;
-         margin-bottom: 1em;
-      }
-      .code{
-         font-family: "Courier Prime";
-      }
-   </style>
-    <title>jpp Documentation</title>
+    
+
+    <title>jpp Documentation || All in One Language Solution</title>
 </head>
 <body>
 
@@ -34,11 +22,7 @@
 <aside id="default-sidebar" class="fixed top-0 left-0 z-40w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class=" h-full px-3 py-4 overflow-y-auto bg-blue-950 dark:bg-gray-800">
       <ul id="sidebarTarg" class="space-y-2 font-medium">
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
-               <span class="ms-3">Dashboard</span>
-            </a>
-         </li>
+       
       </ul>
    </div>
 </aside>
@@ -71,9 +55,9 @@
      <!-- Into Card -->
       <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
         
-         <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white">Learn Python</h1>
+         <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white" id="title">Learn Python</h1>
          
-         <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400">Python is a popular programming language.</p>
+         <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400" id="subtitle">Python is a popular programming language.</p>
          <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
          
          
@@ -92,7 +76,7 @@
          <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and view the result.</p>
 
          <!-- terminals -->
-         <div class="grid grid-cols-2 gap-4 mb-4 mt-4">
+         <div class="grid grid-cols-2  gap-4 mb-4 mt-4">
             <div class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Python <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -117,8 +101,8 @@
                       </ul>
                   </div>
                <div class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-               <pr class="code text-left ">
-                  print("Hello world!")
+               <pre class="code text-left ">
+print("Hello world!")
                </pre>
                </div>
             </div>
@@ -146,8 +130,8 @@
                       </ul>
                   </div>
                <div class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-               <pr class="code text-left ">
-                  print("Hello world!")
+               <pre class="code text-left ">
+print("Hello world!")
                </pre>
                </div>
             </div>
@@ -165,7 +149,12 @@ rel="stylesheet"
 defer
 src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
 ></script>
-<script src="../js/docs script/data.js"></script>
-<script src="../js/docs script/loader.js"></script>
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
+
+
+<script defer src="../js/script.js"></script>
+<script defer src="../js/data.js"></script>
 </body>
 </html>
