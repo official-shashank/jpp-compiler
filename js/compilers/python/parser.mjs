@@ -8,6 +8,7 @@ export default class PythonParser {
     return this.tokens[this.position];
   }
 
+
   advance() {
     this.position++;
   }
