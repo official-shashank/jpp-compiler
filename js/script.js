@@ -1,4 +1,3 @@
-
 const pythonSidebar = [
   "Python Home",
   "Python Intro",
@@ -42,12 +41,11 @@ const matLangSidebar = [];
 // -----------------------------Only for Documentation Sid-------------------------------
 let curRef;
 let sidebar = "";
+const sideBar = document.getElementById("sidebarTarg");
 
 renderSidebar(pythonSidebar);
 
-function renderSidebar(data)
-
-const sideBar = document.getElementById("sidebarTarg");
+function renderSidebar(data) {}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // sid-bar content loader
@@ -92,8 +90,6 @@ const sideBar = document.getElementById("sidebarTarg");
 //     document.getElementById("sidebarTarg").innerHTML = sidebar;
 //   });
 // }
-
-
 
 // let sidebarItems = document.getElementsByClassName("sidebar-item");
 
