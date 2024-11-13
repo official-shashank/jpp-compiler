@@ -1,173 +1,77 @@
 export default class MatLangCompiler {
-    // Main method to compile Mat-Lang code into JavaScript
     compile(code) {
-        let compiledCode = code;
-
-        // Replace custom keywords with JavaScript equivalents
-        compiledCode = this.replaceMana(compiledCode);
-        compiledCode = this.replaceSamasya(compiledCode);
-        compiledCode = this.replaceKaam(compiledCode);
-        compiledCode = this.replaceDikhai(compiledCode);
-        compiledCode = this.replaceAgar(compiledCode);
-        compiledCode = this.replaceNahi(compiledCode);
-        compiledCode = this.replaceChalo(compiledCode);
-        compiledCode = this.replaceAur(compiledCode);
-        compiledCode = this.replaceYa(compiledCode);
-        compiledCode = this.replaceBada(compiledCode);
-        compiledCode = this.replaceChhota(compiledCode);
-        compiledCode = this.replaceMathOps(compiledCode);    // Add support for math operations
-        compiledCode = this.replaceWhile(compiledCode);      // Add support for 'while' loops
-        compiledCode = this.replaceSwitch(compiledCode);     // Add support for 'switch' statements
-        compiledCode = this.replaceReturn(compiledCode);     // Add support for explicit return usage
-        compiledCode = this.replaceObjectLiteral(compiledCode); // Add support for object literals
-        compiledCode = this.replaceForEach(compiledCode);    // Add support for 'forEach' loops
-        compiledCode = this.replaceTryCatch(compiledCode);   // Add support for 'try-catch' blocks
-
-        // Handle function arguments and conditions
-        compiledCode = this.replaceFunctionArgs(compiledCode); // Handle function arguments correctly
-        compiledCode = this.replaceComparison(compiledCode);   // Handle comparisons in conditionals
-
-        return compiledCode;
-    }
-
-    // Replace 'mana' with 'let' (variable declaration)
-    replaceMana(code) {
-        return code.replace(/\bmana\b/g, 'let');
-    }
-
-    // Replace 'samasya' with 'function' (function declaration)
-    replaceSamasya(code) {
-        return code.replace(/\bsamasya\b/g, 'function');
-    }
-
-    // Replace 'kaam' with 'return' (function return)
-    replaceKaam(code) {
-        return code.replace(/\bkaam\b/g, 'return');
-    }
-
-    // Replace 'dikhai' with 'console.log' (output statement)
-    replaceDikhai(code) {
-        return code.replace(/\bdikhai\b/g, 'console.log');
-    }
-
-    // Replace 'agar' with 'if' (if condition)
-    replaceAgar(code) {
-        return code.replace(/\bagar\b/g, 'if');
-    }
-
-    // Replace 'nahi' with 'else' (else condition)
-    replaceNahi(code) {
-        return code.replace(/\bnahi\b/g, 'else');
-    }
-
-    // Replace 'chalo' with 'for' (loop statement)
-    replaceChalo(code) {
-        return code.replace(/\bchalo\s(\w+)\sse\s(\d+)\stak\s(\d+)\stak/g, 
-            (match, varName, start, end) => {
-                return `for (let ${varName} = ${start}; ${varName} < ${end}; ${varName}++)`;
-            }
-        );
-    }
-
-    // Replace 'aur' with '&&' (logical AND)
-    replaceAur(code) {
-        return code.replace(/\baur\b/g, '&&');
-    }
-
-    // Replace 'ya' with '||' (logical OR)
-    replaceYa(code) {
-        return code.replace(/\bya\b/g, '||');
-    }
-
-    // Replace 'bada' with '>' (greater-than comparison)
-    replaceBada(code) {
-        return code.replace(/\bbada\b/g, '>');
-    }
-
-    // Replace 'chhota' with '<' (less-than comparison)
-    replaceChhota(code) {
-        return code.replace(/\bchhota\b/g, '<');
-    }
-
-    // Add support for basic math operations
-    replaceMathOps(code) {
-        return code.replace(/\b(jod|ghata|guna|divide)\b/g, (match) => {
-            if (match === 'jod') return '+';
-            if (match === 'ghata') return '-';
-            if (match === 'guna') return '*';
-            if (match === 'divide') return '/';
-            return match;
-        });
-    }
-
-    // Add support for 'while' loops
-    replaceWhile(code) {
-        return code.replace(/\bchalo\s(\w+)\sjab\s(.*?)\stak/g, 
-            (match, varName, condition) => {
-                return `while (${condition}) {`;
-            }
-        );
-    }
-
-    // Add support for 'switch' statements
-    replaceSwitch(code) {
-        return code.replace(/\bswitch\s(.*?)\s\{/, 
-            (match, expression) => {
-                return `switch(${expression}) {`;
-            }
-        );
-    }
-
-    // Handle explicit return usage
-    replaceReturn(code) {
-        return code.replace(/\bret\b/g, 'return');
-    }
-
-    // Handle object literals in the form of mana obj = {key: value}
-    replaceObjectLiteral(code) {
-        return code.replace(/\bmana\s(\w+)\s=\s\{([^}]+)\}/g, (match, objName, properties) => {
-            const jsProps = properties.split(',').map(prop => prop.trim()).join(', ');
-            return `let ${objName} = { ${jsProps} }`;
-        });
-    }
-
-    // Handle function arguments (convert from 'samasya' to JavaScript function syntax)
-    replaceFunctionArgs(code) {
-        return code.replace(/samasya\s(\w+)\((.*?)\)\s\{/, (match, funcName, args) => {
-            let jsArgs = args.split(',').map(arg => arg.trim()).join(', ');
-            return `function ${funcName}(${jsArgs}) {`;
-        });
-    }
-
-    // Handle conditionals (comparison inside 'agar' statements)
-    replaceComparison(code) {
-        return code.replace(/agar\s(.*?)\s(bada|chhota)\s(.*)/g, 
-            (match, left, operator, right) => {
-                if (operator === 'bada') {
-                    return `if (${left} > ${right})`;
-                } else if (operator === 'chhota') {
-                    return `if (${left} < ${right})`;
+        // Define replacements as an array of [regex, replacementFunction]
+        const replacements = [
+            { regex: /\bmana\b\s+(\w+)\s*=\s*(.*?);/g, replacement: 'let $1 = $2;' },
+            { regex: /\bsamasya\b\s+(\w+)\((.*?)\)\s*{/g, replacement: 'function $1($2) {' },
+            { regex: /\bkaam\b\s+(.*?);/g, replacement: 'return $1;' },
+            { regex: /\bdikhai\b\s*\((.*?)\);/g, replacement: 'console.log($1);' },
+            { regex: /\bagar\b\s*\((.*?)\)\s*{/g, replacement: 'if ($1) {' },
+            { regex: /\bnahi\b\s*{/g, replacement: 'else {' },
+            { regex: /\bchalo\s+(\w+)\s+se\s+(\d+)\s+tak\s+(\d+)(?:\s+step\s+(\d+))?\s*\{/g, replacement: (match, varName, start, end, step) => `for (let ${varName} = ${start}; ${varName} <= ${end}; ${varName} += ${step || 1}) {` },
+            { regex: /\baur\b/g, replacement: '&&' },
+            { regex: /\bya\b/g, replacement: '||' },
+            { regex: /\bbada\b/g, replacement: '>' },
+            { regex: /\bchhota\b/g, replacement: '<' },
+            { regex: /\b(jod|ghata|guna|divide)\b/g, replacement: (match) => {
+                switch (match) {
+                    case 'jod': return '+';
+                    case 'ghata': return '-';
+                    case 'guna': return '*';
+                    case 'divide': return '/';
+                    default: return match;
                 }
+            }},
+            { regex: /\bchalo\s+(\w+)\s+jab\s+(.*?)\s+tak\b/g, replacement: 'while ($2) {' },
+            { regex: /\bswitch\s+(\w+)\s*{/g, replacement: 'switch ($1) {' },
+            { regex: /\bret\b/g, replacement: 'return' },
+            { regex: /\bmana\s+(\w+)\s*=\s*\{([^}]+)\};/g, replacement: 'let $1 = {$2};' },
+            { regex: /\bsamasya\s+(\w+)\((.*?)\)\s*\{/, replacement: 'function $1($2) {' },
+            { regex: /\bagar\s*\((.*?)\)\s+(bada|chhota)\s+(.*?)\)/g, replacement: (match, left, operator, right) => {
+                if (operator === 'bada') return `if (${left} > ${right})`;
+                if (operator === 'chhota') return `if (${left} < ${right})`;
                 return match;
-            }
-        );
+            }},
+            { regex: /\bchalo\s+(\w+)\s+bhar\s+\[(.*?)\]\s+\{(.*?)\}/g, replacement: '[$2].forEach($1 => { $3 });' },
+            { regex: /\btry\s*\{(.*?)\}\s*\bcatch\s*\((\w+)\)\s*\{(.*?)\}/g, replacement: 'try { $1 } catch ($2) { $3 }' },
+
+            // New functionalities
+
+            // Handling array manipulation: `arr jodo` to `push()`
+            { regex: /\b(\w+)\s+jodo\s+(.*?);/g, replacement: '$1.push($2);' },
+
+            // Handling destructuring assignment (both object and array)
+            { regex: /\bmana\s+\[(.*?)\]\s*=\s*(.*?);/g, replacement: 'let [$1] = $2;' },
+            { regex: /\bmana\s+\{(.*?)\}\s*=\s*(.*?);/g, replacement: 'let {$1} = $2;' },
+
+            // Handling spread operator for arrays and objects
+            { regex: /\b(\w+)\s+bhar\s+\[(.*?)\]\s*\{(.*?)\}/g, replacement: '[$2].forEach($1 => { $3 });' },
+            { regex: /\bmana\s+(\w+)\s*=\s*(\w+)\s+bhar\s+\[(.*?)\]/g, replacement: 'let $1 = [...$2, $3];' },
+
+            // Handling class methods and `this` keyword (for method definition)
+            { regex: /\bclass\s+(\w+)\s*\{([^\}]+)\}/g, replacement: (match, className, body) => {
+                return `class ${className} {${body.replace(/\bdikhai\b/g, 'console.log')}}`;
+            }},
+
+            // Handling default function argument values (using '=')
+            { regex: /\bsamasya\s+(\w+)\((.*?=\s*[^)]+)?\)\s*\{/g, replacement: (match, funcName, args) => {
+                const formattedArgs = args ? args.split(',').map(arg => arg.trim()).join(', ') : '';
+                return `function ${funcName}(${formattedArgs}) {`;
+            }},
+        ];
+
+        // Apply all replacements in one pass
+        let compiledCode = code;
+        for (const { regex, replacement } of replacements) {
+            compiledCode = compiledCode.replace(regex, replacement);
+        }
+
+        // Format the final code for better readability
+        return this.formatCode(compiledCode);
     }
 
-    // Add support for 'forEach' loops
-    replaceForEach(code) {
-        return code.replace(/\bchalo\s(\w+)\sbhar\s\[(.*?)\]\s\{(.*?)\}/g, 
-            (match, varName, array, body) => {
-                return `${array}.forEach(${varName} => { ${body} })`;
-            }
-        );
-    }
-
-    // Add support for 'try-catch' blocks
-    replaceTryCatch(code) {
-        return code.replace(/\btry\s\{(.*?)\}\s\bcatch\s\((\w+)\)\s\{(.*?)\}/g, 
-            (match, tryBlock, errorVar, catchBlock) => {
-                return `try { ${tryBlock} } catch (${errorVar}) { ${catchBlock} }`;
-            }
-        );
+    formatCode(code) {
+        // Format the code to ensure proper spacing
+        return code.replace(/(\{|\})/g, ' $1 ').replace(/\s+/g, ' ').trim();
     }
 }
