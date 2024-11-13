@@ -9,7 +9,7 @@ const code = `
 a = 5
 b = 6
 d = 8
-
+res=a+b+d
 print(res)
 `;
 
@@ -27,3 +27,7 @@ console.log('AST:', JSON.stringify(ast, null, 2));
 const codeGenerator = new PythonToJsCompiler();
 const jsCode = codeGenerator.generate(ast);
 console.log('Generated JavaScript Code:\n', jsCode);
+
+
+
+print(name+dghdhgdh)
