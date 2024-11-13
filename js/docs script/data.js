@@ -1,3 +1,4 @@
+let curRef;
 // Data Set for sidebar
 const sideBarHead = [
   "Python Home",
@@ -8,6 +9,7 @@ const sideBarHead = [
   "Python Variable",
   "Python Data Types",
   "Python Numbers",
+  "Shivam",
   "Python Casting",
   "Python Settings",
   "Python Boolean",
@@ -38,3 +40,18 @@ const sideBarHead = [
 ];
 
 const sideBar = document.getElementById("sidebarTarg");
+
+function renderData(id) {
+  if (curRef) {
+    const curRefEle = document.getElementById(curRef);
+    curRefEle.classList.remove("highlight");
+    console.log(id);
+    console.log(curRefEle.innerText);
+  }
+  curRef = `pyRef${id}`;
+  highlightRef(curRef);
+}
+function highlightRef(ele) {
+  const pyReference = document.getElementById(ele);
+  pyReference.classList.add("highlight");
+}

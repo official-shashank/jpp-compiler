@@ -21,3 +21,7 @@ body{
 #sidebarTarg li a {
     color: var(--grey-font);
 }
+
+.highlight{
+    color: aliceblue;
+}
