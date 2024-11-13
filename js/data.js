@@ -7,8 +7,6 @@ const matLangData = {
         Ques: "Python Install",
         sol1: "Many PCs and Macs will have Python already installed.",
         code1: [],
-       
-        
       },
       {
         Ques: "",
