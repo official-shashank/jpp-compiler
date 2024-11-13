@@ -1,5 +1,5 @@
 const matLangData = {
-  "Python Syntax": {
+  "Python Home": {
     title: "Learn Python and More with data",
     subtitle:
       "Learn Python with our multilingual compiler and leverage your skills to shape the future. This documentation provides a hands-on approach to mastering any language effortlessly.",

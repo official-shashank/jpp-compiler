@@ -1,3 +1,4 @@
+
 const pythonSidebar = [
   "Python Home",
   "Python Intro",
@@ -37,35 +38,73 @@ const pythonSidebar = [
 ];
 
 const matLangSidebar = [];
-
+// --------------------------------------------------------------------------------
+// -----------------------------Only for Documentation Sid-------------------------------
+let curRef;
 let sidebar = "";
-
-function renderSidebar(sidebarData) {
-  sidebarData.map((item, key) => {
-    sidebar += `
-         <li key=${item} class="sidebar-item">
-            <a href="#" class="flex items-center p-2 text-gray-400 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
-               <span class="ms-3">${item}</span>
-            </a>
-         </li>
-      
-      `;
-    document.getElementById("sidebarTarg").innerHTML = sidebar;
-  });
-}
 
 renderSidebar(pythonSidebar);
 
-let sidebarItems = document.getElementsByClassName("sidebar-item");
+function renderSidebar(data)
 
-for (let i = 0; i < sidebarItems.length; i++) {
-  sidebarItems[i].addEventListener("click", (e) => {
-    console.log(e.target.innerText);
-    renderClickedContent(matLangData[e.target.innerText]);
-  });
-}
+const sideBar = document.getElementById("sidebarTarg");
 
-function renderClickedContent(data) {
-  document.getElementById("title").innerText = data["title"];
-  document.getElementById("subtitle").innerText = data["subtitle"];
-}
+// document.addEventListener("DOMContentLoaded", () => {
+//   // sid-bar content loader
+//   sideBar.innerHTML = "";
+//   pythonSidebar.forEach((item, idx) => {
+//     console.log("rending");
+//     sideBar.innerHTML += `
+//         <li onclick="renderData(${idx})">
+//             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
+//                <span id="pyRef${idx}" class="ms-3">${item}</span>
+//             </a>
+//          </li>
+//         `;
+//   });
+// });
+
+// function renderData(id) {
+//   if (curRef) {
+//     const curRefEle = document.getElementById(curRef);
+//     curRefEle.classList.remove("highlight");
+//     console.log(id);
+//     console.log(curRefEle.innerText);
+//   }
+//   curRef = `pyRef${id}`;
+//   highlightRef(curRef);
+// }
+// function highlightRef(ele) {
+//   const pyReference = document.getElementById(ele);
+//   pyReference.classList.add("highlight");
+// }
+
+// function renderSidebar(sidebarData) {
+//   sidebarData.map((item, key) => {
+//     sidebar += `
+//          <li onclick="renderData(${key}) class="sidebar-item">
+//             <a href="#" class="flex items-center p-2 text-gray-400 rounded-lg dark:text-white hover:bg-gray-700  dark:hover:bg-gray-700 group">
+//                <span id="pyRef${key}" class="ms-3">${item}</span>
+//             </a>
+//          </li>
+
+//       `;
+//     document.getElementById("sidebarTarg").innerHTML = sidebar;
+//   });
+// }
+
+
+
+// let sidebarItems = document.getElementsByClassName("sidebar-item");
+
+// for (let i = 0; i < sidebarItems.length; i++) {
+//   sidebarItems[i].addEventListener("click", (e) => {
+//     console.log(e.target.innerText);
+//     renderClickedContent(matLangData[e.target.innerText]);
+//   });
+// }
+
+// function renderClickedContent(data) {
+//   document.getElementById("title").innerText = data["title"];
+//   document.getElementById("subtitle").innerText = data["subtitle"];
+// }
