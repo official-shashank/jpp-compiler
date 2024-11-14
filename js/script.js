@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (radio2.checked) {
     renderSidebar(pythonSidebar);
   } else if (radio1.checked) {
-    renderSidebar(matLangData);
+    renderSidebar(matLangSidebar);
   }
 
   radio1.addEventListener("change", () => {
