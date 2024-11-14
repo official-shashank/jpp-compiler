@@ -2027,6 +2027,42 @@ const pythonSidebar = [
   "Python String Formatting",
 ];
 
-const matLangSidebar = [];
+const matLangSidebar = [
+  "MatLang Home",
+  "MatLang Intro",
+  "MatLang Getting Started",
+  "MatLang Syntax",
+  "MatLang Comments",
+  "MatLang Variable",
+  "MatLang Data Types",
+  "MatLang Numbers",
+  "MatLang Casting",
+  "MatLang Settings",
+  "MatLang Boolean",
+  "MatLang Operators",
+  "MatLang Lists",
+  "MatLang Tuples",
+  "MatLang Sets",
+  "MatLang Dictionaries",
+  "MatLang If....Else",
+  "MatLang While Loops",
+  "MatLang For Loops",
+  "MatLang Functions",
+  "MatLang Lamdba",
+  "MatLang Arrays",
+  "MatLang Classes/Objects",
+  "MatLang Inheritance",
+  "MatLang Iterators",
+  "MatLang Polymorphism",
+  "MatLang Scope",
+  "MatLang Modules",
+  "MatLang Dates",
+  "MatLang JSON",
+  "MatLang RegEx",
+  "MatLang PHP",
+  "MatLang Try...Except",
+  "MatLang User Input",
+  "MatLang String Formatting",
+];
 
 const matLangData = [];

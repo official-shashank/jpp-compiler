@@ -2,7 +2,6 @@
 // // -----------------------------Only for Documentation Sid-------------------------------
 
 const sideBar = document.getElementById("sidebarTarg");
-
 function renderSidebar(data) {
   sideBar.innerHTML = "";
   data.forEach((item, idx) => {
@@ -63,3 +62,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // utility function
 function sideBarUtility(id) {}
+
+// Radio Button functionality
+// Function to check the initial selection on page load
+window.addEventListener("DOMContentLoaded", (event) => {
+  const radio1 = document.getElementById("default-radio-1");
+  const radio2 = document.getElementById("default-radio-2");
+
+  if (radio2.checked) {
+    renderSidebar(pythonSidebar);
+  } else if (radio1.checked) {
+    renderSidebar(matLangData);
+  }
+
+  radio1.addEventListener("change", () => {
+    if (radio1.checked) {
+      renderSidebar(pythonSidebar);
+    }
+  });
+
+  radio2.addEventListener("change", () => {
+    if (radio2.checked) {
+      renderSidebar(matLangData);
+    }
+  });
+});
