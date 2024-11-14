@@ -83,7 +83,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   radio2.addEventListener("change", () => {
     if (radio2.checked) {
-      renderSidebar(matLangData);
+      renderSidebar(matLangSidebar);
     }
   });
 });
