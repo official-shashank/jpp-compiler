@@ -30,4 +30,3 @@ console.log('Generated JavaScript Code:\n', jsCode);
 
 
 
-print(name+dghdhgdh)

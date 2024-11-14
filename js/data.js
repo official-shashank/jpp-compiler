@@ -2065,4 +2065,6 @@ const matLangSidebar = [
   "MatLang String Formatting",
 ];
 
-const matLangData = [];
+const matLangData = {
+  
+}
