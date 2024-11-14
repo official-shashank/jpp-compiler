@@ -2,8 +2,15 @@ document.getElementById("runCode").addEventListener("click", function () {
     const code = document.getElementById("codeEditor").value;
     const consoleOutput = document.getElementById("console");
 
+    const language = document.getElementById("languageSelect").value;
+
     try {
-        consoleOutput.innerText = "Code output: " + eval(code);
+        if (language === "javascript") {
+            consoleOutput.innerText = "Code output: " + eval(code);
+        } else {
+            // Placeholder for custom language handling
+            consoleOutput.innerText = "Executed " + language + " code.";
+        }
     } catch (error) {
         consoleOutput.innerText = "Error: " + error.message;
     }
@@ -68,9 +75,33 @@ function updateLineNumbers(){
     const lines = codeEditor.value.split("\n").length;
     linenumbers.innerHTML = Array(lines).fill().map((_, i)=>i+1).join("<br>");
 }
+
+// Initialize line numbers
 updateLineNumbers();
 
 codeEditor.addEventListener("input", updateLineNumbers);
 codeEditor.addEventListener("scroll", () => {
     linenumbers.scrollTop= codeEditor.scrollTop;
 });
+
+// Language Selection Logic
+// const codeEditor = document.getElementById("codeEditor");
+const languageSelect = document.getElementById("languageSelect");
+
+languageSelect.addEventListener("change", function(){
+    const language = languageSelect.value;
+    switch (language) {
+        case "javascript":
+            codeEditor.placeholder = "Type JavaScript code here...";
+            break;
+        case "python":
+            codeEditor.placeholder = "Type Python code here...";
+            break;
+        case "Java":
+            codeEditor.placeholder = "Type Java code here...";
+            break;
+        default:
+            codeEditor.placeholder = "Type your code here...";
+    }
+    codeEditor.value ="";
+})

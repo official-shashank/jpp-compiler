@@ -2065,6 +2065,100 @@ const matLangSidebar = [
   "MatLang String Formatting",
 ];
 
-const matLangData = {
-  
+const MatLangData = {
+  "Matlang Home": {
+    title: "Matlang Home",
+    subtitle: "This is matlang home subtitle",
+    Ques: [
+      {
+        Ques: "Execute Python Syntax",
+        sol1: `As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:`,
+        code1: [
+          {
+            code: `>>> print("Hello, World!")
+Hello, World!`,
+          },
+        ],
+        sol2: `Or by creating a Python file on the server, using the .py file extension, and running it in the Command Line:`,
+        code2: [
+          {
+            code: `C:\\Users\\Your Name>python myfile.py`,
+          },
+        ],
+      },
+      {
+        Ques: "Python Indentation",
+        sol1: `Indentation refers to the spaces at the beginning of a code line.
+
+Where in other programming languages, the indentation in code is for readability only, the indentation in Python is very important.
+
+Python uses indentation to indicate a block of code.`,
+        code1: [
+          {
+            code: `if 5 > 2:
+    print("Five is greater than two!")`,
+          },
+        ],
+        sol2: `Python will give you an error if you skip the indentation:`,
+        code2: [
+          {
+            code: `if 5 > 2:
+print("Five is greater than two!")`,
+          },
+        ],
+        sol3: `The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.`,
+        code3: [
+          {
+            code: `if 5 > 2:
+ print("Five is greater than two!") 
+if 5 > 2:
+        print("Five is greater than two!")`,
+          },
+        ],
+        sol4: `You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:`,
+        code4: [
+          {
+            code: `if 5 > 2:
+ print("Five is greater than two!")
+        print("Five is greater than two!")`,
+          },
+        ],
+      },
+      {
+        Ques: "Python Variables",
+        sol1: `In Python, variables are created when you assign a value to them:`,
+        code1: [
+          {
+            code: `x = 5
+y = "Hello, World!"`,
+          },
+        ],
+        sol2: `Python has no command for declaring a variable.
+
+You will learn more about variables in the Python Variables chapter.`,
+      },
+      {
+        Ques: "Comments",
+        sol1: `Python has commenting capability for the purpose of in-code documentation.
+
+Comments start with a #, and Python will render the rest of the line as a comment:`,
+        code1: [
+          {
+            code: `# This is a comment.
+print("Hello, World!")`,
+          },
+        ],
+        sol2: `You can also write multi-line comments using triple quotes, but this is typically reserved for docstrings:`,
+        code2: [
+          {
+            code: `"""
+This is a multi-line comment.
+It can span multiple lines.
+"""
+print("Hello, World!")`,
+          },
+        ],
+      },
+    ],
+  },
 }

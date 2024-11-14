@@ -1,7 +1,12 @@
-let selectedTab = "";
+let selectedTab = "Matlang Home";
+let selectedLang="matlang"
 
-function getDataOfSelectedTag() {
-  return PyhtonData[selectedTab];
+function getDataOfSelectedTab() {
+  if (selectedLang === "python") {
+    return PyhtonData[selectedTab];
+  } else if (selectedLang === "matlang") {
+    return MatLangData[selectedTab];
+  }
 }
 
 function renderData(data) {
@@ -9,25 +14,49 @@ function renderData(data) {
   document.getElementById("subtitle").innerText = data["subtitle"];
 }
 
-// this function will render only specific data which is unidentical in the data object
-// i.e (Python Home, Python Intro and MatLang Home, Matlang Intro)
-function renderSpecificsData(data) {
-  const mainContainer = document.getElementById("main-core-div");
-  // mainContainer.innerHTML = "";
-  mainContainer.innerHTML = data;
-}
+renderData(getDataOfSelectedTab());
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sidebarList = document.getElementsByClassName("sidebar-item");
-  Array.from(sidebarList).forEach((element) => {
-    element?.addEventListener("click", (e) => {
-      selectedTab = e.target.innerText;
-      console.log(selectedTab);
-      let data = getDataOfSelectedTag();
-      console.log(data.length);
-      (!data["title"] || !data["subtitle"]) && data.length > 1 // if one of them is undefined which means we have keys but value is different.
-        ? renderSpecificsData(data)
-        : renderData(data);
+
+document.getElementById("language").addEventListener("change",(e)=>{
+  if(e.target.value=="python"){
+    selectedLang=e.target.value;
+    renderSidebar(pythonSidebar);
+  }
+  else if(e.target.value==="matlang"){
+    selectedLang=e.target.value;
+    renderSidebar(matLangSidebar);
+    renderData(getDataOfSelectedTab())
+  }
+})
+
+const sideBar = document.getElementById("sidebarTarg");
+
+function renderSidebar(data) {
+  const sidebarTarg = document.getElementById("sidebarTarg");
+  sidebarTarg.innerHTML = ""; 
+  
+  data.forEach((item, idx) => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("sidebar-item");
+
+   
+    listItem.innerHTML = `
+      <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
+        <span id="list${idx}" class="text-gray-400 highlight ms-3 ">${item}</span>
+      </a>
+    `;
+
+    sidebarTarg.appendChild(listItem);
+
+
+    listItem.addEventListener("click", () => {
+      selectedTab = item;
+      console.log("Selected Tab:",selectedLang ,selectedTab);
+
+      const data=getDataOfSelectedTab();
+      renderData(data);
     });
   });
-});
+}
+
+
