@@ -47,13 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<<<<<<< HEAD
-=======
-  if (radio2.checked) {
-    renderSidebar(pythonSidebar);
-  } else if (radio1.checked) {
-    renderSidebar(matLangSidebar);
-  }
->>>>>>> 39340224445461222a9aaa03fcf6f9f02ff5226d
 
 
