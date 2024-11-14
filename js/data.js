@@ -262,7 +262,7 @@ print("Hello, World!")`,
   "Python Comments": {
     title: "Python Comments",
     subtitle:
-      "Comments can be used to explain Python code, make the code more readable & prevent execution when testing code.",
+      "Comments can be used to explain Python code, \n make the code more readable & prevent execution when testing code.",
     Ques: [
       {
         Ques: "Creating a Comment",
@@ -320,8 +320,8 @@ print("Hello, World!")`,
     ],
   },
   /*****************************************************************************************************/
-  "Python Variables": {
-    title: "Python Variables",
+  "Python Variable": {
+    title: "Python Variable",
     subtitle: "Variables are containers for storing data values.",
     Ques: [
       {
@@ -1633,6 +1633,245 @@ dict1 = {"name": "John", "age": 36, "country": "Norway"}`,
     ],
   },
   /*****************************************************************************************************/
+
+  "Python Home": `
+   <div class="p-4 border-2  rounded-lg dark:border-gray-700">
+
+         <!-- Into HEad -->
+         <div class="flex flex-col items-center justify-center p-12 h-[70vh] mb-4 rounded  dark:bg-gray-800">
+            <h1 id="title"
+               class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
+               Learn Python and More</h1>
+            <p id="subtitle"
+               class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
+               Learn Python with our multilingual compiler and leverage your skills to shape the future. This
+               documentation provides a hands-on approach to mastering any language effortlessly.</p>
+            <a href="#"
+               class="inline-flex items-center justify-center px-5 py-3 mb-10 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+               Learn more
+               <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     d="M1 5h12m0 0L9 1m4 4L9 9" />
+               </svg>
+            </a>
+         </div>
+         <!-- navigation button -->
+         <div class="navigation flex  ">
+            <!-- Previous Button -->
+            <a href="#"
+               class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+               Home
+            </a>
+            <!-- Next Button -->
+            <a href="#"
+               class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+               Previous
+            </a>
+         </div>
+         <!-- Into Card -->
+         <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
+
+            <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white" id="title">Learn Python</h1>
+
+            <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400" id="subtitle">Python is a popular
+               programming language.</p>
+            <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
+
+
+            <button type="button"
+               class="text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+               Start Learning
+               <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     d="M1 5h12m0 0L9 1m4 4L9 9" />
+               </svg>
+            </button>
+         </div>
+
+         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+
+         <div class="py-6 px-4 flex flex-col justify-center gap-4  h-auto mb-4   dark:bg-gray-800">
+            <h2 class="text-3xl font-extrabold text-gray-300 dark:text-white">Learning by Examples</h2>
+            <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and
+               view the result.</p>
+
+            <!-- terminals -->
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+               <div
+                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                  <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                     type="button">Python
+                     <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="m1 1 4 4 4-4" />
+                     </svg>
+                  </button>
+
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdownHover"
+                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                     <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
+                        aria-labelledby="dropdownHoverButton">
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                     <pre class="code text-left ">
+print("Hello world!")
+               </pre>
+                  </div>
+                  <button type="button"
+                     class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
+                     it out.</button>
+               </div>
+               <div
+                  class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                  <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                     type="button">JavaScript <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="m1 1 4 4 4-4" />
+                     </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdownHover"
+                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                     <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
+                        aria-labelledby="dropdownHoverButton">
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                        </li>
+                        <li>
+                           <a href="#"
+                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                     <pre class="code text-left ">
+print("Hello world!")
+               </pre>
+                  </div>
+                  <button type="button"
+                     class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
+                     it out.</button>
+               </div>
+            </div>
+         </div>
+
+         <hr class="h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
+         <!-- -----Content ----- -->
+         <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
+            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python File Handling</h3>
+            <p class="text-gray-200 dark:text-gray-400">In our File Handling section you will learn how to open, read,
+               write, and delete files.</p>
+            <a href="#"
+               class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">Phython
+               File Handling</a>
+         </div>
+
+         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+         <!-- -----Content ----- -->
+         <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
+            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Database Handling</h3>
+            <p class="text-gray-200 dark:text-gray-400">In our database section you will learn how to access and work
+               with MySQL and MongoDB databases:</p>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Python MySQL Tutorial
+            </a>
+
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Python MongoDB-Tutorial
+            </a>
+         </div>
+
+         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+
+
+         <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
+            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Reference</h3>
+            <p class="text-gray-200 dark:text-gray-400">You will also find complete function and method references:</p>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Reference Overview
+            </a>
+
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Built-in-Functions
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Strings Methods
+            </a>
+
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               List/Array Methods
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Dictionay Methods
+            </a>
+
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Tuple Methods
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Python Exceptions
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Python Keywords
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Python Glossary
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Random Modile
+            </a>
+
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               Request Modules
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               File Method
+            </a>
+            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+               CMath-Module
+            </a>
+         </div>
+
+      </div>
+  `,
+  /*****************************************************************************************************/
 };
 
 const exampleShowCaseMatLang = [
@@ -1789,10 +2028,41 @@ const pythonSidebar = [
 ];
 
 const matLangSidebar = [
-
-
-
+  "MatLang Home",
+  "MatLang Intro",
+  "MatLang Getting Started",
+  "MatLang Syntax",
+  "MatLang Comments",
+  "MatLang Variable",
+  "MatLang Data Types",
+  "MatLang Numbers",
+  "MatLang Casting",
+  "MatLang Settings",
+  "MatLang Boolean",
+  "MatLang Operators",
+  "MatLang Lists",
+  "MatLang Tuples",
+  "MatLang Sets",
+  "MatLang Dictionaries",
+  "MatLang If....Else",
+  "MatLang While Loops",
+  "MatLang For Loops",
+  "MatLang Functions",
+  "MatLang Lamdba",
+  "MatLang Arrays",
+  "MatLang Classes/Objects",
+  "MatLang Inheritance",
+  "MatLang Iterators",
+  "MatLang Polymorphism",
+  "MatLang Scope",
+  "MatLang Modules",
+  "MatLang Dates",
+  "MatLang JSON",
+  "MatLang RegEx",
+  "MatLang PHP",
+  "MatLang Try...Except",
+  "MatLang User Input",
+  "MatLang String Formatting",
 ];
 
-
-const matLangData=[]
+const matLangData = [];
