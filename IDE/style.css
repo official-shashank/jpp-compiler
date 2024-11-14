@@ -7,7 +7,10 @@
 }
 
 /* Light and Dark Modes */
-body.light-mode { background-color: #ffffff; color: #000000; }
+body.light-mode { 
+    background-color: #ffffff; 
+    color: #000000; 
+}
 .editor-container.light-mode textarea { background-color: #f9f9f9; color: #333; }
 .console-output.light-mode { background-color: #f9f9f9; color: #333; }
 body.dark-mode { background-color: #1e1e1e; color: #ffffff; }
