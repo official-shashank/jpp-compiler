@@ -41,7 +41,9 @@ body {
     background-color: var(--main-bg-color);
  }
 
-
+.highlight{
+  color: rgb(211, 26, 26)
+}
 
  @media (max-width: 640px) { /* Tailwind's `sm` breakpoint */
     #default-sidebar {
