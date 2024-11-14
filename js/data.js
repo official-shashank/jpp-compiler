@@ -3846,6 +3846,8 @@ const exampleShowCaseMatLang = [
   },
 ];
 
+/***************************************************************************************************/
+
 const pythonSidebar = [
   "Python Home",
   "Python Intro",
@@ -3884,44 +3886,296 @@ const pythonSidebar = [
   "Python String Formatting",
 ];
 
+/***************************************************************************************************/
+
 const matLangSidebar = [
-  "MatLang Home",
-  "MatLang Intro",
-  "MatLang Getting Started",
-  "MatLang Syntax",
-  "MatLang Comments",
-  "MatLang Variable",
+  "MatLang Introduction",
+  "MatLang Variable Declarations",
   "MatLang Data Types",
-  "MatLang Numbers",
-  "MatLang Casting",
-  "MatLang Settings",
-  "MatLang Boolean",
-  "MatLang Operators",
-  "MatLang Lists",
-  "MatLang Tuples",
-  "MatLang Sets",
-  "MatLang Dictionaries",
-  "MatLang If....Else",
-  "MatLang While Loops",
-  "MatLang For Loops",
+  "MatLang Basic Arithmetic Operations",
+  "MatLang Control Flow Statements",
+  "MatLang Loops",
   "MatLang Functions",
-  "MatLang Lamdba",
+  "MatLang Objects",
   "MatLang Arrays",
-  "MatLang Classes/Objects",
-  "MatLang Inheritance",
-  "MatLang Iterators",
-  "MatLang Polymorphism",
-  "MatLang Scope",
-  "MatLang Modules",
-  "MatLang Dates",
-  "MatLang JSON",
-  "MatLang RegEx",
-  "MatLang PHP",
-  "MatLang Try...Except",
-  "MatLang User Input",
-  "MatLang String Formatting",
+  "MatLang Error Handling",
+  "MatLang Input/Output",
+  "MatLang Compilation Process",
+  "MatLang Full Example Code",
 ];
 
+/***************************************************************************************************/
 const matLangData = {
-  
-}
+  Home: {
+    title: "Home",
+    subtitle: "Complete Documentation for MatLang Language",
+    description:
+      "MatLang is a high-level language designed to be intuitive and simple, making it accessible to people who may not be familiar with traditional programming languages. This language uses a hybrid of Hindi and English, making it more relatable for non-technical users while still being powerful enough to compile into JavaScript. Below is a comprehensive guide covering all aspects of MatLang with code examples and their JavaScript equivalents.",
+    tableOfContents: [
+      "Introduction",
+      "Variable Declarations",
+      "Data Types",
+      "Basic Arithmetic Operations",
+      "Control Flow Statements",
+      "Loops",
+      "Functions",
+      "Objects",
+      "Arrays",
+      "Error Handling",
+      "Input/Output",
+      "Compilation Process",
+      "Full Example Code",
+    ],
+  },
+  Introduction: {
+    title: "Introduction",
+    subtitle: "Overview of MatLang",
+    description:
+      "MatLang is designed to be beginner-friendly while maintaining the expressive power of JavaScript. It introduces programming concepts with more natural language constructs that are easy to understand and use.",
+  },
+  "Variable Declarations": {
+    title: "Variable Declarations",
+    subtitle: "Declaring Variables in MatLang",
+    description:
+      "In MatLang, variables are declared using the keyword 'mana', which is the Hindi word for 'variable' or 'assign'.",
+    syntax: "mana <variable_name> = <value>;",
+    example: {
+      matlangCode: ["mana age = 25;", "mana name = 'John';"],
+      javaScriptCode: ["let age = 25;", "let name = 'John';"],
+    },
+  },
+  "Data Types": {
+    title: "Data Types",
+    subtitle: "Basic Data Types in MatLang",
+    description:
+      "MatLang supports several basic data types, including Integer, Float, String, Boolean, and Null.",
+    example: {
+      matlangCode: [
+        "mana a = 10;       // Integer",
+        "mana b = 3.14;     // Float",
+        "mana c = 'Hello';  // String",
+        "mana isTrue = sach; // Boolean",
+        "mana nothing = kuchNahi; // Null",
+      ],
+      javaScriptCode: [
+        "let a = 10;",
+        "let b = 3.14;",
+        "let c = 'Hello';",
+        "let isTrue = true;",
+        "let nothing = null;",
+      ],
+    },
+  },
+  "Basic Arithmetic Operations": {
+    title: "Basic Arithmetic Operations",
+    subtitle: "Performing Arithmetic in MatLang",
+    description:
+      "MatLang supports standard arithmetic operations using Hindi terms for addition, subtraction, multiplication, and division.",
+    example: {
+      matlangCode: [
+        "mana sum = jod 5 3;    // 5 + 3",
+        "mana diff = ghata 8 2;  // 8 - 2",
+        "mana prod = guna 4 2;   // 4 * 2",
+        "mana quotient = divide 10 2; // 10 / 2",
+      ],
+      javaScriptCode: [
+        "let sum = 5 + 3;",
+        "let diff = 8 - 2;",
+        "let prod = 4 * 2;",
+        "let quotient = 10 / 2;",
+      ],
+    },
+  },
+  "Control Flow Statements": {
+    title: "Control Flow Statements",
+    subtitle: "MatLang Control Flow Statements: If-Else and Switch-Case",
+    description:
+      "MatLang supports if-else and switch-case statements for control flow.",
+    sections: [
+      {
+        subtitle: "If-Else",
+        description:
+          "The 'agar' keyword represents 'if', and 'nahi' represents 'else'.",
+        syntax: "agar <condition> { <statements>; } nahi { <statements>; }",
+        example: {
+          matlangCode: [
+            "mana x = 10;",
+            "agar x bada 5 { dikhai 'x is greater than 5'; } nahi { dikhai 'x is less than or equal to 5'; }",
+          ],
+          javaScriptCode: [
+            "let x = 10;",
+            "if (x > 5) { console.log('x is greater than 5'); } else { console.log('x is less than or equal to 5'); }",
+          ],
+        },
+      },
+      {
+        subtitle: "Switch-Case",
+        description:
+          "The 'switch' keyword is used to create a switch-case statement.",
+        syntax:
+          "switch <variable> { case <value>: <statements>; break; default: <statements>; }",
+        example: {
+          matlangCode: [
+            "mana day = 2;",
+            "switch day { case 1: dikhai 'Monday'; break; case 2: dikhai 'Tuesday'; break; default: dikhai 'Weekend'; }",
+          ],
+          javaScriptCode: [
+            "let day = 2;",
+            "switch (day) { case 1: console.log('Monday'); break; case 2: console.log('Tuesday'); break; default: console.log('Weekend'); }",
+          ],
+        },
+      },
+    ],
+  },
+  Loops: {
+    title: "Loops",
+    subtitle: "MatLang Loops: For Loop and While Loop",
+    description: "MatLang supports For and While loops.",
+    sections: [
+      {
+        subtitle: "For Loop",
+        description: "The 'chalo' keyword is used for creating loops.",
+        syntax:
+          "chalo <variable> se <start_value> tak <end_value> tak { <statements>; }",
+        example: {
+          matlangCode: ["chalo i se 0 tak 5 tak { dikhai i; }"],
+          javaScriptCode: ["for (let i = 0; i < 5; i++) { console.log(i); }"],
+        },
+      },
+      {
+        subtitle: "While Loop",
+        description:
+          "The 'chalo' keyword is also used for while loops with 'jab tak' (while).",
+        syntax: "chalo <variable> jab tak <condition> tak { <statements>; }",
+        example: {
+          matlangCode: [
+            "mana i = 0;",
+            "chalo i jab tak i chhota 5 tak { dikhai i; mana i = i + 1; }",
+          ],
+          javaScriptCode: [
+            "let i = 0;",
+            "while (i < 5) { console.log(i); i = i + 1; }",
+          ],
+        },
+      },
+    ],
+  },
+  Functions: {
+    title: "Functions",
+    subtitle: "Functions in MatLang",
+    description:
+      "Functions are defined using the keyword 'samasya'. Functions can return values using 'kaam'.",
+    syntax:
+      "samasya <function_name>(<parameters>) { <statements>; kaam <return_value>; }",
+    example: {
+      matlangCode: ["samasya add(x, y) { mana sum = jod x y; kaam sum; }"],
+      javaScriptCode: ["function add(x, y) { let sum = x + y; return sum; }"],
+    },
+  },
+  Objects: {
+    title: "Objects",
+    subtitle: "Objects in MatLang",
+    description:
+      "Objects are declared using the 'mana' keyword with key-value pairs.",
+    syntax: "mana <object_name> = { <key1>: <value1>, <key2>: <value2>, ... };",
+    example: {
+      matlangCode: ["mana person = {name: 'John', age: 30, city: 'New York'};"],
+      javaScriptCode: [
+        "let person = {name: 'John', age: 30, city: 'New York'};",
+      ],
+    },
+  },
+  Arrays: {
+    title: "Arrays",
+    subtitle: "Arrays in MatLang",
+    description:
+      "Arrays in MatLang are declared similarly to objects but with a list of values.",
+    syntax: "mana <array_name> = [<value1>, <value2>, <value3>];",
+    example: {
+      matlangCode: ["mana fruits = ['Apple', 'Banana', 'Cherry'];"],
+      javaScriptCode: ["let fruits = ['Apple', 'Banana', 'Cherry'];"],
+    },
+  },
+  "Error Handling": {
+    title: "Error Handling",
+    subtitle: "Error Handling in MatLang",
+    description:
+      "MatLang doesn't have native exception handling, but errors can be manually checked using conditionals.",
+    syntax:
+      "agar <variable> barabar <null_or_undefined> { dikhai <error_message>; }",
+    example: {
+      matlangCode: [
+        "mana a = 'hello'; agar a barabar kuchNahi { dikhai 'Error: Variable is not initialized!'; }",
+      ],
+      javaScriptCode: [
+        "let a = 'hello'; if (a === null) { console.log('Error: Variable is not initialized!'); }",
+      ],
+    },
+  },
+  "Input/Output": {
+    title: "Input/Output",
+    subtitle: "Handling Input and Output in MatLang",
+    description: "For output, MatLang uses 'dikhai' to print values.",
+    syntax: "mana <variable> = <value>; dikhai <output_message>;",
+    example: {
+      matlangCode: ["mana name = 'John'; dikhai 'Hello ' + name;"],
+      javaScriptCode: ["let name = 'John'; console.log('Hello ' + name);"],
+    },
+  },
+  "Compilation Process": {
+    title: "Compilation Process",
+    subtitle: "How MatLang Code is Compiled",
+    description:
+      "The MatLang compiler parses and converts MatLang code into JavaScript, which can be executed in JavaScript environments.",
+    steps: [
+      "1. Parsing: The MatLang compiler reads and interprets the MatLang code.",
+      "2. Conversion: The compiler converts MatLang syntax into JavaScript.",
+      "3. Output: The resulting JavaScript code is generated.",
+    ],
+    example: {
+      matlangCode: [
+        "mana x = 10;",
+        "mana y = 20;",
+        "mana result = jod x y;",
+        "dikhai 'The sum is ' + result;",
+      ],
+      javaScriptCode: [
+        "let x = 10;",
+        "let y = 20;",
+        "let result = x + y;",
+        "console.log('The sum is ' + result);",
+      ],
+    },
+  },
+  "Full Example Code": {
+    title: "Full Example Code",
+    subtitle:
+      "A Complete Example Demonstrating Variables, Functions, Loops, Conditionals, and Objects",
+    description:
+      "A comprehensive example that demonstrates MatLang code and its JavaScript equivalent.",
+    matlangCode: [
+      "mana x = 10;",
+      "mana y = 20;",
+      "mana name = 'John';",
+      "agar x bada y { dikhai name + ' says x is greater than y!'; } nahi { dikhai name + ' says x is less than or equal to y!'; }",
+      "samasya add(x, y) { mana sum = jod x y; kaam sum; }",
+      "mana result = add(x, y);",
+      "dikhai 'The sum is ' + result;",
+    ],
+    javaScriptCode: [
+      "let x = 10;",
+      "let y = 20;",
+      "let name = 'John';",
+      "if (x > y) { console.log(name + ' says x is greater than y!'); } else { console.log(name + ' says x is less than or equal to y!'); }",
+      "function add(x, y) { let sum = x + y; return sum; }",
+      "let result = add(x, y);",
+      "console.log('The sum is ' + result);",
+    ],
+  },
+  Conclusion: {
+    title: "Conclusion",
+    subtitle: "A Simple and Intuitive Approach to Coding with MatLang",
+    description:
+      "MatLang offers a simple and intuitive approach to coding with Hindi and English constructs, compiled directly into JavaScript for execution in any JavaScript environment.",
+  },
+};
