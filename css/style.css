@@ -1,23 +1,78 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 
 }
 
-:root{
-    --background-color:green;
+:root {
+    --background-color: green;
+    --font1: fjfjfhf;
+    --bgc: #111828;
     --grey-font : rgb(169, 169, 172);
     --main-bg-color: rgb(17, 24, 39);
 }
 
-
-
-body{
+body {
     background-color: var(--main-bg-color);
 }
 
-
-#sidebarTarg li a {
-    color: var(--grey-font);
+.bg-transparent {
+    background-color: transparent;
 }
+
+.dark .bg-transparent {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* adjust the opacity to your liking */
+}
+
+.navigation{
+    justify-content: space-between;
+    padding: .5em;
+    margin-bottom: 1em;
+ }
+ .code{
+    font-family: "Courier Prime";
+ }
+ #default-sidebar{
+    background-color: var(--main-bg-color);
+ }
+
+.highlight{
+  color: rgb(211, 26, 26)
+}
+
+ @media (max-width: 640px) { /* Tailwind's `sm` breakpoint */
+    #default-sidebar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    #default-sidebar::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera */
+    }
+  }
+
+
+/* Stylish Scrollbar */
+.stylish-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .stylish-scrollbar::-webkit-scrollbar-track {
+    background: #1f2937; /* Dark Gray */
+  }
+  
+  .stylish-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Lighter Gray */
+    border-radius: 10px;
+    border: 2px solid #1f2937; /* Dark Gray */
+  }
+  
+  /* For Firefox */
+  .stylish-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937;
+  }
