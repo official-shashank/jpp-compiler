@@ -12,6 +12,11 @@
         <button id="runCode">Run</button>
         <button id="clearConsole">Clear Console</button>
         <button id="toggleTheme">Toggle Theme</button> <!-- Theme Toggle Button -->
+        <select id="languageSelect">
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
     </header>
 
     <!-- Editor and Console Container with Divider -->
@@ -19,16 +24,16 @@
         <!-- Editor Section -->
         <div class="editor-container">
             <div class="line-numbers" id="lineNumbers"></div>
-            <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+            <textarea id="codeEditor" placeholder="Write JavaScript code here..."></textarea>
         </div>
         <!-- Resizable Divider -->
         <div class="resizer"></div>
         <!-- Console Output -->
         <div class="console-output">
             <div id="console" placeholder="Console output will appear here..."></div>
+            <pre id="highlightedCode"></pre>
         </div>
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
+<script src="./app.js"></script>
