@@ -60,3 +60,17 @@ document.getElementById("toggleTheme").addEventListener("click", function () {
     consoleContainer.classList.toggle("dark-mode");
     consoleContainer.classList.toggle("light-mode");
 });
+
+const codeEditor = document.getElementById("codeEditor");
+const linenumbers = document.getElementById("lineNumbers");
+
+function updateLineNumbers(){
+    const lines = codeEditor.value.split("\n").length;
+    linenumbers.innerHTML = Array(lines).fill().map((_, i)=>i+1).join("<br>");
+}
+updateLineNumbers();
+
+codeEditor.addEventListener("input", updateLineNumbers);
+codeEditor.addEventListener("scroll", () => {
+    linenumbers.scrollTop= codeEditor.scrollTop;
+});

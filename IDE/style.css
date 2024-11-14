@@ -63,9 +63,11 @@ body.dark-mode {
 
 /* Editor Section */
 .editor-container {
+    display: flex;
+    flex-direction: row;
     flex: 1;
     padding: 10px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #codeEditor {
@@ -76,6 +78,7 @@ body.dark-mode {
     border: none;
     outline: none;
     resize: none;
+    line-height: 1.5em;
 }
 
 /* Resizable Divider */
@@ -91,3 +94,15 @@ body.dark-mode {
     padding: 10px;
     overflow-y: auto;
 }
+.line-numbers {
+    width: 40px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #888;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.5em;
+    border-right: 1px solid #ddd;
+    overflow: hidden;
+}
+
