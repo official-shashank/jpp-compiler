@@ -83,3 +83,8 @@ body.dark-mode {
     padding: 10px;
     overflow-y: auto;
 }
+/* Syntax Highlighting */
+.keyword { color: #d73a49; font-weight: bold; }
+.function { color: #6f42c1; }
+.string { color: #032f62; }
+.comment { color: #6a737d; font-style: italic; }
