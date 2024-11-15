@@ -86,6 +86,10 @@ body {
     align-items: center;
   }
 
+  .bg-black{
+    background-color: black;
+  }
+
   /* Visualizer Terminal */
   /* Terminal Container */
 #terminal-container {
