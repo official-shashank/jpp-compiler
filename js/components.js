@@ -127,6 +127,14 @@ ${item.output}
   return tempRes;
 };
 
+
+const funcWithQuesEditor=(data)=>{
+   data.forEach((item)=>{
+
+
+   })
+
+}
 const hr = `<hr class="w-full h-px my-0 mb-0 bg-gray-600 border-0 dark:bg-gray-700">`;
 
 const editorQues = `     <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
