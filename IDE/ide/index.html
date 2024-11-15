@@ -6,7 +6,7 @@
     <title>My Programming Language IDE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-mode">
     <header class="toolbar">
         <button id="runCode">Run</button>
         <button id="clearConsole">Clear Console</button>
@@ -18,16 +18,16 @@
         </select>
     </header>
     <div class="container">
-        <div class="editor-container">
+        <div class="editor-container dark-mode">
             <div class="line-numbers" id="lineNumbers"></div>
-            <textarea id="codeEditor" spellcheck="false" placeholder="Write JavaScript code here..."></textarea>
+            <textarea id="codeEditor" placeholder="Write JavaScript code here..."></textarea>
         </div>
         <div class="resizer"></div>
-        <div class="console-output">
+        <div class="console-output dark-mode">
             <div id="console" placeholder="Console output will appear here..."></div>
-            <pre id="highlightedCode"></pre>
         </div>
     </div>
 </body>
+
 <script src="app.js"></script>
 </html>

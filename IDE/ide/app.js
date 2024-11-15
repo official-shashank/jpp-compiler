@@ -3,65 +3,33 @@ document.getElementById("runCode").addEventListener("click", function () {
     const consoleOutput = document.getElementById("console");
     const language = document.getElementById("languageSelect").value;
 
+    // Clear previous output
+    consoleOutput.innerText = "";
+
     try {
         if (language === "javascript") {
-            consoleOutput.innerText = "Code output: " + eval(code);
+            // Safely execute JavaScript code and show only the result in the console
+            const result = eval(code);
+            if (result !== undefined) {
+                consoleOutput.innerText = "Output: " + result;
+            }
         } else {
-            // Placeholder for custom language handling
+            // Placeholder for other language execution
             consoleOutput.innerText = "Executed " + language + " code.";
         }
     } catch (error) {
+        // Display errors in the console
         consoleOutput.innerText = "Error: " + error.message;
     }
 });
 
 document.getElementById("clearConsole").addEventListener("click", function () {
+    // Clear the console output
     document.getElementById("console").innerText = "";
 });
 
 const codeEditor = document.getElementById("codeEditor");
-const highlightedCode = document.getElementById("highlightedCode");
 const languageSelect = document.getElementById("languageSelect");
-
-// Language-specific syntax patterns
-const syntaxPatterns = {
-    javascript: {
-        keyword: /\b(const|let|var|function|return|if|else|for|while)\b/g,
-        function: /\b(console\.log|alert|eval)\b/g,
-        variable: /\b([a-zA-Z_$][0-9a-zA-Z_$]*)\b/g,
-        string: /(".*?"|'.*?')/g,
-        comment: /\/\/.*/g
-    },
-    python: {
-        keyword: /\b(def|return|if|else|elif|for|while|import|from|print)\b/g,
-        function: /\b(print|len|range|input)\b/g,
-        string: /(".*?"|'.*?')/g,
-        comment: /#.*/g
-    },
-    java: {
-        keyword: /\b(public|class|static|void|int|String|if|else|for|while|return)\b/g,
-        function: /\b(System\.out\.println)\b/g,
-        variable: /\b([a-zA-Z_$][0-9a-zA-Z_$]*)\b/g,
-        string: /(".*?")/g,
-        comment: /\/\/.*/g
-    }
-};
-
-// Highlight code based on the language
-function highlightSyntax(language, code) {
-    let highlightedText = code
-        .replace(syntaxPatterns[language].keyword, '<span class="keyword">$&</span>')
-        .replace(syntaxPatterns[language].function, '<span class="function">$&</span>')
-        .replace(syntaxPatterns[language].string, '<span class="string">$&</span>')
-        .replace(syntaxPatterns[language].comment, '<span class="comment">$&</span>');
-    highlightedCode.innerHTML = highlightedText;
-}
-
-codeEditor.addEventListener("input", () => {
-    const language = languageSelect.value;
-    const code = codeEditor.value;
-    highlightSyntax(language, code);
-});
 
 // Get references to editor and console containers
 const editorContainer = document.querySelector(".editor-container");
@@ -101,29 +69,27 @@ document.addEventListener("mouseup", () => {
     }
 });
 
-
 // Theme Toggle Logic
 document.getElementById("toggleTheme").addEventListener("click", function () {
     const body = document.body;
-    
+
     // Toggle between dark and light modes
     if (body.classList.contains("dark-mode")) {
         body.classList.replace("dark-mode", "light-mode");
     } else {
         body.classList.replace("light-mode", "dark-mode");
     }
-    
+
     // Toggle mode on editor
     editorContainer.classList.toggle("dark-mode");
     editorContainer.classList.toggle("light-mode");
-    
+
     // Toggle mode on console output
     consoleContainer.classList.toggle("dark-mode");
     consoleContainer.classList.toggle("light-mode");
 });
 
-// const codeEditor = document.getElementById("codeEditor");
-// const codeEditor = document.getElementById("codeEditor");
+// Line Numbers Logic
 const lineNumbers = document.getElementById("lineNumbers");
 
 function updateLineNumbers() {
@@ -145,12 +111,8 @@ codeEditor.addEventListener("scroll", () => {
 // Initial line number setup
 updateLineNumbers();
 
-
 // Language Selection Logic
-// const codeEditor = document.getElementById("codeEditor");
-// const languageSelect = document.getElementById("languageSelect");
-
-languageSelect.addEventListener("change", function(){
+languageSelect.addEventListener("change", function () {
     const language = languageSelect.value;
     switch (language) {
         case "javascript":
@@ -165,5 +127,5 @@ languageSelect.addEventListener("change", function(){
         default:
             codeEditor.placeholder = "Type your code here...";
     }
-    codeEditor.value ="";
-})
+    codeEditor.value = "";
+});
