@@ -127,18 +127,51 @@ ${item.output}
   return tempRes;
 };
 
+
+const funcWithQuesEditor=(data)=>{
+   let tempRes=""
+   data.forEach((item)=>{
+     tempRes+=`
+      <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
+            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
+            </h3>
+            <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
+            
+         </div>
+     
+     `
+     item.code1.forEach((item)=>{
+      tempRes+=`
+      
+      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+               <div
+                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                  
+
+                  <!-- Dropdown menu -->
+                  <div
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                     <div class="code text-left ">
+${item.code}
+               </div>
+                  </div>
+             
+               </div>
+               
+            </div>
+
+      
+      `
+     })
+     
+   })
+
+   
+   return tempRes;
+}
 const hr = `<hr class="w-full h-px my-0 mb-0 bg-gray-600 border-0 dark:bg-gray-700">`;
 
-const editorQues = `     <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
-            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Creating a Comment
-            </h3>
-            <p class="text-gray-200 dark:text-gray-400">Comments starts with a #, and Python will ignore them:</p>
-
-            <!-- Code Snipeet and Code Editor -->
-            <p class="text-gray-200 dark:text-gray-400"></p>
-
-            
-         </div>`;
+const editorQues = `    `;
 
 const bottomPrevNext = `<div class="navigation w-full pt-8  flex">
             <!-- Previous Button -->

@@ -91,6 +91,11 @@ function renderData(data) {
      finalResult+=codeEditor(data["example"]);
   }
 
+  if(data["Ques"]){
+     finalResult+=funcWithQuesEditor(data["Ques"])
+    
+  }
+
   
  
 

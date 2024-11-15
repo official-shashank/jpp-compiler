@@ -49,8 +49,8 @@ const PythonData = {
       {
         Ques: "",
         sol1: `Where "helloworld.py" is the name of your python file.
-      
-      Let's write our first Python file, called helloworld.py, which can be done in any text editor.`,
+        
+        Let's write our first Python file, called helloworld.py, which can be done in any text editor.`,
         code1: [
           {
             code: `print("Hello, World!")`,
@@ -131,9 +131,9 @@ const PythonData = {
         code1: [
           {
             code: `C:\Users\Your Name>python
-      Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
-      Type "help", "copyright", "credits" or "license" for more information.
-      >>> print("Hello, World!")`,
+        Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> print("Hello, World!")`,
           },
         ],
       },
@@ -143,10 +143,10 @@ const PythonData = {
         code1: [
           {
             code: `C:\Users\Your Name>python
-      Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
-      Type "help", "copyright", "credits" or "license" for more information.
-      >>> print("Hello, World!")
-      Hello, World!`,
+        Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> print("Hello, World!")
+        Hello, World!`,
           },
         ],
       },
@@ -173,7 +173,7 @@ const PythonData = {
         code1: [
           {
             code: `>>> print("Hello, World!")
-      Hello, World!`,
+        Hello, World!`,
           },
         ],
         sol2: `Or by creating a Python file on the server, using the .py file extension, and running it in the Command Line:`,
@@ -186,38 +186,38 @@ const PythonData = {
       {
         Ques: "Python Indentation",
         sol1: `Indentation refers to the spaces at the beginning of a code line.
-      
-      Where in other programming languages, the indentation in code is for readability only, the indentation in Python is very important.
-      
-      Python uses indentation to indicate a block of code.`,
+        
+        Where in other programming languages, the indentation in code is for readability only, the indentation in Python is very important.
+        
+        Python uses indentation to indicate a block of code.`,
         code1: [
           {
             code: `if 5 > 2:
-          print("Five is greater than two!")`,
+            print("Five is greater than two!")`,
           },
         ],
         sol2: `Python will give you an error if you skip the indentation:`,
         code2: [
           {
             code: `if 5 > 2:
-      print("Five is greater than two!")`,
+        print("Five is greater than two!")`,
           },
         ],
         sol3: `The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.`,
         code3: [
           {
             code: `if 5 > 2:
-       print("Five is greater than two!") 
-      if 5 > 2:
-              print("Five is greater than two!")`,
+         print("Five is greater than two!") 
+        if 5 > 2:
+                print("Five is greater than two!")`,
           },
         ],
         sol4: `You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:`,
         code4: [
           {
             code: `if 5 > 2:
-       print("Five is greater than two!")
-              print("Five is greater than two!")`,
+         print("Five is greater than two!")
+                print("Five is greater than two!")`,
           },
         ],
       },
@@ -227,32 +227,32 @@ const PythonData = {
         code1: [
           {
             code: `x = 5
-      y = "Hello, World!"`,
+        y = "Hello, World!"`,
           },
         ],
         sol2: `Python has no command for declaring a variable.
-      
-      You will learn more about variables in the Python Variables chapter.`,
+        
+        You will learn more about variables in the Python Variables chapter.`,
       },
       {
         Ques: "Comments",
         sol1: `Python has commenting capability for the purpose of in-code documentation.
-      
-      Comments start with a #, and Python will render the rest of the line as a comment:`,
+        
+        Comments start with a #, and Python will render the rest of the line as a comment:`,
         code1: [
           {
             code: `# This is a comment.
-      print("Hello, World!")`,
+        print("Hello, World!")`,
           },
         ],
         sol2: `You can also write multi-line comments using triple quotes, but this is typically reserved for docstrings:`,
         code2: [
           {
             code: `"""
-      This is a multi-line comment.
-      It can span multiple lines.
-      """
-      print("Hello, World!")`,
+        This is a multi-line comment.
+        It can span multiple lines.
+        """
+        print("Hello, World!")`,
           },
         ],
       },
@@ -270,7 +270,7 @@ const PythonData = {
         code1: [
           {
             code: `#This is a comment
-      print("Hello, World!")`,
+        print("Hello, World!")`,
           },
         ],
         sol2: `Comments can be placed at the end of a line, and Python will ignore the rest of the line:`,
@@ -283,39 +283,39 @@ const PythonData = {
         code3: [
           {
             code: `#print("Hello, World!")
-      print("Cheers, Mate!")`,
+        print("Cheers, Mate!")`,
           },
         ],
       },
       {
         Ques: "Multiline Comments",
         sol1: `Python does not really have a syntax for multiline comments.
-      
-      To add a multiline comment you could insert a # for each line:`,
+        
+        To add a multiline comment you could insert a # for each line:`,
         code1: [
           {
             code: `#This is a comment
-      #written in
-      #more than just one line
-      print("Hello, World!")`,
+        #written in
+        #more than just one line
+        print("Hello, World!")`,
           },
         ],
         sol2: `Or, not quite as intended, you can use a multiline string.
-      
-      Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:`,
+        
+        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:`,
         code2: [
           {
             code: `"""
-      This is a comment
-      written in
-      more than just one line
-      """
-      print("Hello, World!")`,
+        This is a comment
+        written in
+        more than just one line
+        """
+        print("Hello, World!")`,
           },
         ],
         sol3: `As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment.
-      
-      `,
+        
+        `,
       },
     ],
   },
@@ -327,22 +327,22 @@ const PythonData = {
       {
         Ques: "Creating Variables",
         sol1: `Python has no command for declaring a variable.
-      
-      A variable is created the moment you first assign a value to it.`,
+        
+        A variable is created the moment you first assign a value to it.`,
         code1: [
           {
             code: `x = 5
-      y = "John"
-      print(x)
-      print(y)`,
+        y = "John"
+        print(x)
+        print(y)`,
           },
         ],
         sol2: `Variables do not need to be declared with any particular type, and can even change type after they have been set.`,
         code2: [
           {
             code: `x = 4       # x is of type int
-      x = "Sally"     # x is now of type str
-      print(x)`,
+        x = "Sally"     # x is now of type str
+        print(x)`,
           },
         ],
       },
@@ -352,8 +352,8 @@ const PythonData = {
         code1: [
           {
             code: `x = str(3)    # x will be '3'
-      y = int(3)    # y will be 3
-      z = float(3)  # z will be 3.0`,
+        y = int(3)    # y will be 3
+        z = float(3)  # z will be 3.0`,
           },
         ],
       },
@@ -363,9 +363,9 @@ const PythonData = {
         code1: [
           {
             code: `x = 5
-      y = "John"
-      print(type(x))
-      print(type(y))`,
+        y = "John"
+        print(type(x))
+        print(type(y))`,
           },
         ],
         sol2: `You will learn more about data types and casting later in this tutorial.`,
@@ -376,8 +376,8 @@ const PythonData = {
         code1: [
           {
             code: `x = "John"
-      # is the same as
-      x = 'John'`,
+        # is the same as
+        x = 'John'`,
           },
         ],
       },
@@ -387,8 +387,8 @@ const PythonData = {
         code1: [
           {
             code: `a = 4
-      A = "Sally"
-      # A will not overwrite a`,
+        A = "Sally"
+        # A will not overwrite a`,
           },
         ],
       },
@@ -406,28 +406,28 @@ const PythonData = {
         code1: [
           {
             code: `# Text Type
-      str
-      
-      # Numeric Types
-      int, float, complex
-      
-      # Sequence Types
-      list, tuple, range
-      
-      # Mapping Type
-      dict
-      
-      # Set Types
-      set, frozenset
-      
-      # Boolean Type
-      bool
-      
-      # Binary Types
-      bytes, bytearray, memoryview
-      
-      # None Type
-      NoneType`,
+        str
+        
+        # Numeric Types
+        int, float, complex
+        
+        # Sequence Types
+        list, tuple, range
+        
+        # Mapping Type
+        dict
+        
+        # Set Types
+        set, frozenset
+        
+        # Boolean Type
+        bool
+        
+        # Binary Types
+        bytes, bytearray, memoryview
+        
+        # None Type
+        NoneType`,
           },
         ],
       },
@@ -437,7 +437,7 @@ const PythonData = {
         code1: [
           {
             code: `x = 5
-      print(type(x))  # Output: <class 'int'>`,
+        print(type(x))  # Output: <class 'int'>`,
           },
         ],
       },
@@ -447,20 +447,20 @@ const PythonData = {
         code1: [
           {
             code: `x = "Hello World"    # str
-      x = 20                 # int
-      x = 20.5               # float
-      x = 1j                 # complex
-      x = ["apple", "banana", "cherry"]  # list
-      x = ("apple", "banana", "cherry")  # tuple
-      x = range(6)           # range
-      x = {"name" : "John", "age" : 36}  # dict
-      x = {"apple", "banana", "cherry"}  # set
-      x = frozenset({"apple", "banana", "cherry"})  # frozenset
-      x = True               # bool
-      x = b"Hello"           # bytes
-      x = bytearray(5)       # bytearray
-      x = memoryview(bytes(5))  # memoryview
-      x = None               # NoneType`,
+        x = 20                 # int
+        x = 20.5               # float
+        x = 1j                 # complex
+        x = ["apple", "banana", "cherry"]  # list
+        x = ("apple", "banana", "cherry")  # tuple
+        x = range(6)           # range
+        x = {"name" : "John", "age" : 36}  # dict
+        x = {"apple", "banana", "cherry"}  # set
+        x = frozenset({"apple", "banana", "cherry"})  # frozenset
+        x = True               # bool
+        x = b"Hello"           # bytes
+        x = bytearray(5)       # bytearray
+        x = memoryview(bytes(5))  # memoryview
+        x = None               # NoneType`,
           },
         ],
       },
@@ -470,19 +470,19 @@ const PythonData = {
         code1: [
           {
             code: `x = str("Hello World")        # str
-      x = int(20)                     # int
-      x = float(20.5)                 # float
-      x = complex(1j)                 # complex
-      x = list(("apple", "banana", "cherry"))  # list
-      x = tuple(("apple", "banana", "cherry")) # tuple
-      x = range(6)                    # range
-      x = dict(name="John", age=36)   # dict
-      x = set(("apple", "banana", "cherry"))  # set
-      x = frozenset(("apple", "banana", "cherry"))  # frozenset
-      x = bool(5)                     # bool
-      x = bytes(5)                    # bytes
-      x = bytearray(5)                # bytearray
-      x = memoryview(bytes(5))        # memoryview`,
+        x = int(20)                     # int
+        x = float(20.5)                 # float
+        x = complex(1j)                 # complex
+        x = list(("apple", "banana", "cherry"))  # list
+        x = tuple(("apple", "banana", "cherry")) # tuple
+        x = range(6)                    # range
+        x = dict(name="John", age=36)   # dict
+        x = set(("apple", "banana", "cherry"))  # set
+        x = frozenset(("apple", "banana", "cherry"))  # frozenset
+        x = bool(5)                     # bool
+        x = bytes(5)                    # bytes
+        x = bytearray(5)                # bytearray
+        x = memoryview(bytes(5))        # memoryview`,
           },
         ],
       },
@@ -1068,7 +1068,7 @@ const PythonData = {
         code1: [
           {
             code: `thislist = ["apple", "banana", "cherry"]
-      print(thislist)`,
+        print(thislist)`,
           },
         ],
       },
@@ -1078,7 +1078,7 @@ const PythonData = {
         code1: [
           {
             code: `thislist = ["apple", "banana", "cherry", "apple", "cherry"]
-      print(thislist)`,
+        print(thislist)`,
           },
         ],
       },
@@ -1088,7 +1088,7 @@ const PythonData = {
         code1: [
           {
             code: `thislist = ["apple", "banana", "cherry"]
-      print(len(thislist))`,
+        print(len(thislist))`,
           },
         ],
       },
@@ -1098,11 +1098,11 @@ const PythonData = {
         code1: [
           {
             code: `list1 = ["apple", "banana", "cherry"]
-      list2 = [1, 5, 7, 9, 3]
-      list3 = [True, False, False]
-      
-      # A list can contain different data types:
-      list1 = ["abc", 34, True, 40, "male"]`,
+        list2 = [1, 5, 7, 9, 3]
+        list3 = [True, False, False]
+        
+        # A list can contain different data types:
+        list1 = ["abc", 34, True, 40, "male"]`,
           },
         ],
       },
@@ -1112,7 +1112,7 @@ const PythonData = {
         code1: [
           {
             code: `mylist = ["apple", "banana", "cherry"]
-      print(type(mylist))  # Output: <class 'list'>`,
+        print(type(mylist))  # Output: <class 'list'>`,
           },
         ],
       },
@@ -1122,7 +1122,7 @@ const PythonData = {
         code1: [
           {
             code: `thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
-      print(thislist)`,
+        print(thislist)`,
           },
         ],
       },
@@ -1132,16 +1132,16 @@ const PythonData = {
         code1: [
           {
             code: `# List - Ordered, Changeable, Allows Duplicates
-      list1 = ["apple", "banana", "cherry"]
-      
-      # Tuple - Ordered, Unchangeable, Allows Duplicates
-      tuple1 = ("apple", "banana", "cherry")
-      
-      # Set - Unordered, Unchangeable, No Duplicates
-      set1 = {"apple", "banana", "cherry"}
-      
-      # Dictionary - Ordered, Changeable, No Duplicates
-      dict1 = {"name": "John", "age": 36}`,
+        list1 = ["apple", "banana", "cherry"]
+        
+        # Tuple - Ordered, Unchangeable, Allows Duplicates
+        tuple1 = ("apple", "banana", "cherry")
+        
+        # Set - Unordered, Unchangeable, No Duplicates
+        set1 = {"apple", "banana", "cherry"}
+        
+        # Dictionary - Ordered, Changeable, No Duplicates
+        dict1 = {"name": "John", "age": 36}`,
           },
         ],
       },
@@ -1159,7 +1159,7 @@ const PythonData = {
         code1: [
           {
             code: `thistuple = ("apple", "banana", "cherry")
-      print(thistuple)`,
+        print(thistuple)`,
           },
         ],
       },
@@ -1169,7 +1169,7 @@ const PythonData = {
         code1: [
           {
             code: `thistuple = ("apple", "banana", "cherry", "apple", "cherry")
-      print(thistuple)`,
+        print(thistuple)`,
           },
         ],
       },
@@ -1179,7 +1179,7 @@ const PythonData = {
         code1: [
           {
             code: `thistuple = ("apple", "banana", "cherry")
-      print(len(thistuple))`,
+        print(len(thistuple))`,
           },
         ],
       },
@@ -1189,11 +1189,11 @@ const PythonData = {
         code1: [
           {
             code: `thistuple = ("apple",)
-      print(type(thistuple))  # Output: <class 'tuple'>
-      
-      # NOT a tuple
-      thistuple = ("apple")
-      print(type(thistuple))  # Output: <class 'str'>`,
+        print(type(thistuple))  # Output: <class 'tuple'>
+        
+        # NOT a tuple
+        thistuple = ("apple")
+        print(type(thistuple))  # Output: <class 'str'>`,
           },
         ],
       },
@@ -1203,11 +1203,11 @@ const PythonData = {
         code1: [
           {
             code: `tuple1 = ("apple", "banana", "cherry")
-      tuple2 = (1, 5, 7, 9, 3)
-      tuple3 = (True, False, False)
-      
-      # A tuple can contain different data types:
-      tuple1 = ("abc", 34, True, 40, "male")`,
+        tuple2 = (1, 5, 7, 9, 3)
+        tuple3 = (True, False, False)
+        
+        # A tuple can contain different data types:
+        tuple1 = ("abc", 34, True, 40, "male")`,
           },
         ],
       },
@@ -1217,7 +1217,7 @@ const PythonData = {
         code1: [
           {
             code: `mytuple = ("apple", "banana", "cherry")
-      print(type(mytuple))  # Output: <class 'tuple'>`,
+        print(type(mytuple))  # Output: <class 'tuple'>`,
           },
         ],
       },
@@ -1227,7 +1227,7 @@ const PythonData = {
         code1: [
           {
             code: `thistuple = tuple(("apple", "banana", "cherry"))  # note the double round-brackets
-      print(thistuple)`,
+        print(thistuple)`,
           },
         ],
       },
@@ -1237,16 +1237,16 @@ const PythonData = {
         code1: [
           {
             code: `# List - Ordered, Changeable, Allows Duplicates
-      list1 = ["apple", "banana", "cherry"]
-      
-      # Tuple - Ordered, Unchangeable, Allows Duplicates
-      tuple1 = ("apple", "banana", "cherry")
-      
-      # Set - Unordered, Unchangeable, No Duplicates
-      set1 = {"apple", "banana", "cherry"}
-      
-      # Dictionary - Ordered, Changeable, No Duplicates
-      dict1 = {"name": "John", "age": 36}`,
+        list1 = ["apple", "banana", "cherry"]
+        
+        # Tuple - Ordered, Unchangeable, Allows Duplicates
+        tuple1 = ("apple", "banana", "cherry")
+        
+        # Set - Unordered, Unchangeable, No Duplicates
+        set1 = {"apple", "banana", "cherry"}
+        
+        # Dictionary - Ordered, Changeable, No Duplicates
+        dict1 = {"name": "John", "age": 36}`,
           },
         ],
       },
@@ -1264,27 +1264,27 @@ const PythonData = {
         code1: [
           {
             code: `thisset = {"apple", "banana", "cherry"}
-      print(thisset)`,
+        print(thisset)`,
           },
         ],
       },
       {
         Ques: "Set Items - Unordered, Unchangeable, and No Duplicates",
         sol1: `Set items are unordered, unchangeable, and do not allow duplicate values. 
-      You cannot refer to items by index or key, and duplicate items will be automatically removed.`,
+        You cannot refer to items by index or key, and duplicate items will be automatically removed.`,
         code1: [
           {
             code: `# Duplicates will be ignored
-      thisset = {"apple", "banana", "cherry", "apple"}
-      print(thisset)  # Output will be: {"apple", "banana", "cherry"}`,
+        thisset = {"apple", "banana", "cherry", "apple"}
+        print(thisset)  # Output will be: {"apple", "banana", "cherry"}`,
 
             code: `# True and 1 are considered the same in sets
-      thisset = {"apple", "banana", "cherry", True, 1, 2}
-      print(thisset)  # Output will be: {"apple", "banana", "cherry", True, 2}`,
+        thisset = {"apple", "banana", "cherry", True, 1, 2}
+        print(thisset)  # Output will be: {"apple", "banana", "cherry", True, 2}`,
 
             code: `# False and 0 are considered the same in sets
-      thisset = {"apple", "banana", "cherry", False, True, 0}
-      print(thisset)  # Output will be: {"apple", "banana", "cherry", False, True}`,
+        thisset = {"apple", "banana", "cherry", False, True, 0}
+        print(thisset)  # Output will be: {"apple", "banana", "cherry", False, True}`,
           },
         ],
       },
@@ -1294,7 +1294,7 @@ const PythonData = {
         code1: [
           {
             code: `thisset = {"apple", "banana", "cherry"}
-      print(len(thisset))  # Output will be: 3`,
+        print(len(thisset))  # Output will be: 3`,
           },
         ],
       },
@@ -1304,11 +1304,11 @@ const PythonData = {
         code1: [
           {
             code: `set1 = {"apple", "banana", "cherry"}
-      set2 = {1, 5, 7, 9, 3}
-      set3 = {True, False, False}
-      
-      # A set can contain different data types:
-      set1 = {"abc", 34, True, 40, "male"}`,
+        set2 = {1, 5, 7, 9, 3}
+        set3 = {True, False, False}
+        
+        # A set can contain different data types:
+        set1 = {"abc", 34, True, 40, "male"}`,
           },
         ],
       },
@@ -1318,7 +1318,7 @@ const PythonData = {
         code1: [
           {
             code: `myset = {"apple", "banana", "cherry"}
-      print(type(myset))  # Output: <class 'set'>`,
+        print(type(myset))  # Output: <class 'set'>`,
           },
         ],
       },
@@ -1328,7 +1328,7 @@ const PythonData = {
         code1: [
           {
             code: `thisset = set(("apple", "banana", "cherry"))  # note the double round-brackets
-      print(thisset)`,
+        print(thisset)`,
           },
         ],
       },
@@ -1338,16 +1338,16 @@ const PythonData = {
         code1: [
           {
             code: `# List - Ordered, Changeable, Allows Duplicates
-      list1 = ["apple", "banana", "cherry"]
-      
-      # Tuple - Ordered, Unchangeable, Allows Duplicates
-      tuple1 = ("apple", "banana", "cherry")
-      
-      # Set - Unordered, Unchangeable*, No Duplicates
-      set1 = {"apple", "banana", "cherry"}
-      
-      # Dictionary - Ordered**, Changeable, No Duplicates
-      dict1 = {"name": "John", "age": 36}`,
+        list1 = ["apple", "banana", "cherry"]
+        
+        # Tuple - Ordered, Unchangeable, Allows Duplicates
+        tuple1 = ("apple", "banana", "cherry")
+        
+        # Set - Unordered, Unchangeable*, No Duplicates
+        set1 = {"apple", "banana", "cherry"}
+        
+        # Dictionary - Ordered**, Changeable, No Duplicates
+        dict1 = {"name": "John", "age": 36}`,
           },
         ],
       },
@@ -1365,11 +1365,11 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      print(thisdict)`,
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        print(thisdict)`,
           },
         ],
       },
@@ -1379,11 +1379,11 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      print(thisdict["brand"])  # Output: Ford`,
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        print(thisdict["brand"])  # Output: Ford`,
           },
         ],
       },
@@ -1393,12 +1393,12 @@ const PythonData = {
         code1: [
           {
             code: `# In Python 3.7 and later, dictionary order is maintained
-      thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      print(thisdict)`,
+        thisdict = {
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        print(thisdict)`,
           },
         ],
       },
@@ -1408,13 +1408,13 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      thisdict["year"] = 2020  # Modify value
-      thisdict["color"] = "red"  # Add new item
-      print(thisdict)`,
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        thisdict["year"] = 2020  # Modify value
+        thisdict["color"] = "red"  # Add new item
+        print(thisdict)`,
           },
         ],
       },
@@ -1424,12 +1424,12 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964,
-        "year": 2020  # Duplicates are overwritten
-      }
-      print(thisdict)`, // Output will be: { "brand": "Ford", "model": "Mustang", "year": 2020 }
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964,
+          "year": 2020  # Duplicates are overwritten
+        }
+        print(thisdict)`, // Output will be: { "brand": "Ford", "model": "Mustang", "year": 2020 }
           },
         ],
       },
@@ -1439,11 +1439,11 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      print(len(thisdict))  # Output: 3`,
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        print(len(thisdict))  # Output: 3`,
           },
         ],
       },
@@ -1453,12 +1453,12 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "electric": False,
-        "year": 1964,
-        "colors": ["red", "white", "blue"]
-      }
-      print(thisdict)`,
+          "brand": "Ford",
+          "electric": False,
+          "year": 1964,
+          "colors": ["red", "white", "blue"]
+        }
+        print(thisdict)`,
           },
         ],
       },
@@ -1468,11 +1468,11 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-      }
-      print(type(thisdict))  # Output: <class 'dict'>`,
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": 1964
+        }
+        print(type(thisdict))  # Output: <class 'dict'>`,
           },
         ],
       },
@@ -1482,7 +1482,7 @@ const PythonData = {
         code1: [
           {
             code: `thisdict = dict(name="John", age=36, country="Norway")
-      print(thisdict)`,
+        print(thisdict)`,
           },
         ],
       },
@@ -1492,16 +1492,16 @@ const PythonData = {
         code1: [
           {
             code: `# List - Ordered, Changeable, Allows Duplicates
-      list1 = ["apple", "banana", "cherry"]
-      
-      # Tuple - Ordered, Unchangeable, Allows Duplicates
-      tuple1 = ("apple", "banana", "cherry")
-      
-      # Set - Unordered, Unchangeable*, No Duplicates
-      set1 = {"apple", "banana", "cherry"}
-      
-      # Dictionary - Ordered**, Changeable, No Duplicates
-      dict1 = {"name": "John", "age": 36, "country": "Norway"}`,
+        list1 = ["apple", "banana", "cherry"]
+        
+        # Tuple - Ordered, Unchangeable, Allows Duplicates
+        tuple1 = ("apple", "banana", "cherry")
+        
+        # Set - Unordered, Unchangeable*, No Duplicates
+        set1 = {"apple", "banana", "cherry"}
+        
+        # Dictionary - Ordered**, Changeable, No Duplicates
+        dict1 = {"name": "John", "age": 36, "country": "Norway"}`,
           },
         ],
       },
@@ -1644,9 +1644,9 @@ const PythonData = {
         code1: [
           {
             code: `i = 1
-    while i < 6:
-      print(i)
-      i += 1`,
+      while i < 6:
+        print(i)
+        i += 1`,
           },
         ],
         sol2: "Note: remember to increment i, or else the loop will continue forever.",
@@ -1657,11 +1657,11 @@ const PythonData = {
         code1: [
           {
             code: `i = 1
-    while i < 6:
-      print(i)
-      if i == 3:
-        break
-      i += 1`,
+      while i < 6:
+        print(i)
+        if i == 3:
+          break
+        i += 1`,
           },
         ],
       },
@@ -1671,11 +1671,11 @@ const PythonData = {
         code1: [
           {
             code: `i = 0
-    while i < 6:
-      i += 1
-      if i == 3:
-        continue
-      print(i)`,
+      while i < 6:
+        i += 1
+        if i == 3:
+          continue
+        print(i)`,
           },
         ],
       },
@@ -1685,11 +1685,11 @@ const PythonData = {
         code1: [
           {
             code: `i = 1
-    while i < 6:
-      print(i)
-      i += 1
-    else:
-      print("i is no longer less than 6")`,
+      while i < 6:
+        print(i)
+        i += 1
+      else:
+        print("i is no longer less than 6")`,
           },
         ],
       },
@@ -1709,8 +1709,8 @@ const PythonData = {
         code1: [
           {
             code: `fruits = ["apple", "banana", "cherry"]
-    for x in fruits:
-      print(x)`,
+      for x in fruits:
+        print(x)`,
           },
         ],
         sol4: "The for loop does not require an indexing variable to set beforehand.",
@@ -1721,7 +1721,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in "banana":
-      print(x)`,
+        print(x)`,
           },
         ],
       },
@@ -1731,10 +1731,10 @@ const PythonData = {
         code1: [
           {
             code: `fruits = ["apple", "banana", "cherry"]
-    for x in fruits:
-      print(x)
-      if x == "banana":
-        break`,
+      for x in fruits:
+        print(x)
+        if x == "banana":
+          break`,
           },
         ],
         sol2: "Exit the loop when x is 'banana'.",
@@ -1745,10 +1745,10 @@ const PythonData = {
         code1: [
           {
             code: `fruits = ["apple", "banana", "cherry"]
-    for x in fruits:
-      if x == "banana":
-        break
-      print(x)`,
+      for x in fruits:
+        if x == "banana":
+          break
+        print(x)`,
           },
         ],
       },
@@ -1758,10 +1758,10 @@ const PythonData = {
         code1: [
           {
             code: `fruits = ["apple", "banana", "cherry"]
-    for x in fruits:
-      if x == "banana":
-        continue
-      print(x)`,
+      for x in fruits:
+        if x == "banana":
+          continue
+        print(x)`,
           },
         ],
         sol2: "Do not print 'banana'.",
@@ -1773,7 +1773,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in range(6):
-      print(x)`,
+        print(x)`,
           },
         ],
         sol3: "Note that range(6) is not the values of 0 to 6, but the values 0 to 5.",
@@ -1784,7 +1784,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in range(2, 6):
-      print(x)`,
+        print(x)`,
           },
         ],
       },
@@ -1794,7 +1794,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in range(2, 30, 3):
-      print(x)`,
+        print(x)`,
           },
         ],
       },
@@ -1804,9 +1804,9 @@ const PythonData = {
         code1: [
           {
             code: `for x in range(6):
-      print(x)
-    else:
-      print("Finally finished!")`,
+        print(x)
+      else:
+        print("Finally finished!")`,
           },
         ],
         sol2: "Note: The else block will NOT be executed if the loop is stopped by a break statement.",
@@ -1817,10 +1817,10 @@ const PythonData = {
         code1: [
           {
             code: `for x in range(6):
-      if x == 3: break
-      print(x)
-    else:
-      print("Finally finished!")`,
+        if x == 3: break
+        print(x)
+      else:
+        print("Finally finished!")`,
           },
         ],
       },
@@ -1831,11 +1831,11 @@ const PythonData = {
         code1: [
           {
             code: `adj = ["red", "big", "tasty"]
-    fruits = ["apple", "banana", "cherry"]
-    
-    for x in adj:
-      for y in fruits:
-        print(x, y)`,
+      fruits = ["apple", "banana", "cherry"]
+      
+      for x in adj:
+        for y in fruits:
+          print(x, y)`,
           },
         ],
       },
@@ -1845,7 +1845,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in [0, 1, 2]:
-      pass`,
+        pass`,
           },
         ],
       },
@@ -1863,7 +1863,7 @@ const PythonData = {
         code1: [
           {
             code: `def my_function():
-      print("Hello from a function")`,
+        print("Hello from a function")`,
           },
         ],
       },
@@ -1873,9 +1873,9 @@ const PythonData = {
         code1: [
           {
             code: `def my_function():
-      print("Hello from a function")
-    
-    my_function()`,
+        print("Hello from a function")
+      
+      my_function()`,
           },
         ],
       },
@@ -1887,11 +1887,11 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(fname):
-      print(fname + " Refsnes")
-    
-    my_function("Emil")
-    my_function("Tobias")
-    my_function("Linus")`,
+        print(fname + " Refsnes")
+      
+      my_function("Emil")
+      my_function("Tobias")
+      my_function("Linus")`,
           },
         ],
       },
@@ -1908,18 +1908,18 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(fname, lname):
-      print(fname + " " + lname)
-    
-    my_function("Emil", "Refsnes")`,
+        print(fname + " " + lname)
+      
+      my_function("Emil", "Refsnes")`,
           },
         ],
         sol2: "If you try to call the function with 1 or 3 arguments, you will get an error:",
         code2: [
           {
             code: `def my_function(fname, lname):
-      print(fname + " " + lname)
-    
-    my_function("Emil")`,
+        print(fname + " " + lname)
+      
+      my_function("Emil")`,
           },
         ],
       },
@@ -1930,9 +1930,9 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(*kids):
-      print("The youngest child is " + kids[2])
-    
-    my_function("Emil", "Tobias", "Linus")`,
+        print("The youngest child is " + kids[2])
+      
+      my_function("Emil", "Tobias", "Linus")`,
           },
         ],
       },
@@ -1943,9 +1943,9 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(child3, child2, child1):
-      print("The youngest child is " + child3)
-    
-    my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")`,
+        print("The youngest child is " + child3)
+      
+      my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")`,
           },
         ],
       },
@@ -1956,9 +1956,9 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(**kid):
-      print("His last name is " + kid["lname"])
-    
-    my_function(fname = "Tobias", lname = "Refsnes")`,
+        print("His last name is " + kid["lname"])
+      
+      my_function(fname = "Tobias", lname = "Refsnes")`,
           },
         ],
       },
@@ -1969,12 +1969,12 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(country = "Norway"):
-      print("I am from " + country)
-    
-    my_function("Sweden")
-    my_function("India")
-    my_function()
-    my_function("Brazil")`,
+        print("I am from " + country)
+      
+      my_function("Sweden")
+      my_function("India")
+      my_function()
+      my_function("Brazil")`,
           },
         ],
       },
@@ -1985,12 +1985,12 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(food):
-      for x in food:
-        print(x)
-    
-    fruits = ["apple", "banana", "cherry"]
-    
-    my_function(fruits)`,
+        for x in food:
+          print(x)
+      
+      fruits = ["apple", "banana", "cherry"]
+      
+      my_function(fruits)`,
           },
         ],
       },
@@ -2000,11 +2000,11 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(x):
-      return 5 * x
-    
-    print(my_function(3))
-    print(my_function(5))
-    print(my_function(9))`,
+        return 5 * x
+      
+      print(my_function(3))
+      print(my_function(5))
+      print(my_function(9))`,
           },
         ],
       },
@@ -2014,7 +2014,7 @@ const PythonData = {
         code1: [
           {
             code: `def myfunction():
-      pass`,
+        pass`,
           },
         ],
       },
@@ -2025,27 +2025,27 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(x, /):
-      print(x)
-    
-    my_function(3)`,
+        print(x)
+      
+      my_function(3)`,
           },
         ],
         sol3: "Without the , / you are actually allowed to use keyword arguments even if the function expects positional arguments:",
         code2: [
           {
             code: `def my_function(x):
-      print(x)
-    
-    my_function(x = 3)`,
+        print(x)
+      
+      my_function(x = 3)`,
           },
         ],
         sol4: "But when adding the , / you will get an error if you try to send a keyword argument:",
         code3: [
           {
             code: `def my_function(x, /):
-      print(x)
-    
-    my_function(x = 3)`,
+        print(x)
+      
+      my_function(x = 3)`,
           },
         ],
       },
@@ -2055,27 +2055,27 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(*, x):
-      print(x)
-    
-    my_function(x = 3)`,
+        print(x)
+      
+      my_function(x = 3)`,
           },
         ],
         sol2: "Without the *, you are allowed to use positional arguments even if the function expects keyword arguments:",
         code2: [
           {
             code: `def my_function(x):
-      print(x)
-    
-    my_function(3)`,
+        print(x)
+      
+      my_function(3)`,
           },
         ],
         sol3: "But with the *, you will get an error if you try to send a positional argument:",
         code3: [
           {
             code: `def my_function(*, x):
-      print(x)
-    
-    my_function(3)`,
+        print(x)
+      
+      my_function(3)`,
           },
         ],
       },
@@ -2086,9 +2086,9 @@ const PythonData = {
         code1: [
           {
             code: `def my_function(a, b, /, *, c, d):
-      print(a + b + c + d)
-    
-    my_function(5, 6, c = 7, d = 8)`,
+        print(a + b + c + d)
+      
+      my_function(5, 6, c = 7, d = 8)`,
           },
         ],
       },
@@ -2101,15 +2101,15 @@ const PythonData = {
         code1: [
           {
             code: `def tri_recursion(k):
-      if(k > 0):
-        result = k + tri_recursion(k - 1)
-        print(result)
-      else:
-        result = 0
-      return result
-    
-    print("Recursion Example Results:")
-    tri_recursion(6)`,
+        if(k > 0):
+          result = k + tri_recursion(k - 1)
+          print(result)
+        else:
+          result = 0
+        return result
+      
+      print("Recursion Example Results:")
+      tri_recursion(6)`,
           },
         ],
       },
@@ -2127,7 +2127,7 @@ const PythonData = {
         code1: [
           {
             code: `x = lambda a : a + 10
-    print(x(5))`,
+      print(x(5))`,
           },
         ],
       },
@@ -2137,7 +2137,7 @@ const PythonData = {
         code1: [
           {
             code: `x = lambda a, b : a * b
-    print(x(5, 6))`,
+      print(x(5, 6))`,
           },
         ],
       },
@@ -2147,7 +2147,7 @@ const PythonData = {
         code1: [
           {
             code: `x = lambda a, b, c : a + b + c
-    print(x(5, 6, 2))`,
+      print(x(5, 6, 2))`,
           },
         ],
       },
@@ -2158,33 +2158,33 @@ const PythonData = {
         code1: [
           {
             code: `def myfunc(n):
-      return lambda a : a * n`,
+        return lambda a : a * n`,
           },
         ],
         sol3: "Use that function definition to make a function that always doubles the number you send in:",
         code2: [
           {
             code: `mydoubler = myfunc(2)
-    
-    print(mydoubler(11))`,
+      
+      print(mydoubler(11))`,
           },
         ],
         sol4: "Or, use the same function definition to make a function that always triples the number you send in:",
         code3: [
           {
             code: `mytripler = myfunc(3)
-    
-    print(mytripler(11))`,
+      
+      print(mytripler(11))`,
           },
         ],
         sol5: "Or, use the same function definition to make both functions, in the same program:",
         code4: [
           {
             code: `mydoubler = myfunc(2)
-    mytripler = myfunc(3)
-    
-    print(mydoubler(11))
-    print(mytripler(11))`,
+      mytripler = myfunc(3)
+      
+      print(mydoubler(11))
+      print(mytripler(11))`,
           },
         ],
       },
@@ -2216,8 +2216,8 @@ const PythonData = {
         code1: [
           {
             code: `car1 = "Ford"
-    car2 = "Volvo"
-    car3 = "BMW"`,
+      car2 = "Volvo"
+      car3 = "BMW"`,
           },
         ],
         sol3: "However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?",
@@ -2255,7 +2255,7 @@ const PythonData = {
         code1: [
           {
             code: `for x in cars:
-      print(x)`,
+        print(x)`,
           },
         ],
       },
@@ -2895,35 +2895,35 @@ const PythonData = {
         code1: [
           {
             code: `
-    %a  -> Weekday, short version  (e.g. Wed)
-    %A  -> Weekday, full version  (e.g. Wednesday)
-    %w  -> Weekday as a number 0-6, 0 is Sunday
-    %d  -> Day of month 01-31
-    %b  -> Month name, short version  (e.g. Dec)
-    %B  -> Month name, full version  (e.g. December)
-    %m  -> Month as a number 01-12
-    %y  -> Year, short version, without century  (e.g. 18)
-    %Y  -> Year, full version  (e.g. 2018)
-    %H  -> Hour 00-23
-    %I  -> Hour 00-12
-    %p  -> AM/PM
-    %M  -> Minute 00-59
-    %S  -> Second 00-59
-    %f  -> Microsecond 000000-999999
-    %z  -> UTC offset +0100
-    %Z  -> Timezone  (e.g. CST)
-    %j  -> Day number of year 001-366
-    %U  -> Week number of year, Sunday as the first day of week, 00-53
-    %W  -> Week number of year, Monday as the first day of week, 00-53
-    %c  -> Local version of date and time (e.g. Mon Dec 31 17:41:00 2018)
-    %C  -> Century  (e.g. 20)
-    %x  -> Local version of date (e.g. 12/31/18)
-    %X  -> Local version of time (e.g. 17:41:00)
-    %%  -> A % character  (%)
-    %G  -> ISO 8601 year
-    %u  -> ISO 8601 weekday (1-7)
-    %V  -> ISO 8601 weeknumber (01-53)
-                `,
+      %a  -> Weekday, short version  (e.g. Wed)
+      %A  -> Weekday, full version  (e.g. Wednesday)
+      %w  -> Weekday as a number 0-6, 0 is Sunday
+      %d  -> Day of month 01-31
+      %b  -> Month name, short version  (e.g. Dec)
+      %B  -> Month name, full version  (e.g. December)
+      %m  -> Month as a number 01-12
+      %y  -> Year, short version, without century  (e.g. 18)
+      %Y  -> Year, full version  (e.g. 2018)
+      %H  -> Hour 00-23
+      %I  -> Hour 00-12
+      %p  -> AM/PM
+      %M  -> Minute 00-59
+      %S  -> Second 00-59
+      %f  -> Microsecond 000000-999999
+      %z  -> UTC offset +0100
+      %Z  -> Timezone  (e.g. CST)
+      %j  -> Day number of year 001-366
+      %U  -> Week number of year, Sunday as the first day of week, 00-53
+      %W  -> Week number of year, Monday as the first day of week, 00-53
+      %c  -> Local version of date and time (e.g. Mon Dec 31 17:41:00 2018)
+      %C  -> Century  (e.g. 20)
+      %x  -> Local version of date (e.g. 12/31/18)
+      %X  -> Local version of time (e.g. 17:41:00)
+      %%  -> A % character  (%)
+      %G  -> ISO 8601 year
+      %u  -> ISO 8601 weekday (1-7)
+      %V  -> ISO 8601 weeknumber (01-53)
+                  `,
           },
         ],
       },
@@ -3492,242 +3492,242 @@ const PythonData = {
   /*****************************************************************************************************/
 
   "Python Home": `
-     <div class="p-4 border-2  rounded-lg dark:border-gray-700">
-  
-           <!-- Into HEad -->
-           <div class="flex flex-col items-center justify-center p-12 h-[70vh] mb-4 rounded  dark:bg-gray-800">
-              <h1 id="title"
-                 class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
-                 Learn Python and More</h1>
-              <p id="subtitle"
-                 class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
-                 Learn Python with our multilingual compiler and leverage your skills to shape the future. This
-                 documentation provides a hands-on approach to mastering any language effortlessly.</p>
-              <a href="#"
-                 class="inline-flex items-center justify-center px-5 py-3 mb-10 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                 Learn more
-                 <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                       d="M1 5h12m0 0L9 1m4 4L9 9" />
-                 </svg>
-              </a>
-           </div>
-           <!-- navigation button -->
-           <div class="navigation flex  ">
-              <!-- Previous Button -->
-              <a href="#"
-                 class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                 Home
-              </a>
-              <!-- Next Button -->
-              <a href="#"
-                 class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                 Previous
-              </a>
-           </div>
-           <!-- Into Card -->
-           <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
-  
-              <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white" id="title">Learn Python</h1>
-  
-              <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400" id="subtitle">Python is a popular
-                 programming language.</p>
-              <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
-  
-  
-              <button type="button"
-                 class="text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                 Start Learning
-                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                       d="M1 5h12m0 0L9 1m4 4L9 9" />
-                 </svg>
-              </button>
-           </div>
-  
-           <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-  
-           <div class="py-6 px-4 flex flex-col justify-center gap-4  h-auto mb-4   dark:bg-gray-800">
-              <h2 class="text-3xl font-extrabold text-gray-300 dark:text-white">Learning by Examples</h2>
-              <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and
-                 view the result.</p>
-  
-              <!-- terminals -->
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
-                 <div
-                    class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                    <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
-                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                       type="button">Python
-                       <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                          viewBox="0 0 10 6">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                             d="m1 1 4 4 4-4" />
-                       </svg>
-                    </button>
-  
-  
-                    <!-- Dropdown menu -->
-                    <div id="dropdownHover"
-                       class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                       <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
-                          aria-labelledby="dropdownHoverButton">
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
-                          </li>
-                       </ul>
-                    </div>
-                    <div
-                       class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                       <pre class="code text-left ">
-  print("Hello world!")
-                 </pre>
-                    </div>
-                    <button type="button"
-                       class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
-                       it out.</button>
-                 </div>
-                 <div
-                    class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                    <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
-                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                       type="button">JavaScript <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                             d="m1 1 4 4 4-4" />
-                       </svg>
-                    </button>
-  
-                    <!-- Dropdown menu -->
-                    <div id="dropdownHover"
-                       class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                       <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
-                          aria-labelledby="dropdownHoverButton">
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
-                          </li>
-                          <li>
-                             <a href="#"
-                                class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
-                          </li>
-                       </ul>
-                    </div>
-                    <div
-                       class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                       <pre class="code text-left ">
-  print("Hello world!")
-                 </pre>
-                    </div>
-                    <button type="button"
-                       class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
-                       it out.</button>
-                 </div>
-              </div>
-           </div>
-  
-           <hr class="h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
-           <!-- -----Content ----- -->
-           <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
-              <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python File Handling</h3>
-              <p class="text-gray-200 dark:text-gray-400">In our File Handling section you will learn how to open, read,
-                 write, and delete files.</p>
-              <a href="#"
-                 class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">Phython
-                 File Handling</a>
-           </div>
-  
-           <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-           <!-- -----Content ----- -->
-           <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
-              <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Database Handling</h3>
-              <p class="text-gray-200 dark:text-gray-400">In our database section you will learn how to access and work
-                 with MySQL and MongoDB databases:</p>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Python MySQL Tutorial
-              </a>
-  
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Python MongoDB-Tutorial
-              </a>
-           </div>
-  
-           <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-  
-  
-           <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
-              <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Reference</h3>
-              <p class="text-gray-200 dark:text-gray-400">You will also find complete function and method references:</p>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Reference Overview
-              </a>
-  
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Built-in-Functions
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Strings Methods
-              </a>
-  
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 List/Array Methods
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Dictionay Methods
-              </a>
-  
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Tuple Methods
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Python Exceptions
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Python Keywords
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Python Glossary
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Random Modile
-              </a>
-  
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 Request Modules
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 File Method
-              </a>
-              <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-                 CMath-Module
-              </a>
-           </div>
-  
-        </div>
-    `,
+       <div class="p-4 border-2  rounded-lg dark:border-gray-700">
+    
+             <!-- Into HEad -->
+             <div class="flex flex-col items-center justify-center p-12 h-[70vh] mb-4 rounded  dark:bg-gray-800">
+                <h1 id="title"
+                   class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
+                   Learn Python and More</h1>
+                <p id="subtitle"
+                   class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
+                   Learn Python with our multilingual compiler and leverage your skills to shape the future. This
+                   documentation provides a hands-on approach to mastering any language effortlessly.</p>
+                <a href="#"
+                   class="inline-flex items-center justify-center px-5 py-3 mb-10 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                   Learn more
+                   <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                         d="M1 5h12m0 0L9 1m4 4L9 9" />
+                   </svg>
+                </a>
+             </div>
+             <!-- navigation button -->
+             <div class="navigation flex  ">
+                <!-- Previous Button -->
+                <a href="#"
+                   class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                   Home
+                </a>
+                <!-- Next Button -->
+                <a href="#"
+                   class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                   Previous
+                </a>
+             </div>
+             <!-- Into Card -->
+             <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
+    
+                <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white" id="title">Learn Python</h1>
+    
+                <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400" id="subtitle">Python is a popular
+                   programming language.</p>
+                <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
+    
+    
+                <button type="button"
+                   class="text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                   Start Learning
+                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                         d="M1 5h12m0 0L9 1m4 4L9 9" />
+                   </svg>
+                </button>
+             </div>
+    
+             <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+    
+             <div class="py-6 px-4 flex flex-col justify-center gap-4  h-auto mb-4   dark:bg-gray-800">
+                <h2 class="text-3xl font-extrabold text-gray-300 dark:text-white">Learning by Examples</h2>
+                <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and
+                   view the result.</p>
+    
+                <!-- terminals -->
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+                   <div
+                      class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                      <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                         type="button">Python
+                         <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                               d="m1 1 4 4 4-4" />
+                         </svg>
+                      </button>
+    
+    
+                      <!-- Dropdown menu -->
+                      <div id="dropdownHover"
+                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                         <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
+                            aria-labelledby="dropdownHoverButton">
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                            </li>
+                         </ul>
+                      </div>
+                      <div
+                         class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                         <pre class="code text-left ">
+    print("Hello world!")
+                   </pre>
+                      </div>
+                      <button type="button"
+                         class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
+                         it out.</button>
+                   </div>
+                   <div
+                      class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                      <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                         type="button">JavaScript <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                               d="m1 1 4 4 4-4" />
+                         </svg>
+                      </button>
+    
+                      <!-- Dropdown menu -->
+                      <div id="dropdownHover"
+                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                         <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
+                            aria-labelledby="dropdownHoverButton">
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+                            </li>
+                            <li>
+                               <a href="#"
+                                  class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+                            </li>
+                         </ul>
+                      </div>
+                      <div
+                         class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                         <pre class="code text-left ">
+    print("Hello world!")
+                   </pre>
+                      </div>
+                      <button type="button"
+                         class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
+                         it out.</button>
+                   </div>
+                </div>
+             </div>
+    
+             <hr class="h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
+             <!-- -----Content ----- -->
+             <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
+                <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python File Handling</h3>
+                <p class="text-gray-200 dark:text-gray-400">In our File Handling section you will learn how to open, read,
+                   write, and delete files.</p>
+                <a href="#"
+                   class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">Phython
+                   File Handling</a>
+             </div>
+    
+             <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+             <!-- -----Content ----- -->
+             <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
+                <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Database Handling</h3>
+                <p class="text-gray-200 dark:text-gray-400">In our database section you will learn how to access and work
+                   with MySQL and MongoDB databases:</p>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Python MySQL Tutorial
+                </a>
+    
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Python MongoDB-Tutorial
+                </a>
+             </div>
+    
+             <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
+    
+    
+             <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
+                <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Reference</h3>
+                <p class="text-gray-200 dark:text-gray-400">You will also find complete function and method references:</p>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Reference Overview
+                </a>
+    
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Built-in-Functions
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Strings Methods
+                </a>
+    
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   List/Array Methods
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Dictionay Methods
+                </a>
+    
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Tuple Methods
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Python Exceptions
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Python Keywords
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Python Glossary
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Random Modile
+                </a>
+    
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   Request Modules
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   File Method
+                </a>
+                <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
+                   CMath-Module
+                </a>
+             </div>
+    
+          </div>
+      `,
   /*****************************************************************************************************/
 };
 
@@ -3737,112 +3737,112 @@ const exampleShowCaseMatLang = [
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
   {
     title: "This is the title",
     exp: "This is subheading",
     href: "/docs.html",
     code: `function renderData(id) {
-    if (curRef) {
-      const curRefEle = document.getElementById(curRef);
-      curRefEle.classList.remove("highlight");
-      console.log(id);
-      console.log(curRefEle.innerText);
-    };
-    highlightRef(curRef);
-  }`,
+      if (curRef) {
+        const curRefEle = document.getElementById(curRef);
+        curRefEle.classList.remove("highlight");
+        console.log(id);
+        console.log(curRefEle.innerText);
+      };
+      highlightRef(curRef);
+    }`,
   },
 ];
 
@@ -3888,21 +3888,21 @@ const MatLangData = {
     example: [
       {
         input: `
-        mana age = 25;
-        
-        `,
+      mana age = 25;
+      
+      `,
         output: `
-        let age = 25;
-        `,
+      let age = 25;
+      `,
       },
       {
         input: `
-        mana name = 'John';
-        
-        `,
+      mana name = 'John';
+      
+      `,
         output: `
-        let name = 'John';
-        `,
+      let name = 'John';
+      `,
       },
     ],
   },
@@ -3911,81 +3911,112 @@ const MatLangData = {
     subtitle: "Basic Data Types in MatLang",
     description:
       "MatLang supports several basic data types, including Integer, Float, String, Boolean, and Null.",
-    example: {
-      matlangCode: [
-        "mana a = 10;       // Integer",
-        "mana b = 3.14;     // Float",
-        "mana c = 'Hello';  // String",
-        "mana isTrue = sach; // Boolean",
-        "mana nothing = kuchNahi; // Null",
-      ],
-      javaScriptCode: [
-        "let a = 10;",
-        "let b = 3.14;",
-        "let c = 'Hello';",
-        "let isTrue = true;",
-        "let nothing = null;",
-      ],
-    },
+    example: [
+      {
+        input: `
+  mana a = 10;       // Integer
+  `,
+        output: `
+  let a = 10;
+  `,
+      },
+      {
+        input: `
+  mana b = 3.14;     // Float
+  `,
+        output: `
+  let b = 3.14;
+  `,
+      },
+      {
+        input: `
+  mana c = 'Hello';  // String
+  `,
+        output: `
+  let c = 'Hello';
+  `,
+      },
+      {
+        input: `
+  mana isTrue = sach; // Boolean
+  `,
+        output: `
+  let isTrue = true;
+  `,
+      },
+      {
+        input: `
+  mana nothing = kuchNahi; // Null
+  `,
+        output: `
+  let nothing = null;
+  `,
+      },
+    ],
   },
   "Basic Arithmetic Operations": {
     title: "Basic Arithmetic Operations",
     subtitle: "Performing Arithmetic in MatLang",
     description:
       "MatLang supports standard arithmetic operations using Hindi terms for addition, subtraction, multiplication, and division.",
-    example: {
-      matlangCode: [
-        "mana sum = jod 5 3;    // 5 + 3",
-        "mana diff = ghata 8 2;  // 8 - 2",
-        "mana prod = guna 4 2;   // 4 * 2",
-        "mana quotient = divide 10 2; // 10 / 2",
-      ],
-      javaScriptCode: [
-        "let sum = 5 + 3;",
-        "let diff = 8 - 2;",
-        "let prod = 4 * 2;",
-        "let quotient = 10 / 2;",
-      ],
-    },
+    example: [
+      {
+        input: `
+  mana sum = jod 5 3;    // 5 + 3
+  `,
+        output: `
+  let sum = 5 + 3;
+  `,
+      },
+      {
+        input: `
+  mana diff = ghata 8 2;  // 8 - 2
+  `,
+        output: `
+  let diff = 8 - 2;
+  `,
+      },
+      {
+        input: `
+  mana prod = guna 4 2;   // 4 * 2
+  `,
+        output: `
+  let prod = 4 * 2;
+  `,
+      },
+      {
+        input: `
+  mana quotient = divide 10 2; // 10 / 2
+  `,
+        output: `
+  let quotient = 10 / 2;
+  `,
+      },
+    ],
   },
   "Control Flow Statements": {
     title: "Control Flow Statements",
     subtitle: "MatLang Control Flow Statements: If-Else and Switch-Case",
     description:
       "MatLang supports if-else and switch-case statements for control flow.",
-    sections: [
+    example: [
       {
-        subtitle: "If-Else",
-        description:
-          "The 'agar' keyword represents 'if', and 'nahi' represents 'else'.",
-        syntax: "agar <condition> { <statements>; } nahi { <statements>; }",
-        example: {
-          matlangCode: [
-            "mana x = 10;",
-            "agar x bada 5 { dikhai 'x is greater than 5'; } nahi { dikhai 'x is less than or equal to 5'; }",
-          ],
-          javaScriptCode: [
-            "let x = 10;",
-            "if (x > 5) { console.log('x is greater than 5'); } else { console.log('x is less than or equal to 5'); }",
-          ],
-        },
+        input: `
+mana x = 10;
+agar x bada 5 { dikhai 'x is greater than 5'; } nahi { dikhai 'x is less than or equal to 5'; }
+`,
+        output: `
+if (x > 5) { console.log('x is greater than 5'); } else { console.log('x is less than or equal to 5'); }
+`,
       },
       {
-        subtitle: "Switch-Case",
-        description:
-          "The 'switch' keyword is used to create a switch-case statement.",
-        syntax:
-          "switch <variable> { case <value>: <statements>; break; default: <statements>; }",
-        example: {
-          matlangCode: [
-            "mana day = 2;",
-            "switch day { case 1: dikhai 'Monday'; break; case 2: dikhai 'Tuesday'; break; default: dikhai 'Weekend'; }",
-          ],
-          javaScriptCode: [
-            "let day = 2;",
-            "switch (day) { case 1: console.log('Monday'); break; case 2: console.log('Tuesday'); break; default: console.log('Weekend'); }",
-          ],
-        },
+        input: `
+mana day = 2;
+switch day { case 1: dikhai 'Monday'; break; case 2: dikhai 'Tuesday'; break; default: dikhai 'Weekend'; }
+`,
+        output: `
+switch (day) { case 1: console.log('Monday'); break; case 2: console.log('Tuesday'); break; default: console.log('Weekend'); }
+`,
       },
     ],
   },
@@ -3993,32 +4024,23 @@ const MatLangData = {
     title: "Loops",
     subtitle: "MatLang Loops: For Loop and While Loop",
     description: "MatLang supports For and While loops.",
-    sections: [
+    example: [
       {
-        subtitle: "For Loop",
-        description: "The 'chalo' keyword is used for creating loops.",
-        syntax:
-          "chalo <variable> se <start_value> tak <end_value> tak { <statements>; }",
-        example: {
-          matlangCode: ["chalo i se 0 tak 5 tak { dikhai i; }"],
-          javaScriptCode: ["for (let i = 0; i < 5; i++) { console.log(i); }"],
-        },
+        input: `
+chalo i se 0 tak 5 tak { dikhai i; }
+`,
+        output: `
+for (let i = 0; i < 5; i++) { console.log(i); }
+`,
       },
       {
-        subtitle: "While Loop",
-        description:
-          "The 'chalo' keyword is also used for while loops with 'jab tak' (while).",
-        syntax: "chalo <variable> jab tak <condition> tak { <statements>; }",
-        example: {
-          matlangCode: [
-            "mana i = 0;",
-            "chalo i jab tak i chhota 5 tak { dikhai i; mana i = i + 1; }",
-          ],
-          javaScriptCode: [
-            "let i = 0;",
-            "while (i < 5) { console.log(i); i = i + 1; }",
-          ],
-        },
+        input: `
+mana i = 0;
+chalo i jab tak i chhota 5 tak { dikhai i; mana i = i + 1; }
+`,
+        output: `
+while (i < 5) { console.log(i); i = i + 1; }
+`,
       },
     ],
   },
@@ -4029,10 +4051,16 @@ const MatLangData = {
       "Functions are defined using the keyword 'samasya'. Functions can return values using 'kaam'.",
     syntax:
       "samasya <function_name>(<parameters>) { <statements>; kaam <return_value>; }",
-    example: {
-      matlangCode: ["samasya add(x, y) { mana sum = jod x y; kaam sum; }"],
-      javaScriptCode: ["function add(x, y) { let sum = x + y; return sum; }"],
-    },
+    example: [
+      {
+        input: `
+  samasya add(x, y) { mana sum = jod x y; kaam sum; }
+  `,
+        output: `
+  function add(x, y) { let sum = x + y; return sum; }
+  `,
+      },
+    ],
   },
   Objects: {
     title: "Objects",
@@ -4040,12 +4068,16 @@ const MatLangData = {
     description:
       "Objects are declared using the 'mana' keyword with key-value pairs.",
     syntax: "mana <object_name> = { <key1>: <value1>, <key2>: <value2>, ... };",
-    example: {
-      matlangCode: ["mana person = {name: 'John', age: 30, city: 'New York'};"],
-      javaScriptCode: [
-        "let person = {name: 'John', age: 30, city: 'New York'};",
-      ],
-    },
+    example: [
+      {
+        input: `
+  mana person = {name: 'John', age: 30, city: 'New York'};
+  `,
+        output: `
+  let person = {name: 'John', age: 30, city: 'New York'};
+  `,
+      },
+    ],
   },
   Arrays: {
     title: "Arrays",
@@ -4053,10 +4085,16 @@ const MatLangData = {
     description:
       "Arrays in MatLang are declared similarly to objects but with a list of values.",
     syntax: "mana <array_name> = [<value1>, <value2>, <value3>];",
-    example: {
-      matlangCode: ["mana fruits = ['Apple', 'Banana', 'Cherry'];"],
-      javaScriptCode: ["let fruits = ['Apple', 'Banana', 'Cherry'];"],
-    },
+    example: [
+      {
+        input: `
+  mana fruits = ['Apple', 'Banana', 'Cherry'];
+  `,
+        output: `
+  let fruits = ['Apple', 'Banana', 'Cherry'];
+  `,
+      },
+    ],
   },
   "Error Handling": {
     title: "Error Handling",
@@ -4065,49 +4103,61 @@ const MatLangData = {
       "MatLang doesn't have native exception handling, but errors can be manually checked using conditionals.",
     syntax:
       "agar <variable> barabar <null_or_undefined> { dikhai <error_message>; }",
-    example: {
-      matlangCode: [
-        "mana a = 'hello'; agar a barabar kuchNahi { dikhai 'Error: Variable is not initialized!'; }",
-      ],
-      javaScriptCode: [
-        "let a = 'hello'; if (a === null) { console.log('Error: Variable is not initialized!'); }",
-      ],
-    },
+    example: [
+      {
+        input: `
+  mana a = 'hello';
+  agar a barabar kuchNahi { dikhai 'Error: Variable is not initialized!'; }
+  `,
+        output: `
+  let a = 'hello';
+  if (a === null) { console.log('Error: Variable is not initialized!'); }
+  `,
+      },
+    ],
   },
   "Input/Output": {
     title: "Input/Output",
     subtitle: "Handling Input and Output in MatLang",
     description: "For output, MatLang uses 'dikhai' to print values.",
     syntax: "mana <variable> = <value>; dikhai <output_message>;",
-    example: {
-      matlangCode: ["mana name = 'John'; dikhai 'Hello ' + name;"],
-      javaScriptCode: ["let name = 'John'; console.log('Hello ' + name);"],
-    },
+    example: [
+      {
+        input: `
+  mana name = 'John';
+  dikhai 'Hello ' + name;
+  `,
+        output: `
+  let name = 'John';
+  console.log('Hello ' + name);
+  `,
+      },
+    ],
   },
   "Compilation Process": {
     title: "Compilation Process",
     subtitle: "How MatLang Code is Compiled",
-    description:
-      "The MatLang compiler parses and converts MatLang code into JavaScript, which can be executed in JavaScript environments.",
-    steps: [
-      "1. Parsing: The MatLang compiler reads and interprets the MatLang code.",
-      "2. Conversion: The compiler converts MatLang syntax into JavaScript.",
-      "3. Output: The resulting JavaScript code is generated.",
+    description: `The MatLang compiler parses and converts MatLang code into JavaScript, which can be executed in JavaScript environments. 
+The process involves three main steps:
+1. Parsing: The MatLang compiler reads and interprets the MatLang code.
+2. Conversion: The compiler converts MatLang syntax into JavaScript.
+3. Output: The resulting JavaScript code is generated.`,
+    example: [
+      {
+        input: `
+mana x = 10
+mana y = 20
+mana result = jod x y
+dikhai 'The sum is ' + result;
+`,
+        output: `
+let x = 10
+let y = 20
+let result = x + y
+console.log('The sum is ' + result);
+`,
+      },
     ],
-    example: {
-      matlangCode: [
-        "mana x = 10;",
-        "mana y = 20;",
-        "mana result = jod x y;",
-        "dikhai 'The sum is ' + result;",
-      ],
-      javaScriptCode: [
-        "let x = 10;",
-        "let y = 20;",
-        "let result = x + y;",
-        "console.log('The sum is ' + result);",
-      ],
-    },
   },
   "Full Example Code": {
     title: "Full Example Code",
@@ -4115,23 +4165,27 @@ const MatLangData = {
       "A Complete Example Demonstrating Variables, Functions, Loops, Conditionals, and Objects",
     description:
       "A comprehensive example that demonstrates MatLang code and its JavaScript equivalent.",
-    matlangCode: [
-      "mana x = 10;",
-      "mana y = 20;",
-      "mana name = 'John';",
-      "agar x bada y { dikhai name + ' says x is greater than y!'; } nahi { dikhai name + ' says x is less than or equal to y!'; }",
-      "samasya add(x, y) { mana sum = jod x y; kaam sum; }",
-      "mana result = add(x, y);",
-      "dikhai 'The sum is ' + result;",
-    ],
-    javaScriptCode: [
-      "let x = 10;",
-      "let y = 20;",
-      "let name = 'John';",
-      "if (x > y) { console.log(name + ' says x is greater than y!'); } else { console.log(name + ' says x is less than or equal to y!'); }",
-      "function add(x, y) { let sum = x + y; return sum; }",
-      "let result = add(x, y);",
-      "console.log('The sum is ' + result);",
+    example: [
+      {
+        input: `
+  mana x = 10
+  mana y = 20
+  mana name = 'John'
+  agar x bada y { dikhai name + ' says x is greater than y!'; } nahi { dikhai name + ' says x is less than or equal to y!'; }
+  samasya add(x, y) { mana sum = jod x y; kaam sum; }
+  mana result = add(x, y)
+  dikhai 'The sum is ' + result;
+  `,
+        output: `
+  let x = 10
+  let y = 20
+  let name = 'John'
+  if (x > y) { console.log(name + ' says x is greater than y!'); } else { console.log(name + ' says x is less than or equal to y!'); }
+  function add(x, y) { let sum = x + y; return sum; }
+  let result = add(x, y)
+  console.log('The sum is ' + result);
+  `,
+      },
     ],
   },
   Conclusion: {
