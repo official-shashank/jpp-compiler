@@ -1,7 +1,10 @@
 // // --------------------------------------------------------------------------------
 // // -----------------------------Only for Documentation Side-------------------------------
 
-
+let selectedLang="matlang";
+let selectedTab = "Home" ;
+let mSidebar=[];
+let pSidebar=[];
 
 
 // MatLangCodeExamples
@@ -36,8 +39,21 @@ function showExampleMatlang() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
+
+for(let item in MatLangData ){
+  mSidebar.push(item);
+}
+for(let item in PythonData ){
+  pSidebar.push(item);
+}
+selectedTab = mSidebar[0] ;
+
+
   if (window.location.href.includes("/docs.html")) {
-    renderSidebar(matLangSidebar);
+    renderSidebar(mSidebar);
   }
   if (window.location.href.includes("/index.html")) {
     showExampleMatlang();

@@ -42,7 +42,10 @@ body {
  }
 
 .highlight{
-  color: rgb(211, 26, 26)
+  color: rgb(211, 26, 26);
+  background-color: rgb(97, 97, 234);
+  border-radius: 1rem;
+  color: white;
 }
 
 
