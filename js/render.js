@@ -92,7 +92,7 @@ function renderData(data) {
   }
 
   if(data["Ques"]){
-
+     finalResult+=funcWithQuesEditor(data["Ques"])
     
   }
 
