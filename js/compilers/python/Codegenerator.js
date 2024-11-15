@@ -151,4 +151,4 @@ class PythonToJsCompiler {
     }
 }
 
-export default PythonToJsCompiler;
+

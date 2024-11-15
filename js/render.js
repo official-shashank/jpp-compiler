@@ -46,6 +46,8 @@ function renderSidebar(data) {
       </a>
     `;
 
+    listItem.classList.toggle("bg-green")
+
     sidebarTarg.appendChild(listItem);
 
 

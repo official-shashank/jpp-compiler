@@ -171,7 +171,7 @@
                 <div id="wysiwyg-typography-example"
                     class="block overflow-y-auto stylish-scrollbar w-full px-0 text-sm text-gray-200 bg-gray-800 bg-neutral-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
                     <textarea class=" code w-full outline-none h-80 border-0 bg-transparent " name=""
-                        placeholder="// code here" id=""></textarea>
+                        placeholder="// code here" id="visual-code"></textarea>
                 </div>
             </div>
         </div>
@@ -190,30 +190,9 @@
                     class="block stylish-scrollbar  overflow-y-auto w-full px-0 text-sm text-gray-200 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-full">
 
 
-                    <pre class="overflow-x-auto">  <pre>
-                        Tokens: [
-  { type: 'IDENTIFIER', value: 'a' },
-  { type: 'OPERATOR', value: '=' },  
-  { type: 'NUMBER', value: '5' },    
-  { type: 'IDENTIFIER', value: 'b' },
-  { type: 'OPERATOR', value: '=' },  
-  { type: 'NUMBER', value: '6' },    
-  { type: 'IDENTIFIER', value: 'd' },
-  { type: 'OPERATOR', value: '=' },  
-  { type: 'NUMBER', value: '8' },    
-  { type: 'IDENTIFIER', value: 'res' },
-  { type: 'OPERATOR', value: '=' },
-  { type: 'IDENTIFIER', value: 'a' },
-  { type: 'OPERATOR', value: '+' },
-  { type: 'IDENTIFIER', value: 'b' },
-  { type: 'OPERATOR', value: '+' },
-  { type: 'IDENTIFIER', value: 'd' },
-  { type: 'KEYWORD', value: 'print' },
-  { type: 'PUNCTUATION', value: '(' },
-  { type: 'IDENTIFIER', value: 'res' },
-  { type: 'PUNCTUATION', value: ')' }
-]
-                    </pre>
+                    <pre class="overflow-x-auto" id="lexer">  
+                        
+                  
 
                 </div>
             </div>
@@ -233,66 +212,7 @@
                     class="block stylish-scrollbar  overflow-y-auto w-full px-0 text-sm text-gray-200 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-full">
 
 
-                    <pre class="overflow-x-auto">  <pre>
-AST: [
-    {
-      "type": "ASSIGNMENT",
-      "variable": "a",
-      "value": {
-        "type": "LITERAL",
-        "value": "5"
-      }
-    },
-    {
-      "type": "ASSIGNMENT",
-      "variable": "b",
-      "value": {
-        "type": "LITERAL",
-        "value": "6"
-      }
-    },
-    {
-      "type": "ASSIGNMENT",
-      "variable": "d",
-      "value": {
-        "type": "LITERAL",
-        "value": "8"
-      }
-    },
-    {
-      "type": "ASSIGNMENT",
-      "variable": "res",
-      "value": {
-        "type": "BINARY_OPERATION",
-        "left": {
-          "type": "BINARY_OPERATION",
-          "left": {
-            "type": "LITERAL",
-            "value": "a"
-          },
-          "operator": "+",
-          "right": {
-            "type": "LITERAL",
-            "value": "b"
-          }
-        },
-        "operator": "+",
-        "right": {
-          "type": "LITERAL",
-          "value": "d"
-        }
-      }
-    },
-    {
-      "type": "PRINT_STATEMENT",
-      "args": [
-        {
-          "type": "LITERAL",
-          "value": "res"
-        }
-      ]
-    }
-  ]   
+                    <pre class="overflow-x-auto" id="parser">  <pre>
                     </pre>
 
                 </div>
@@ -317,11 +237,15 @@ AST: [
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
-
-
+    
+    <script src="../js/compilers/python/lexer.js"></script>
+    <script src="../js/compilers/python/parser.js"></script>
+    <script src="../js/compilers/python/Codegenerator.js"></script>
     <script src="../js/data.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/render.js"></script>
+
+    <script src="../js/visuallizer.js"></script>
 </body>
 
 </html>
