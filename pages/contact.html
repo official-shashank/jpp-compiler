@@ -11,7 +11,7 @@
   <script src="./js/script.js" defer></script>
 </head>
 
-<body class="p-2">
+<body class="p-2 bg-black">
   <header>
     <!-- navbar -->
     <nav class="bg-transparent border-gray-200 dark:bg-transparent">
@@ -101,170 +101,74 @@
 
   </header>
 
-<!-- heading -->
 
-<div class="py-8 flex flex-col items-center justify-center h-96 my-32">
-<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white text-center">We invest in the world’s potential</h1>
-<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center mt-6">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-<a href="/pages/docs.html" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900 mt-4">
-    Learn more
-    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg>
-</a>
-<a href="./register.html" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900 mt-4">
-    Get Started
-    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg>
-</a>
+
+  <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Jpp(A tool for your efficiency) we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+            <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Learn more
+            </a>  
+        </div>
+    </div>
+</section>
+
+<!-- heading contact form -->
+
+<h1 class="mb-4 text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl py-8"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Contact Us.</span></h1>
+
+<!-- parent contact -->
+
+<div class="flex flex-wrap justify-evenly items-center mt-12 pb-20">
+
+<!-- img telephone -->
+
+<img class="rounded-full w-96 h-96 bg-gray-700" src="https://st3.depositphotos.com/9626848/14322/i/450/depositphotos_143220599-stock-photo-glowing-lines-web-icons-contact.jpg" alt="image description">
+
+<!-- content of contact us -->
+
+<div class="">
+
+<!-- contact form -->
+
+<form class="bg-gray-800 w-96 h-110 p-6 rounded-lg flex flex-col justify-center">
+    <div class="mb-4">
+        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+        <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+    </div>
+    <div class="mb-6">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required />
+    </div> 
+    <div class="mb-6">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="mb-6">
+        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+        <input type="password" id="confirm_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+        </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+    </div>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+</form>
+</div>
+
 </div>
 
 
-<!-- middle img -->
-
-
-
-<div id="gallery" class="relative w-full py-8 mt-10 mb-10" data-carousel="slide">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://images.ctfassets.net/aq13lwl6616q/2wqtcZLn5BirJ42EDfoair/95be1804195bb47acb392cec54eb551b/Complete_Python_Developer_Zero_to_Mastery.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-5/12 rounded-lg" alt="">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-          <img src="https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg?tx=w_1920,q_auto" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-5/12 rounded-lg" alt="">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://img.cdn.cratecode.com/info/headerimg/compiler-design-basics.5bu7.webp?format=jpeg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-5/12 rounded-lg" alt="">
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://raw.githubusercontent.com/2chevskii/lexer/master/logo.png" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-5/12 rounded-lg" alt="">
-      </div>
-      <!-- Item 5 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://bigblue.academy/images/image/blog/python-vs-javascript-which-language-should-you-learn-first/pythonvsjavascript.jpeg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-5/12 rounded-lg" alt="">
-      </div>
-  </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-          </svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-          </svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
-</div>
-
-<!-- teckStacks -->
-<div class="border p-2 rounded-lg mt-28">
-<div class="mt-12">
-<h1 class="mb-4 text-center text-3xl font-extrabold text-white dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Jpp with other</span> Technologies.</h1>
-<p class="text-lg font-normal text-center text-gray-500 lg:text-xl dark:text-gray-400 mt-10">Here at Jpp we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-</div>
-
-<!-- technologies div -->
-
-<div class="flex flex-wrap justify-center gap-8 py-8 p-4 border mb-10 mt-20 rounded-lg">
-  
-<!-- python -->
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/640px-Python.svg.png" alt="Python image"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Python</h5>  
-  </div>  
-</div>
-
-<!-- JavaScript Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript image"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">JavaScript</h5>  
-  </div>  
-</div>  
-
-<!-- React Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" alt="React logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">React</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-<!-- C++ Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://img-c.udemycdn.com/course/750x422/5710478_6976_4.jpg" alt="C++ logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">C++</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-<!-- C Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://banner2.cleanpng.com/20180405/doe/avgjobs91.webp" alt="C logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">C</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-<!-- Angular Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://platri.de/wp-content/uploads/2024/01/Angular-Framework-e1649312852136.png" alt="Angular logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Angular</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-<!-- Java Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTBl3CXRLySYth-OpzCMPGDGliuMU7VpwT2A&s" alt="Java logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Java</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-<!-- Golang Card -->  
-<div class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">  
-  <div class="flex flex-col items-center pb-10">  
-      <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" src="https://imgcdn.stablediffusionweb.com/2024/4/25/12ec4739-4c1d-4357-9e17-4649103a400d.jpg" alt="Golang logo"/>  
-      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Golang</h5>  
-      <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>  
-  </div>  
-</div>  
-
-</div>
-</div>
-
-<!-- heading of the small examples of matlang -->
-
-<div class="p-5  text-center">
-<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-500 md:text-5xl lg:text-6xl dark:text-white mt-16"> MatLang: A Beginner-Friendly <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500"> Programming </mark> Language</h1>
-<p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mb-16 mt-4">MatLang is designed to bridge the gap between programming concepts and everyday language, combining Hindi and English constructs to make coding accessible. It compiles into JavaScript, allowing you to run your code in any environment that supports JS.</p>
-</div>
-
-<div id="MatLangCodeExamples" class="items-center flex flex-wrap justify-center gap-10 m-4 p-4 pb-10 rounded-lg border">
-
-
-
-
-</div>
 
 <!-- footer -->
 <footer class="bg-transparent dark:bg-transparent border-gray-700 mt-10">
