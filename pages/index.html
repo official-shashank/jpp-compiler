@@ -13,59 +13,6 @@
   <script src="https://cdn.tailwindcss.com" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <style>
-    /* Custom animations */
-    .fade-in {
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .bounce {
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-
-      0%,
-      100% {
-        transform: translateY(-5px);
-      }
-
-      50% {
-        transform: translateY(0);
-      }
-    }
-
-    /* Background icon styling */
-    .background-icon {
-      position: absolute;
-      font-size: 8rem;
-      opacity: 0.05;
-      color: rgba(255, 255, 255, 0.05);
-      z-index: 0;
-      transform: rotate(15deg);
-      pointer-events: none;
-    }
-
-    /* Gradient text effect */
-    .gradient-text {
-      background: linear-gradient(to right, #5e63ff, #f54ea2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 800;
-    }
-  </style>
 </head>
 
 <body class="p-2">
@@ -76,9 +23,8 @@
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/pages/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="https://cdn.leonardo.ai/users/9e27d29d-e642-4640-a4d3-36075e7a5af5/generations/9d98d5c4-7015-495b-b7cf-1dceb26ae2d8/Leonardo_Phoenix_A_modern_sleek_logo_design_for_J_featuring_bo_3.jpg"
-            class="h-8 bg-transparent dark:bg-transparent" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jpp</span>
+src="../assets/logo.png"            class="h-8 bg-transparent dark:bg-transparent" alt="Flowbite Logo" />
+    
         </a>
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button type="button"
@@ -87,8 +33,7 @@
             data-dropdown-placement="bottom">
             <span class="sr-only">Open user menu</span>
             <img class="w-8 h-8 rounded-full"
-              src="https://cdn.leonardo.ai/users/9e27d29d-e642-4640-a4d3-36075e7a5af5/generations/9d98d5c4-7015-495b-b7cf-1dceb26ae2d8/Leonardo_Phoenix_A_modern_sleek_logo_design_for_J_featuring_bo_2.jpg"
-              alt="user photo">
+src="../assets/logo.png"              alt="user photo">
           </button>
           <!-- Dropdown menu -->
           <div
@@ -171,11 +116,8 @@
   <section
     class="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
     <!-- Custom Language Icon -->
-    <div class="flex items-center justify-center w-24 h-24 bg-gray-800 rounded-full mb-6 fade-in shadow-lg bounce">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-white w-12 h-12" viewBox="0 0 16 16">
-        <path
-          d="M5.062 12.01c1.322 0 2.61-.256 3.691-.837 1.167-.62 1.895-1.522 1.895-2.91 0-1.676-1.04-2.418-2.32-2.727v-.1c1.008-.5 1.633-1.17 1.633-2.308 0-1.498-1.274-2.416-3.2-2.416H1v11.45h4.062zm-1.66-9.56h1.89c1.166 0 1.757.498 1.757 1.31 0 .82-.593 1.3-1.692 1.3h-1.96V2.45zm0 8.07h2.066c1.46 0 2.442-.593 2.442-1.7 0-1.063-.865-1.625-2.315-1.625h-2.193v3.325zm10.63 2.07c1.378 0 2.5-.315 3.33-.923.808-.607 1.215-1.466 1.215-2.658 0-2.36-1.656-3.535-3.977-3.535-1.857 0-3.21.575-3.84 1.346-.622.76-.835 1.85-.835 3.385 0 2.6 1.563 3.73 4.107 3.73z" />
-      </svg>
+    <div class="flex items-center justify-center w-24 h-24 bg-white rounded-full mb-6 fade-in shadow-lg bounce">
+      <img src="../assets/logo.png" alt="logo">
     </div>
 
     <!-- Highlighted Title -->
@@ -191,8 +133,8 @@
 
     <!-- Buttons -->
     <div class="flex items-center mt-10 space-x-4 fade-in">
-      <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-        <code>$ matlang compile your_script.py</code>
+      <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md text-white">
+        <code>$ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs</code>
       </div>
       <a href="#"
         class="px-6 py-2 font-semibold text-purple-700 bg-white rounded-lg hover:bg-gray-100 transition duration-200 transform hover:scale-105 shadow-md">

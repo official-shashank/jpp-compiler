@@ -44,3 +44,56 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #4b5563 #1f2937;
   }
+
+
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-5px);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  /* Background icon styling */
+  .background-icon {
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.05;
+    color: rgba(255, 255, 255, 0.05);
+    z-index: 0;
+    transform: rotate(15deg);
+    pointer-events: none;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(to right, #5e63ff, #f54ea2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
