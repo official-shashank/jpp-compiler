@@ -23,7 +23,7 @@
         </p>
     </div>
     <!-- User Code Edifor -->
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-96 gap-4 p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-1 mb-10 md:grid-cols-2 lg:grid-cols-3 h-96 gap-4 p-4">
         <!-- User Editor -->
 
         <div
@@ -233,7 +233,7 @@
                     class="block stylish-scrollbar  overflow-y-auto w-full px-0 text-sm text-gray-200 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-full">
 
 
-                    <pre class="overflow-x-auto">  <pre>
+                    <pre class="overflow-x-auto">
 AST: [
     {
       "type": "ASSIGNMENT",
@@ -302,12 +302,58 @@ AST: [
 
     </div>
 
-    <!-- For Terminal -->
-    <div id="terminal-container">
-        <div id="title-bar">Command Prompt</div>
-        <div id="terminal">
-            <textarea class="w-full h-full bg-transparent border-0 p-0" name="" id="cmd-v"></textarea>
+    <!-- For Terminal and Generated Code -->
+    <div class="grid grid-cols-2 mx-4 gap-4">
+
+        <div class="w-full border border-gray-700 rounded-lg bg-gray-700 dark:bg-gray-700 dark:border-gray-600">
+            <div class="px-3 py-2 border-b dark:border-gray-600">
+                <div class="flex code-editor-v flex-wrap items-center">
+                    <p class="text-gray-200 font-extrabold text-xl my-2">Generated Script <i
+                            class="fa-brands fa-js mx-2 text-3xl text-center"></i></p>
+                    <button data-copy-to-clipboard-target="npm-install-copy-text"
+                        class=" text-gray-900 font-bold hover:text-white  border-gray-800 border bg-gray-300  hover:bg-gray-900  hover:text-gray-200 dark:text-gray-400  dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-sm py-2 px-2.5 inline-flex items-center justify-center">
+                        <span id="default-message" class="inline-flex items-center ">
+
+                            <span class="text-xs  font-semibold">Run Script</span>
+                            <i class="fa-solid fa-arrow-right mx-2"></i>
+                        </span>
+
+                    </button>
+                </div>
+            </div>
+            <div class="px-2 py-2 bg-gary-700 h-72 rounded-b-lg dark:bg-gray-800">
+                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
+                <div id="wysiwyg-alignment-example"
+                    class="block stylish-scrollbar  overflow-y-auto  w-full h-full px-2 py-2 text-sm text-gray-200 bg-gray-800 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
+                    <pre>
+let a = "5";
+let b = "6";
+let d = "8";
+let res = "a" + "b" + "d";
+console.log("res");
+                    </pre>
+                </div>
+            </div>
         </div>
+
+        <!-- Terminal -->
+        <div class="w-full border border-gray-700 rounded-lg bg-gray-700 dark:bg-gray-700 dark:border-gray-600">
+            <div class="px-3 py-2 border-b dark:border-gray-600">
+                <div class="flex code-editor-v flex-wrap items-center">
+                    <p class="text-gray-200 font-extrabold text-xl my-2">Terminal _></p>
+
+                </div>
+            </div>
+            <div class="px-2 py-2 bg-gray-800 h-72 rounded-b-lg dark:bg-gray-800">
+                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
+                <div id="wysiwyg-alignment-example"
+                    class="block stylish-scrollbar bg-black  overflow-y-auto  w-full h-full px-2 py-2 text-sm text-gray-200  border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
+                    <pre>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- --------------------------------------------------------------------------------------------------- -->
