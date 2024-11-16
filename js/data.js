@@ -4105,6 +4105,7 @@ console.log("The sum is " + result);`,
 
 /***************************************************************************************************/
 const MatLangData = {
+  "Getting Started": {},
   Home: {
     title: "Home",
     subtitle: "Complete Documentation for MatLang Language",
