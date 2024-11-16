@@ -1,4 +1,4 @@
-export default class PythonLexer {
+class PythonLexer {
     constructor() {
         this.keywords = new Set([
             'if', 'else', 'def', 'return', 'class', 'while', 'for', 'import', 'print', 'and', 'or', 'not',

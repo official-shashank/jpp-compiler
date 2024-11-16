@@ -11,300 +11,39 @@
 </head>
 
 <body>
-   <!-- side-bar ham burger -->
-   <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
-      type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-      <span class="sr-only">Open sidebar</span>
-      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-         xmlns="http://www.w3.org/2000/svg">
-         <path clip-rule="evenodd" fill-rule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-         </path>
-      </svg>
-   </button>
+   <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" 
+   aria-expanded="false" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+   <span class="sr-only">Open sidebar</span>
+   <svg class="w-6 h-6"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+         d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+   </svg> 
+</button>
 
-   <!-- sidebar -->
-   <aside id="default-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 "
-      aria-label="Sidebar">
-      <div class=" sidebar-div h-full px-3 py-4 overflow-y-auto stylish-scrollbar dark:bg-gray-800 sm:bg-gray-800 ">
-         <!-- select language radio -->
+<!-- Sidebar -->
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+   aria-label="Sidebar" >
+   <div class="sidebar-div h-full px-3 py-4 overflow-y-auto stylish-scrollbar dark:bg-gray-800 sm:bg-gray-800">
+      <!-- Sidebar Content -->
+      <select id="language" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+         
+         <option value="matlang" selected>Mat Lang</option>
+         <option value="python">Python</option>
+         <option disabled value="cpp">c++</option>
+         <option disabled value="c">C</option>
+       </select>
+      <ul id="sidebarTarg" class="space-y-2 font-medium"></ul>
+   </div>
+</aside>
 
-         <button id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio"
-            class="text-white mb-8 mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">Select Language<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="m1 1 4 4 4-4" />
-            </svg>
-         </button>
+   <div id="main-core-div" class="p-4 sm:ml-64">
+      <div id="data-container" class="p-4 border-2  rounded-lg dark:boder-gray-700">
+        
 
-         <!-- Dropdown menu -->
-         <div id="dropdownDefaultRadio"
-            class="z-10 hidden w-48 bg-gray-700 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
-            <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioButton">
-               <li>
-                  <div class="flex items-center">
-                     <input checked id="default-radio-1" type="radio" value="" name="default-radio"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                     <label for="default-radio-1"
-                        class="ms-2 text-sm font-medium text-gray-300 dark:text-gray-300">Python 3</label>
-                  </div>
-               </li>
-               <li>
-                  <div class="flex items-center">
-                     <input id="default-radio-2" type="radio" value="" name="default-radio"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                     <label for="default-radio-2"
-                        class="ms-2 text-sm font-medium text-gray-300 dark:text-gray-300">MatLang</label>
-                  </div>
-               </li>
-            </ul>
-         </div>
+         
 
-         <!-- --------------------------- -->
-         <ul id="sidebarTarg" class="space-y-2 font-medium">
-
-         </ul>
-      </div>
-   </aside>
-
-   <div class="p-4 sm:ml-64">
-      <div class="p-4 border-2  rounded-lg dark:border-gray-700">
-
-         <!-- Into HEad -->
-         <div class="flex flex-col items-center justify-center p-12 h-[70vh] mb-4 rounded  dark:bg-gray-800">
-            <h1 id="title"
-               class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
-               Learn Python and More</h1>
-            <p id="subtitle"
-               class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
-               Learn Python with our multilingual compiler and leverage your skills to shape the future. This
-               documentation provides a hands-on approach to mastering any language effortlessly.</p>
-            <a href="#"
-               class="inline-flex items-center justify-center px-5 py-3 mb-10 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-               Learn more
-               <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     d="M1 5h12m0 0L9 1m4 4L9 9" />
-               </svg>
-            </a>
-         </div>
-         <!-- navigation button -->
-         <div class="navigation flex  ">
-            <!-- Previous Button -->
-            <a href="#"
-               class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-               Home
-            </a>
-            <!-- Next Button -->
-            <a href="#"
-               class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-               Previous
-            </a>
-         </div>
-         <!-- Into Card -->
-         <div class="py-6 px-4 h-auto mb-4 rounded bg-gray-600 dark:bg-gray-800">
-
-            <h1 class="text-5xl font-extrabold text-gray-300 dark:text-white" id="title">Learn Python</h1>
-
-            <p class="mb-3 mt-8 text-lg text-gray-200 md:text-xl dark:text-gray-400" id="subtitle">Python is a popular
-               programming language.</p>
-            <p class="text-gray-200 dark:text-gray-400">Python can be used on a server to create web applications.</p>
-
-
-            <button type="button"
-               class="text-white mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-               Start Learning
-               <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     d="M1 5h12m0 0L9 1m4 4L9 9" />
-               </svg>
-            </button>
-         </div>
-
-         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-
-         <div class="py-6 px-4 flex flex-col justify-center gap-4  h-auto mb-4   dark:bg-gray-800">
-            <h2 class="text-3xl font-extrabold text-gray-300 dark:text-white">Learning by Examples</h2>
-            <p class="text-gray-200 dark:text-gray-400">With our "Try it Yourself" editor, you can edit Python code and
-               view the result.</p>
-
-            <!-- terminals -->
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
-               <div
-                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                  <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
-                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                     type="button">Python
-                     <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                           d="m1 1 4 4 4-4" />
-                     </svg>
-                  </button>
-
-
-                  <!-- Dropdown menu -->
-                  <div id="dropdownHover"
-                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                     <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
-                        aria-labelledby="dropdownHoverButton">
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <pre class="code text-left ">
-print("Hello world!")
-               </pre>
-                  </div>
-                  <button type="button"
-                     class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
-                     it out.</button>
-               </div>
-               <div
-                  class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                  <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
-                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                     type="button">JavaScript <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                           d="m1 1 4 4 4-4" />
-                     </svg>
-                  </button>
-
-                  <!-- Dropdown menu -->
-                  <div id="dropdownHover"
-                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                     <ul class="py-2 text-sm text-gray-200 bg-gray-600 dark:text-gray-200"
-                        aria-labelledby="dropdownHoverButton">
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
-                        </li>
-                        <li>
-                           <a href="#"
-                              class="block px-4 py-2 text-white hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <pre class="code text-left ">
-print("Hello world!")
-               </pre>
-                  </div>
-                  <button type="button"
-                     class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Try
-                     it out.</button>
-               </div>
-            </div>
-         </div>
-
-         <hr class="h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
-         <!-- -----Content ----- -->
-         <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
-            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python File Handling</h3>
-            <p class="text-gray-200 dark:text-gray-400">In our File Handling section you will learn how to open, read,
-               write, and delete files.</p>
-            <a href="#"
-               class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">Phython
-               File Handling</a>
-         </div>
-
-         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-         <!-- -----Content ----- -->
-         <div class="p-4 flex flex-col justify-center items-start gap-4 h-48 mb-4  dark:bg-gray-800">
-            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Database Handling</h3>
-            <p class="text-gray-200 dark:text-gray-400">In our database section you will learn how to access and work
-               with MySQL and MongoDB databases:</p>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Python MySQL Tutorial
-            </a>
-
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Python MongoDB-Tutorial
-            </a>
-         </div>
-
-         <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700">
-
-
-         <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
-            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Python Reference</h3>
-            <p class="text-gray-200 dark:text-gray-400">You will also find complete function and method references:</p>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Reference Overview
-            </a>
-
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Built-in-Functions
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Strings Methods
-            </a>
-
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               List/Array Methods
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Dictionay Methods
-            </a>
-
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Tuple Methods
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Python Exceptions
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Python Keywords
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Python Glossary
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Random Modile
-            </a>
-
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               Request Modules
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               File Method
-            </a>
-            <a href="#" class="font-medium text-gray-300  hover:text-blue-700 dark:text-blue-700 hover:underline">
-               CMath-Module
-            </a>
-         </div>
-
+         
       </div>
    </div>
 
@@ -315,10 +54,10 @@ print("Hello world!")
    <!-- font awesome -->
    <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
 
-
+   <script src="../js/components.js"></script>
    <script src="../js/data.js"></script>
    <script src="../js/script.js"></script>
-   <script  src="../js/render.js"></script>
+   <script src="../js/render.js"></script>
 </body>
 
 </html>

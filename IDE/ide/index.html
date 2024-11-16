@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Programming Language IDE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <header class="toolbar">
+        <button id="runCode">Run</button>
+        <button id="clearConsole">Clear Console</button>
+        <button id="toggleTheme">Toggle Theme</button>
+        <select id="languageSelect">
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+    </header>
+    <div class="container">
+        <div class="editor-container dark-mode">
+            <div class="line-numbers" id="lineNumbers"></div>
+            <textarea id="codeEditor" placeholder="Write JavaScript code here..."></textarea>
+        </div>
+        <div class="resizer"></div>
+        <div class="console-output dark-mode">
+            <div id="console" placeholder="Console output will appear here..."></div>
+        </div>
+    </div>
+</body>
+
+<script src="app.js"></script>
+</html>

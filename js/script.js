@@ -1,20 +1,11 @@
 // // --------------------------------------------------------------------------------
 // // -----------------------------Only for Documentation Sid-------------------------------
-  
-const sideBar = document.getElementById("sidebarTarg");
 
-function renderSidebar(data) {
-  sideBar.innerHTML = "";
-    data.forEach((item, idx) => {
-      sideBar.innerHTML += `
-          <li class="sidebar-item">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
-                 <span class="ms-3">${item}</span>
-              </a>
-           </li>
-          `;
-    });
-}
+let selectedLang="matlang";
+let selectedTab = "Home" ;
+let mSidebar=[];
+let pSidebar=[];
+
 
 // MatLangCodeExamples
 
@@ -23,10 +14,10 @@ function showExampleMatlang() {
 
   exampleShowCaseMatLang.map((item) => {
     matres += `
-  <a href="../pages/docs.html">
-  <h2 class="text-white">${item.title}</h2>
+  <a href="../pages/docs.html" class=" flex flex-col mt-12 h-96 max-w-md gap-4 p-4 rounded-lg transition-transform transform duration-300 ease-in-out hover:scale-110 animate-fade-in" style="box-shadow: 0 10px 25px 0 black">
+  <h2 class="text-white font-bold">${item.title}</h2>
   <span class="text-white">${item.exp}</span>
-  <aside class="bg-black text-white p-6 rounded-lg w-full max-w-md font-mono">
+  <aside class="bg-black text-white p-6 rounded-lg w-full max-w-md font-mono max-h-56 overflow-y-auto stylish-scrollbar">
     <div class="flex justify-between items-center">
       <div class="flex space-x-2 text-red-500">
         <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -44,29 +35,29 @@ function showExampleMatlang() {
   `;
   });
 
-
   document.getElementById("MatLangCodeExamples").innerHTML = matres;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
 
 
-document.addEventListener("DOMContentLoaded",()=>{
 
-  if(window.location.href.includes("/docs.html")){
-    renderSidebar(pythonSidebar);
+
+for(let item in MatLangData ){
+  mSidebar.push(item);
+}
+for(let item in PythonData ){
+  pSidebar.push(item);
+}
+selectedTab = mSidebar[0] ;
+
+
+  if (window.location.href.includes("/docs.html")) {
+    renderSidebar(mSidebar);
   }
-  if(window.location.href.includes("/index.html")){
-    showExampleMatlang()
+  if (window.location.href.includes("/index.html")) {
+    showExampleMatlang();
   }
-})
-
-
-
-
-
-
-
-
-
+});
 
 

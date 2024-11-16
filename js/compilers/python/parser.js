@@ -1,4 +1,4 @@
-export default class PythonParser {
+ class PythonParser {
   constructor(tokens) {
     this.tokens = tokens;
     this.position = 0;

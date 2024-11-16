@@ -1,91 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <title>
+    J++ || A complete Solution to the syntax of different programming language
+  </title>
+  <link rel="stylesheet" href="/css/landing.css" />
+  <script src="./js/script.js" defer></script>
 </head>
-<body>
-    <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
-          <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contact sales</h2>
-          <p class="mt-2 text-lg/8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
-        </div>
-        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">First name</label>
-              <div class="mt-2.5">
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
-              </div>
+
+<body class="p-2 bg-black">
+  <header>
+    <!-- navbar -->
+    <nav class="bg-transparent border-gray-200 dark:bg-transparent">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/pages/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="https://cdn.leonardo.ai/users/9e27d29d-e642-4640-a4d3-36075e7a5af5/generations/9d98d5c4-7015-495b-b7cf-1dceb26ae2d8/Leonardo_Phoenix_A_modern_sleek_logo_design_for_J_featuring_bo_3.jpg" class="h-8 bg-transparent dark:bg-transparent" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jpp</span>
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button type="button"
+            class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-8 h-8 rounded-full" src="https://cdn.leonardo.ai/users/9e27d29d-e642-4640-a4d3-36075e7a5af5/generations/9d98d5c4-7015-495b-b7cf-1dceb26ae2d8/Leonardo_Phoenix_A_modern_sleek_logo_design_for_J_featuring_bo_2.jpg" alt="user photo">
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            id="user-dropdown">
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+              <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
             </div>
-            <div>
-              <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Last name</label>
-              <div class="mt-2.5">
-                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="company" class="block text-sm/6 font-semibold text-gray-900">Company</label>
-              <div class="mt-2.5">
-                <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="email" class="block text-sm/6 font-semibold text-gray-900">Email</label>
-              <div class="mt-2.5">
-                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Phone number</label>
-              <div class="relative mt-2.5">
-                <div class="absolute inset-y-0 left-0 flex items-center">
-                  <label for="country" class="sr-only">Country</label>
-                  <select id="country" name="country" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select>
-                  <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="message" class="block text-sm/6 font-semibold text-gray-900">Message</label>
-              <div class="mt-2.5">
-                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"></textarea>
-              </div>
-            </div>
-            <div class="flex gap-x-4 sm:col-span-2">
-              <div class="flex h-6 items-center">
-                <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-                <button type="button" class="flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-                  <span class="sr-only">Agree to policies</span>
-                  <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
-                  <span aria-hidden="true" class="size-4 translate-x-0 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
-                </button>
-              </div>
-              <label class="text-sm/6 text-gray-600" id="switch-1-label">
-                By selecting this, you agree to our
-                <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
-              </label>
-            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                  out</a>
+              </li>
+            </ul>
           </div>
-          <div class="mt-10">
-            <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's talk</button>
-          </div>
-        </form>
+          <button data-collapse-toggle="navbar-user" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-user" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-gray-900 dark:border-gray-700">
+            <li>  
+              <a href="/pages/index.html"  
+                class="block py-2 px-3 text-white bg-blue-700 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:text-blue-700 md:p-0 md:hover:bg-magenta-500 md:dark:text-blue-500"  
+                aria-current="page">Home</a>  
+            </li>
+            <li>  
+              <a href="/pages/about.html"  
+                class="block py-2 px-3 text-blue-500 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>  
+            </li>
+            <li>  
+              <a href="#"  
+                class="block py-2 px-3 text-blue-500 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>  
+            </li>
+            <li>  
+              <a href="#"  
+                class="block py-2 px-3 text-blue-500 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>  
+            </li>
+            <li>  
+              <a href="/pages/contact.html"  
+                class="block py-2 px-3 text-blue-500 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>  
+            </li>
+            <li>  
+              <a href="/pages/docs.html"  
+                class="block py-2 px-3 text-blue-500 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>  
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+  </header>
+
+
+
+  <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Jpp(A tool for your efficiency) we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+            <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Learn more
+            </a>  
+        </div>
+    </div>
+</section>
+
+<!-- heading contact form -->
+
+<h1 class="mb-4 text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl py-8"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Contact Us.</span></h1>
+
+<!-- parent contact -->
+
+<div class="flex flex-wrap justify-evenly items-center mt-12 pb-20">
+
+<!-- img telephone -->
+
+<img class="rounded-full w-96 h-96 bg-gray-700" src="https://st3.depositphotos.com/9626848/14322/i/450/depositphotos_143220599-stock-photo-glowing-lines-web-icons-contact.jpg" alt="image description">
+
+<!-- content of contact us -->
+
+<div class="">
+
+<!-- contact form -->
+
+<form class="bg-gray-800 w-96 h-110 p-6 rounded-lg flex flex-col justify-center">
+    <div class="mb-4">
+        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+        <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+    </div>
+    <div class="mb-6">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required />
+    </div> 
+    <div class="mb-6">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="mb-6">
+        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+        <input type="password" id="confirm_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+        </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+    </div>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+</form>
+</div>
+
+</div>
+
+
+
+<!-- footer -->
+<footer class="bg-transparent dark:bg-transparent border-gray-700 mt-10">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+
+          </div>
+ 
+        </div>
+    <div class="px-4 py-3 bg-transparent dark:bg-transparent md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Jpp™</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+        </div>
+      </div>
+ 
+    </div>
+</footer>
+
+  
 </body>
+
 <!-- flowbite config -->
 <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<script defer src="../js/data.js"></script>
+<script defer src="../js/script.js"></script>
+
 </html>

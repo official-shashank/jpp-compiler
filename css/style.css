@@ -41,17 +41,13 @@ body {
     background-color: var(--main-bg-color);
  }
 
+.highlight{
+  color: rgb(211, 26, 26);
+  background-color: rgb(97, 97, 234);
+  border-radius: 1rem;
+  color: white;
+}
 
-
- @media (max-width: 640px) { /* Tailwind's `sm` breakpoint */
-    #default-sidebar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-    #default-sidebar::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, and Opera */
-    }
-  }
 
 
 /* Stylish Scrollbar */
@@ -74,3 +70,100 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #4b5563 #1f2937;
   }
+
+
+  /* Gradiant to Heading in Visualizer */
+  .visual-head{
+    
+    background: #005AA7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+      -webkit-background-clip: text;
+      color: transparent; 
+  
+  }
+  .code-editor-v{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bg-black{
+    background-color: black;
+  }
+
+  /* Visualizer Terminal */
+  /* Terminal Container */
+#terminal-container {
+  width: 100%;
+  height: 20em;
+  margin-top: 10em;
+  border: 2px solid #c1c1c1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Title Bar */
+#title-bar {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Terminal Window */
+#terminal {
+  background-color: #000000;
+  color: #00ff00;
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Output Area */
+#output-area {
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Input Field */
+
+
+/* Scrollbar styling */
+#output-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+#output-area::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+#output-area::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+  @media (max-width: 1020px) { /* Tailwind's `sm` breakpoint */
+    #code-parser{
+      width: 97vw;
+    }
+  }
+  
+ @media (max-width: 640px) { /* Tailwind's `sm` breakpoint */
+  #default-sidebar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #default-sidebar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+}
+
+
+
