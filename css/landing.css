@@ -97,3 +97,18 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 800;
   }
+
+
+  pre {  
+    background-color: #1e1e1e; /* Dark background */  
+    color: #dcdcdc;           /* Light text color */  
+    padding: 10px;           /* Padding around the code */  
+    border-radius: 4px;      /* Rounded corners */  
+    overflow: auto;          /* Enable scroll if content overflows */  
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */  
+    white-space: pre;        /* Maintain whitespace and new lines */  
+  }  
+  
+  code {  
+    font-family: 'Courier New', Courier, monospace; /* Consistent monospaced font */  
+  }
