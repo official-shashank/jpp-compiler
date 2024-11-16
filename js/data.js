@@ -4645,7 +4645,7 @@ const MatLangData = {
     subtitle: "Declaring Variables in MatLang",
     description:
       "In MatLang, variables are declared using the keyword 'mana', which is the Hindi word for 'variable' or 'assign'.",
-    syntax: `mana &gtvariable_name&lt = &gtvalue&lt;`,
+    syntax: `mana <variable_name>= <value>;`,
     example: [
       {
         input: `

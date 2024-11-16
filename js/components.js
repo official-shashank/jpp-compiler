@@ -69,6 +69,7 @@ const syntax = (syntax) => {
         <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md text-white">
         <code>${syntax}</code>
       </div>
+
         
         
         `;
@@ -95,7 +96,7 @@ const codeEditor = (data) => {
             </div>
             <button type="button" onclick="redirectToPlayground()"
                class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
-               it yourself</button>
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
          </div>
          <div>
             <div
@@ -110,9 +111,7 @@ const codeEditor = (data) => {
                   </div>
                </div>
             </div>
-            <button type="button" onclick="redirectToPlayground()"
-               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
-               it yourself</button>
+     
          </div>
       </div>
             
@@ -131,7 +130,10 @@ const funcWithQuesEditor = (data) => {
             <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
             </h3>
             <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
-            
+             <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+         </div>
          </div>
      
      `;
