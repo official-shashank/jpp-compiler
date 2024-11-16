@@ -11,40 +11,63 @@
 </head>
 
 <body>
-   <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" 
-   aria-expanded="false" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-   <span class="sr-only">Open sidebar</span>
-   <svg class="w-6 h-6"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd"
-         d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-      </path>
-   </svg> 
-</button>
+   <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+      aria-expanded="false" type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+         <path clip-rule="evenodd" fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+         </path>
+      </svg>
+   </button>
 
-<!-- Sidebar -->
-<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-   aria-label="Sidebar" >
-   <div class="sidebar-div h-full px-3 py-4 overflow-y-auto stylish-scrollbar dark:bg-gray-800 sm:bg-gray-800">
-      <!-- Sidebar Content -->
-      <select id="language" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-         
-         <option value="matlang" selected>Mat Lang</option>
-         <option value="python">Python</option>
-         <option disabled value="cpp">c++</option>
-         <option disabled value="c">C</option>
-       </select>
-      <ul id="sidebarTarg" class="space-y-2 font-medium"></ul>
-   </div>
-</aside>
+   <!-- Sidebar -->
+   <aside id="default-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar">
+      <div class="sidebar-div h-full px-3 py-4 overflow-y-auto stylish-scrollbar dark:bg-gray-800 sm:bg-gray-800">
+         <!-- Sidebar Content -->
+         <select id="language"
+            class=" bg-blue-700 border-blue-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="matlang" selected>MatLang</option>
+            <option value="python">Python</option>
+            <option disabled class="text-gray-200" value="cpp">c++</option>
+            <option disabled class="bg-blue-900" value="c">C</option>
+         </select>
+         <ul id="sidebarTarg" class="space-y-2 mt-4 font-medium"></ul>
+      </div>
+   </aside>
 
    <div id="main-core-div" class="p-4 sm:ml-64">
       <div id="data-container" class="p-4 border-2  rounded-lg dark:boder-gray-700">
-        
 
-         
 
-         
+
+
+
       </div>
+      <footer class=" rounded-lg shadow m-4 dark:bg-gray-800">
+         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-300 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+                  class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-300 dark:text-gray-400 sm:mt-0">
+               <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">About</a>
+               </li>
+               <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+               </li>
+               <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+               </li>
+               <li>
+                  <a href="#" class="hover:underline">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </footer>
    </div>
 
    <!-- Flowbite attachments -->

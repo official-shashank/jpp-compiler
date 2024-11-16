@@ -79,42 +79,25 @@ const codeEditor = (data) => {
 
   data.forEach((item) => {
     tempRes += `
-         <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+         <div class="grid mt-2 w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
                <div
-                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                  class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
                   
 
                   <!-- Dropdown menu -->
                   <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
+                     class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">                     <div class="code text-left ">
 ${item.input}
                </div>
                   </div>
-                  <div class="flex w-full h-auto items-center justify-center ">
-                     <button type="button"
-                        class="text-gray-900 bg-white hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Run</button>
-                     <div class=" code p-1 w-full h-auto bg-gray-900 text-white">>>
-                     </div>
-                  </div>
                </div>
                <div
-                  class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                
-
-                  <!-- Dropdown menu -->
-                  
+                  class=" px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
                   <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
                      <div class="code text-left ">
 ${item.output}
                </div>
-                  </div>
-                  <div class="flex w-full h-auto items-center justify-center ">
-                     <button type="button"
-                        class="text-gray-900 bg-white hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Run</button>
-                     <div class=" code p-1 w-full h-auto bg-gray-900 text-white">>>
-                     </div>
                   </div>
                </div>
             </div>
@@ -127,18 +110,48 @@ ${item.output}
   return tempRes;
 };
 
+const funcWithQuesEditor = (data) => {
+  let tempRes = "";
+  data.forEach((item) => {
+    tempRes += `
+      <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
+            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
+            </h3>
+            <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
+            
+         </div>
+     
+     `;
+    item.code1.forEach((item) => {
+      tempRes += `
+      
+      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+               <div
+                  class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded bg-gray-700 h-auto dark:bg-gray-800">
+                  
+
+                  <!-- Dropdown menu -->
+                  <div
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-dull-black h-auto dark:bg-gray-800">
+                     <div class="code text-left bg-dull-black">
+${item.code}
+               </div>
+                  </div>
+             
+               </div>
+               
+            </div>
+
+      
+      `;
+    });
+  });
+
+  return tempRes;
+};
 const hr = `<hr class="w-full h-px my-0 mb-0 bg-gray-600 border-0 dark:bg-gray-700">`;
 
-const editorQues = `     <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
-            <h3 class="text-3xl font-bold text-gray-200 dark:text-white">Creating a Comment
-            </h3>
-            <p class="text-gray-200 dark:text-gray-400">Comments starts with a #, and Python will ignore them:</p>
-
-            <!-- Code Snipeet and Code Editor -->
-            <p class="text-gray-200 dark:text-gray-400"></p>
-
-            
-         </div>`;
+const editorQues = `    `;
 
 const bottomPrevNext = `<div class="navigation w-full pt-8  flex">
             <!-- Previous Button -->

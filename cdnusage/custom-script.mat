@@ -1,0 +1,7 @@
+mana a=5;
+mana b=5;
+mana c=5;
+
+dikhai(a);
+dikhai(b);
+
