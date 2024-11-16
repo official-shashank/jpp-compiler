@@ -21,10 +21,7 @@ Compiler: [https://matlang-compiler.whatever](https://matlang-compiler.whatever)
 
 MatLang/
 ├─ compiler/
-│  ├─ parser.js
-│  ├─ tokenizer.js
-│  ├─ interpreter.js
-│  ├─ ...
+
 ├─ examples/
 │  ├─ basics.mat
 │  ├─ loops.mat
@@ -35,8 +32,8 @@ MatLang/
 │  ├─ examples.md
 │  ├─ ...
 ├─ tests/
-│  ├─ test-parser.js
-│  ├─ test-tokenizer.js
+│  ├─ Mat_Lang_script.js
+│  ├─ Javascript_parser.js
 │  ├─ ...
 
 
@@ -86,17 +83,7 @@ MatLang/
    cd matlang
      
 
-2. Install dependencies:  
-   bash
-   npm install
-     
-
-3. Run the compiler:  
-   bash
-   npm start
-     
-
-4. Compile a MatLang file:  
+2. Compile a MatLang file:  
    bash
    node compiler/parser.js examples/basics.mat
      
@@ -144,7 +131,7 @@ This project does not use any external APIs. All compilation and interpretation 
 - *Compiler Components:*  
   - Tokenizer  
   - Parser  
-  - Interpreter  
+  - Generator Javascript 
 - *Testing Framework:* Jest  
 
 ---
