@@ -5,18 +5,18 @@ const funcTitle = (title, subtitle) => {
             <h2 id="title" class="text-5xl mb-8 text-gray-200 font-bold dark:text-white">${title}</h2>
 
             <!-- navigation button -->
-            <div class="navigation w-full pt-8  flex  ">
-               <!-- Previous Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Home
-               </a>
-               <!-- Next Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Previous
-               </a>
-            </div>
+            // <div class="navigation w-full pt-8  flex  ">
+            //    <!-- Previous Button -->
+            //    <a href="#"
+            //       class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            //       Home
+            //    </a>
+            //    <!-- Next Button -->
+            //    <a href="#"
+            //       class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            //       Previous
+            //    </a>
+            // </div>
 
             <hr class="w-full h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
 
