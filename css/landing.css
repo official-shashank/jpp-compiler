@@ -13,6 +13,8 @@
 
 body {
     background-color: var(--bgc);
+    scroll-behavior: smooth;
+   
 }
 
 .bg-transparent {
