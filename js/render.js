@@ -63,6 +63,11 @@ function renderSidebar(data) {
 
 function renderData(data) {
   let finalResult = "";
+  
+  if(selectedTab == "Getting Started"){
+    finalResult+=data['data']
+  }
+
   if (data["title"] || data["subtitle"]) {
     finalResult += funcTitle(data["title"], data["subtitle"]);
   }
@@ -86,6 +91,8 @@ function renderData(data) {
   if (data["Ques"]) {
     finalResult += funcWithQuesEditor(data["Ques"]);
   }
+
+  
 
   document.getElementById("data-container").innerHTML = finalResult;
 }

@@ -4105,7 +4105,514 @@ console.log("The sum is " + result);`,
 
 /***************************************************************************************************/
 const MatLangData = {
-  "Getting Started": {},
+  "Getting Started": {
+    data:`
+    <div id="main-core-div" class="p-4 ">
+      
+            <div class="p-4 code-editor-v mt-10 get-start-head">
+                <!-- Heading and Subs -->
+                <div>
+                    <h1 class="text-5xl p-1 m-10 mb-4 font-extrabold text-white sm:text-4xl sm:p-4 dark:text-white">
+                        Get Started<small class="ms-2 font-semibold text-gray-400 dark:text-gray-400">With
+                            MatLang</small>
+                    </h1>
+
+                    <p class="mb-3 text-lg text-gray-300 leading-2 md:text-xl sm:text-lg dark:text-gray-400">
+                        Deliver great service experiences fast - without the complexity of
+                        traditional ITSM solutions.Accelerate critical development work
+                        and deploy.
+                    </p>
+                </div>
+                <button
+                    class="relative inline-flex items-center w-40 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-blue-900 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                    <span
+                        class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        GitHub <i class="fa-brands fa-github mx-1 text-xl"></i>
+                    </span>
+                </button>
+            </div>
+            <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+            <!-- Main Head and Content -->
+            <div class="mb-2">
+                <h3 class="text-3xl text-gray-200 font-bold dark:text-white mb-2">
+                    Quick start
+                    <span class="text-blue-900 hover:text-blue-600 dark:text-blue-500">#</span>
+                </h3>
+
+                <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-gray-400">
+                    To begin using MatLang, include its production-ready core library
+                    and utilities via MatLang's Content Delivery Network (CDN). This
+                    eliminates the need for any complex build steps, allowing you to
+                    quickly prototype and develop.
+                </p>
+            </div>
+
+            <!-- Some Imp List -->
+            <div class="m-4 pd-4 list-start">
+                <div class="margin-butt">
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        1.
+                        <span class="font-bold">Begin by creating an <span class="pink-code">index.html</span> file in
+                            your
+                            project directory.</span> This will serve as the main file for
+                        your application. Add the following boilerplate HTML code to it:
+                    </p>
+
+                  
+                    <div class="code-editor-v stylish-scrollbar overflow-x-auto relative border bg-dull-black border-gray-700 rounded-md"
+                        style="max-height: 300px; overflow-y: auto;">
+                        <div class="code w-full text-white whitespace-pre-line px-3">
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                            &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;MatLang Compiler&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;h1&gt;This is CDN usage for MatLang&lt;/h1&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+
+                        </div>
+
+                        <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                            <i class="fa-regular fa-copy"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="margin-butt">
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        2.
+                        <span class="font-bold">To use the MatLang compiler, you need to include the MatLang CDN in your
+                            project.</span> Additionally, you’ll
+                        write your custom MatLang code in a separate file <span class="pink code">index.mat</span> and
+                        link it
+                        to the <span class="pink-code">index.html</span>.
+                    </p>
+
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        a. Create a new file named <span class="pink-code">script.mat</span> in the same directory as
+                        your
+                        <span class="pink-code">index.html</span>. This file will contain your custom MatLang code. For
+                        example:
+                    </p>
+               
+                    <div class="code-editor-v stylish-scrollbar overflow-x-auto relative border bg-dull-black border-gray-700 rounded-md"
+                        style="max-height: 300px; overflow-y: auto;">
+                        <div class="code w-full text-white whitespace-pre-line px-3">
+                            // Example MatLang Code
+                            print("Hello, MatLang!");
+
+
+                        </div>
+
+                        <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                            <i class="fa-regular fa-copy"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        b. Open your <span class="pink-code">index.html</span> file and add two <span
+                            class="pink-code">&ltscript&gt</span> tags at the end of the <span
+                            class="pink-code">&ltbody&gt</span> section.
+                        The first
+                        <span class="pink-code">&ltscript&gt</span> tag will link your custom <span
+                            class="pink-code">script.mat</span> file. Make sure to specify <span class="pink-code">type
+                            =
+                            "text/matlang"</span> to indicate that this is a MatLang script.
+                        The order of these scripts is important. The custom script file must be included before the
+                        compiler
+                        script. Your index.html should now look like this:
+                    </p>
+
+                 
+                    <div class="code-editor-v stylish-scrollbar overflow-x-auto relative border bg-dull-black border-gray-700 rounded-md"
+                        style="max-height: 300px; overflow-y: auto;">
+                        <div class="code w-full text-white whitespace-pre-line px-3">
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                            &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;MatLang Compiler&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;h1&gt;This is CDN usage for MatLang&lt;/h1&gt;
+
+                            &lt;!-- Include user's custom MatLang script --&gt;
+                            &lt;script src="script.mat" type="text/matlang"&gt;&lt;/script&gt;
+
+                            &lt;!-- Include the MatLang Compiler from CDN --&gt;
+                            &lt;script
+                            src="https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js"&gt;&lt;/script&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+
+                        </div>
+
+                        <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                            <i class="fa-regular fa-copy"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="margin-butt">
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        3. <span class="font-bold">Add the MatLang Compilation Script</span>
+
+                        To dynamically fetch and compile your MatLang code, add the following script after the MatLang
+                        CDN in
+                        your <span class="pink-code">index.html</span>. This script fetches the content of the
+                        <span class="pink-code">script.mat</span> file, compiles it using the
+                        MatLangCompiler class from the CDN, and logs the generated JavaScript code to the browser
+                        console:
+                    </p>
+
+                    <div class="code-editor-v stylish-scrollbar overflow-x-auto relative border bg-dull-black border-gray-700 rounded-md"
+                        style="max-height: 300px; overflow-y: auto;">
+                        <div class="code w-full text-white whitespace-pre-line px-3">
+                            &lt;script&gt;
+                            document.addEventListener("DOMContentLoaded", async () =&gt; {
+                            try {
+                            // Fetch the custom MatLang script dynamically
+                            const scriptElement = document.querySelector('script[type="text/matlang"]');
+                            const scriptSrc = scriptElement?.src;
+
+                            if (scriptSrc &amp;&amp; typeof MatLangCompiler !== "undefined") {
+                            // Fetch the content of the custom script file
+                            const response = await fetch(scriptSrc);
+                            if (!response.ok) throw new Error("Failed to load the MatLang script.");
+
+                            const code = await response.text();
+                            let compiler;
+                            let generatedCode;
+
+                            // Compile the code using MatLangCompiler
+                            try {
+                            compiler = new MatLangCompiler();
+                            generatedCode = compiler.compile(code);
+                            } catch (err) {
+                            console.error("Compilation Error:", err);
+                            }
+
+                            // Output the compiled code
+                            console.log("Generated Code:", generatedCode);
+                            } else {
+                            console.error("Custom MatLang script or MatLangCompiler is not defined.");
+                            }
+                            } catch (error) {
+                            console.error("Error occurred:", error);
+                            }
+                            });
+                            &lt;/script&gt;
+
+
+                        </div>
+
+                        <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                            <i class="fa-regular fa-copy"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="margin-butt">
+                    <p class="text-gray-200 m-4 text-lg dark:text-gray-400">
+                        4. <span class="font-bold">Run the Project on a Live Server</span>
+
+                        To test your project, run it on a live server using any code editor's Live Server Extension or a
+                        local HTTP server (e.g., http-server or python -m http.server). Then, open your browser and
+                        navigate
+                        to the project. If everything is set up correctly, you’ll see the heading <span
+                            class="font-bold">"This is CDN usage for
+                            MatLang"</span> on the page, and the compiled MatLang code will appear in the browser
+                        console.
+                    </p>
+                </div>
+            </div>
+            <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+            <!--CDN Table-- >
+
+         <div class="relative overflow-x-auto shadow-md sm:rounded-lg"> -->
+            <table class="w-full text-sm text-left rtl:text-right text-gray-200 dark:text-gray-400">
+                <caption
+                    class="p-5 text-3xl font-semibold text-left rtl:text-right text-gray-200 bg-transparent dark:text-white dark:bg-gray-800">
+                    CDN links
+                    <p class="mt-1 text-lg font-normal text-gray-200 dark:text-gray-400">
+                        As reference, here are our primary CDN links.
+                    </p>
+                </caption>
+                <thead class="text-xs text-gray-300 uppercase border-b-2 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">Description</th>
+                        <th scope="col" class="px-6 py-3">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-tranparent dark:bg-gray-800">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-white">
+                            Script
+                        </th>
+                        <td class="px-6 py-4 pink-code">
+                            https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
+                        </td>
+                    </tr>
+                    <tr class="dark:bg-gray-800 border-y border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-white">
+                            Script
+                        </th>
+                        <td class="px-6 py-4 pink-code">
+                            https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mt-4 text-lg font-normal text-gray-200 dark:text-gray-400">
+                You can also use the CDN to fetch any of our additional builds
+                listed in the Contents page.
+            </p>
+        </div>
+
+        <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+        <section class="p-4">
+            <h2 class="text-4xl font-bold text-gray-300 mb-6 mt-2">Next steps</h2>
+            <ul class="list-disc mx-4 text-gray-300 pl-6 space-y-4">
+                <li>
+                    Read a bit more about some
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        important global environment sttings
+                    </a>
+                    that matLang utilizes.
+                </li>
+                <li>
+                    Read about what’s included in matLang in our
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        contents section
+                    </a>
+                    and the list of
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        components that require JavaScript </a>below.
+                </li>
+                <li>
+                    Need a little more power? Consider building with matLang by
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        including the source files via package manager.
+                    </a>
+                </li>
+                <li>
+                    Looking to use matLang as a module with
+                    <span class="pink-code">&ltscript type="module"&gt</span> ? Please
+                    refer to our
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        using matLang as a module section.
+                    </a>
+                </li>
+                <li>
+                    Chat with fellow matLangpers in IRC. On the
+                    <span class="text-pink-700">irc.libera.chat</span>
+                    server, in the <span class="text-pink-700">#matLang </span>
+                    channel.
+                </li>
+            </ul>
+        </section>
+
+        <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+        <section class="p-4">
+            <h2 class="text-4xl font-bold text-gray-300 mb-6 mt-2">
+                JS Components
+            </h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Curious which components explicitly require our JavaScript and
+                Popper? If you’re at all unsure about the general page structure,
+                keep reading for an example page template.
+            </p>
+            <ul class="list-disc mx-4 text-gray-300 pl-6 space-y-4">
+                <li>
+                    Alerts for dismissing
+                </li>
+                <li>
+                    Buttons for toggling states and checkbox/radio functionality
+                </li>
+                <li>
+                    Carousel for all slide behaviors, controls, and indicators
+                </li>
+                <li>
+                    Collapse for toggling visibility of content
+                </li>
+                <li>
+                    Dropdowns for displaying and positioning (also requires Popper)
+                </li>
+                <li>
+                    Modals for displaying, positioning, and scroll behavior
+                </li>
+                <li>
+                    Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors
+                </li>
+                <li>
+                    Navs with the Tab plugin for toggling content panes
+                </li>
+                <li>
+                    Offcanvases for displaying, positioning, and scroll behavior
+                </li>
+                <li>
+                    Scrollspy for scroll behavior and navigation updates
+                </li>
+                <li>
+                    Toasts for displaying and dismissing
+                </li>
+                <li>
+                    ooltips and popovers for displaying and positioning (also requires Popper)
+                </li>
+            </ul>
+        </section>
+
+        <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+        <div class="mb-2 mt-2 px-3">
+            <h3 class="text-3xl text-gray-200 font-bold dark:text-white mb-2">
+                Important globals
+                <span class="text-blue-900 hover:text-blue-600 dark:text-blue-500">#</span>
+            </h3>
+
+            <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-gray-400">
+                MatLang utilizes a set of essential global styles and settings, primarily designed to normalize styles
+                across different browsers and ensure consistency. Let’s dive into how these styles work and their impact
+                on your projects.
+            </p>
+        </div>
+
+        <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+
+        <div class="mb-2 px-3">
+            <h3 class="text-3xl text-gray-200 font-bold dark:text-white mb-2">
+                HTML5 doctype
+                <span class="text-blue-900 hover:text-blue-600 dark:text-blue-500">#</span>
+            </h3>
+
+            <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-gray-400">
+                matLang requires the use of the HTML5 doctype. Without it, youll see some funky and incomplete
+                styling.
+            </p>
+
+
+            <div class="code-editor-v relative border bg-dull-black border-gray-700 rounded-md">
+                <div class="code w-full text-white whitespace-pre-line px-3">
+                    &lt!doctype html&gt
+                    &lthtml lang="en"&gt
+                    ...
+
+                    &lt/html&gt
+                </div>
+
+                <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                    <i class="fa-regular fa-copy"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="m-4 px-3">
+            <h3 class="text-3xl text-gray-200 font-bold dark:text-white mb-2">
+                Viewport meta
+                <span class="text-blue-900 hover:text-blue-600 dark:text-blue-500">#</span>
+            </h3>
+
+            <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-gray-400">
+                Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices first and
+                then scale up components as necessary using CSS media queries. To ensure proper rendering and touch
+                zooming for all devices, add the responsive viewport meta tag to your <span
+                    class="pink-code">&lthead&gt</span>.
+            </p>
+
+            <div class="code-editor-v relative border bg-dull-black border-gray-700 rounded-md">
+                <div class="code w-full text-white whitespace-pre-line px-3">
+                    &ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt
+                </div>
+                <a href="#" class="filter copy-clip invert hover:invert-0 transition duration-300">
+                    <i class="fa-regular fa-copy"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--community -->
+        <section class="p-4">
+            <h2 class="text-4xl font-bold text-gray-300 mb-6 mt-2">Community</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Stay up-to-date on the development of matLang and reach out to the
+                community with these helpful resources.
+            </p>
+            <ul class="list-disc mx-4 text-gray-300 pl-6 space-y-4">
+                <li>
+                    Read and subscribe to
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        The Official matLang Blog.
+                    </a>
+                </li>
+                <li>
+                    Ask questions and explore
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        our GitHub Discussions.
+                    </a>
+                </li>
+                <li>
+                    Discuss, ask questions, and more on
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        the community Discord
+                    </a>
+                    or
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        matLang subreddit.
+                    </a>
+                </li>
+                <li>
+                    Developers should use the keyword
+                    <span class="pink-code">matLang</span>
+                    on packages that modify on packages that modify or add to the
+                    functionality of matLang when distributing through
+                    <a href="https://example.com" target="_blank"
+                        class="text-blue-500 hover:text-blue-700 hover:underline">
+                        npm
+                    </a>
+                    or similar delivery mechanisms for maximum dicoverablity.
+                </li>
+                <li>
+                    Chat with fellow matLangpers in IRC. On the
+                    <span class="pink-code">irc.libera.chat</span> server, in the
+                    <span class="pink-code">#matlang</span>
+                    channel.
+                </li>
+            </ul>
+            <p class="text-lg text-gray-300 mt-6 mb-6">
+                You can also follow <a href="https://example.com" target="_blank"
+                    class="text-blue-500 hover:text-blue-700 hover:underline">
+                    @getmatLang on Twitter
+                </a> for the latest gossip
+                and awesome music videos.
+            </p>
+        </section>
+
+        <hr class="w-full h-px my-8 mb-10 bg-gray-500 border-0 dark:bg-gray-700" />
+    </div>
+    
+    
+    
+    `
+  },
   Home: {
     title: "Home",
     subtitle: "Complete Documentation for MatLang Language",
