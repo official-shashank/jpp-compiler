@@ -119,9 +119,7 @@ const funcWithQuesEditor = (data) => {
             <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
             </h3>
             <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
-             <button type="button" onclick="redirectToPlayground()"
-               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
-               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+             
          </div>
          </div>
      
@@ -129,7 +127,7 @@ const funcWithQuesEditor = (data) => {
     item.code1.forEach((item) => {
       tempRes += `
       
-      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center  gap-4 mb-4 mt-4">
                <div
                   class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded bg-gray-700 h-auto dark:bg-gray-800">
                   
@@ -141,9 +139,14 @@ const funcWithQuesEditor = (data) => {
 ${item.code}
                </div>
                   </div>
+                  
              
                </div>
-               
+               <div>
+               <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+               </div>
             </div>
 
       

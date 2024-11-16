@@ -3731,7 +3731,6 @@ const PythonData = {
   /*****************************************************************************************************/
 };
 
-
 const exampleShowCaseMatLang = [
   {
     title: "1. Introduction",
@@ -4095,8 +4094,7 @@ function add(x, y) {
 
 let result = add(x, y);
 console.log("The sum is " + result);`,
-  }
-  
+  },
 ];
 
 /***************************************************************************************************/
@@ -4106,7 +4104,7 @@ console.log("The sum is " + result);`,
 /***************************************************************************************************/
 const MatLangData = {
   "Getting Started": {
-    data:`
+    data: `
     <div id="main-core-div" class="p-4 ">
       
             <div class="p-4 code-editor-v mt-10 get-start-head">
@@ -4123,7 +4121,7 @@ const MatLangData = {
                         and deploy.
                     </p>
                 </div>
-                <button
+                <button onclick="redirectToPage('https://github.com/official-shashank/jpp-compiler')"
                     class="relative inline-flex items-center w-40 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-blue-900 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                     <span
                         class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -4611,7 +4609,7 @@ const MatLangData = {
     
     
     
-    `
+    `,
   },
   Home: {
     title: "Home",
