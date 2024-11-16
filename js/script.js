@@ -1,25 +1,24 @@
 // // --------------------------------------------------------------------------------
 // // -----------------------------Only for Documentation Sid-------------------------------
 
-let selectedLang="matlang";
-let selectedTab = "Home" ;
-let mSidebar=[];
-let pSidebar=[];
-
+let selectedLang = "matlang";
+let selectedTab = "Home";
+let mSidebar = [];
+let pSidebar = [];
 
 // MatLangCodeExamples
 
-function showExampleMatlang() {  
-  let matres = "";  
+function showExampleMatlang() {
+  let matres = "";
 
-  exampleShowCaseMatLang.forEach((item) => {  
-    matres += createExampleCard(item);  
-  });  
+  exampleShowCaseMatLang.forEach((item) => {
+    matres += createExampleCard(item);
+  });
 
-  document.getElementById("MatLangCodeExamples").innerHTML = matres;  
-}  
+  document.getElementById("MatLangCodeExamples").innerHTML = matres;
+}
 
-function createExampleCard(item) {  
+function createExampleCard(item) {
   return `  
     <a href="../pages/docs.html" class="flex flex-col mt-12 h-96 max-w-md gap-4 p-4 rounded-lg transition-transform transform duration-300 ease-in-out hover:scale-110 animate-fade-in" style="box-shadow: 0 10px 25px 0 black">  
       <h2 class="text-white font-bold">${item.title}</h2>  
@@ -38,31 +37,26 @@ function createExampleCard(item) {
         </div>  
       </aside>  
     </a>  
-  `;  
-}  
+  `;
+}
 
-function formatCode(code) {  
-  return code  
-    .trim() // Remove any leading/trailing whitespace  
-    .replace(/</g, '&lt;') // Escape HTML special characters  
-    .replace(/>/g, '&gt;')  
-    .replace(/&/g, '&amp;')  
-    .replace(/\n/g, '<br/>'); // Each line in the code will now break to a new line  
+function formatCode(code) {
+  return code
+    .trim() // Remove any leading/trailing whitespace
+    .replace(/</g, "&lt;") // Escape HTML special characters
+    .replace(/>/g, "&gt;")
+    .replace(/&/g, "&amp;")
+    .replace(/\n/g, "<br/>"); // Each line in the code will now break to a new line
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-
-
-for(let item in MatLangData ){
-  mSidebar.push(item);
-}
-for(let item in PythonData ){
-  pSidebar.push(item);
-}
-selectedTab = mSidebar[0] ;
-
+  for (let item in MatLangData) {
+    mSidebar.push(item);
+  }
+  for (let item in PythonData) {
+    pSidebar.push(item);
+  }
+  selectedTab = mSidebar[0];
 
   if (window.location.href.includes("/docs.html")) {
     renderSidebar(mSidebar);
@@ -72,4 +66,8 @@ selectedTab = mSidebar[0] ;
   }
 });
 
-
+//redirection to the playground
+function redirectToPlayground() {
+  // Redirect to the playground.html page
+  window.location.href = "playground.html";
+}

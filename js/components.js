@@ -80,28 +80,41 @@ const codeEditor = (data) => {
   data.forEach((item) => {
     tempRes += `
          <div class="grid mt-2 w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
-               <div
-                  class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
-                  
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
-                  <!-- Dropdown menu -->
-                  <div
-                     class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">                     <div class="code text-left ">
-${item.input}
-               </div>
-                  </div>
-               </div>
+
+               <!-- Dropdown menu -->
                <div
-                  class=" px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
-${item.output}
-               </div>
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.input}
                   </div>
                </div>
             </div>
+            <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself</button>
+         </div>
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
+
+               <!-- Dropdown menu -->
+               <div
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.output}
+                  </div>
+               </div>
+            </div>
+            <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself</button>
+         </div>
+      </div>
             
         
         `;
