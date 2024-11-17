@@ -1,12 +1,10 @@
-document.getElementById("registerForm").addEventListener("submit", (event) => {
+document.getElementById("registerForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirmPassword").value;
 
-  const loginBtnLanding = document.getElementById("login-btn");
-  const avtar = document.getElementById("login-btn");
 
   if (password !== confirmPassword) {
     alert("Passwords do not match!");
@@ -28,9 +26,10 @@ document.getElementById("registerForm").addEventListener("submit", (event) => {
   localStorage.setItem("users", JSON.stringify(userArr));
 
   alert("Registration successful!");
+  window.location.href="./login.html"
 });
 
-document.getElementById("loginForm").addEventListener("submit", (event) => {
+document.getElementById("loginForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const username = document.getElementById("username").value;
@@ -62,8 +61,23 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
 // }
 function checkAuth() {
   const user = localStorage.getItem("users");
-  if (user) {
+  if (user && (window.location.href.includes("/login.html") || window.location.href.includes("/register.html"))) {
     window.location.href = "./index.html";
+
+  
+ 
+  }
+  if(user){
+    const loginBtnLanding = document.getElementById("login-btn");
+    document.getElementById("user-avtar").style.display="block"
+    loginBtnLanding.style.display="none";
   }
 }
 checkAuth();
+
+function signOut(){
+    
+    localStorage.removeItem("users");
+    window.location.href="./index.html"
+}
+

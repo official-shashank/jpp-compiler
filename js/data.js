@@ -3750,19 +3750,16 @@ const exampleShowCaseMatLang = [
     title: "2. Variable Declarations",
     exp: "In MatLang, variables are declared using the keyword mana which is the Hindi word for variable or assign. The syntax is simple and intuitive.",
     href: "/docs.html",
-    code: `Syntax:
-matlang
-Copy code
+    code: `
+
 mana <variable_name> = <value>;
-Example 1:
-matlang
-Copy code
+
 mana age = 25;
 mana name = "John";
 
 Output (compiled JavaScript):
-javascript
-Copy code
+
+
 let age = 25;
 let name = "John";`,
   },
