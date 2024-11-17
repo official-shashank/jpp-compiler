@@ -4114,9 +4114,7 @@ const MatLangData = {
                     </h1>
 
                     <p class="mb-3 text-lg text-gray-300 leading-2 md:text-xl sm:text-lg dark:text-gray-400">
-                        Deliver great service experiences fast - without the complexity of
-                        traditional ITSM solutions.Accelerate critical development work
-                        and deploy.
+                       Add MatLang to your project using our CDN and explore its syntax. MatLang is a dynamic and comprehensive solution, offering an innovative alternative coding experience designed for simplicity and scalability.
                     </p>
                 </div>
                 <button onclick="redirectToPage('https://github.com/official-shashank/jpp-compiler')"
@@ -4357,14 +4355,7 @@ const MatLangData = {
                             https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
                         </td>
                     </tr>
-                    <tr class="dark:bg-gray-800 border-y border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-white">
-                            Script
-                        </th>
-                        <td class="px-6 py-4 pink-code">
-                            https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
             <p class="mt-4 text-lg font-normal text-gray-200 dark:text-gray-400">
