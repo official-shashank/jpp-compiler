@@ -82,10 +82,10 @@ Fullstack: [Jpp Compiler](https://jpp-compiler.vercel.app/)
 
 
 ## Video Walkthrough of the Project
-[Video Walkthrough of Features](https://youtu.be/)
+[Video Walkthrough of Features](https://youtu.be/rQdgRvjVHok)
 
 ## Video Walkthrough of the Codebase
-[Video Walkthrough of Codebase](https://youtu.be/)
+[Video Walkthrough of Codebase](https://www.youtube.com/watch?v=X24AJz2_8sM)
 
 ## Features
 - Intuitive Syntax: Uses a blend of Hindi and English, making programming more relatable and easier to understand for non-technical users.
