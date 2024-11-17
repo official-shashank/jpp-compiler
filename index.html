@@ -32,24 +32,24 @@
             data-dropdown-placement="bottom">
             <span class="sr-only">Open user menu</span>
             <img id="user-avtar" class="hidden w-8 h-8 rounded-full" src="../assets/logo.png" alt="user photo">
-           <a href="./register.html">
+            <a href="./register.html">
 
-             <button type="button" id="login-btn"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-3xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login
-              or Register</button>
+              <button type="button" id="login-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-3xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login
+                or Register</button>
           </button>
-           </a>
+          </a>
           <!-- Dropdown menu -->
           <div
             class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
             id="user-dropdown">
-          
+
             <ul class="py-2" aria-labelledby="user-menu-button">
               <li>
                 <a href="./visualizer.html"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Visualize</a>
               </li>
-              
+
               <li>
                 <a href="#" onclick="signOut()"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
@@ -179,41 +179,6 @@
       </div>
 
     </div>
-    <!-- part2 -->
-    <div>
-
-
-      <div class="max-w-sm p-6 border border-gray-400 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
-        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path
-            d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-        </svg>
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Include via CDN
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">TInstall the MatLang source JavaScript files using
-          npm. Please note that package-managed installations do not include documentation or the complete build
-          scripts. As MatLang is still in development, we recommend utilizing our robust CDN for the latest updates and
-          stability
-        </p>
-        <div class="flex flex-col gap-4">
-          <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-            <code class="text-blue-500 fade-in">$ matlang compile your_script.mat</code>
-          </div>
-          <div
-            class="fade-in stylish-scrollbar bg-gray-800 text-sm font-medium py-1 px-4 rounded-lg border border-gray-700 shadow-md"
-            style="overflow-x: auto; white-space: nowrap;">
-            <code class="text-blue-500">
-            $ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs
-          </code>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
 
     <!-- part3 -->
     <div>
@@ -226,20 +191,64 @@
             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
         </svg>
         <a href="#">
-          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Learn and develope with
-            MatLang
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Include MatLang via CDN
           </h5>
         </a>
-        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">Explore our latest in-built IDE and playground to
-          test MatLang effortlessly. You can also integrate MatLang syntax into your code editor by simply installing
-          the MatLib extension, enhancing your coding experience.
+        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">Install the Python source files using pip. Please
+          note that package-managed installations may not include full documentation or complete build scripts. As this
+          project is still under development, we recommend using our robust CDN for the latest updates and enhanced
+          stability.
+        </p>
         <div class="flex flex-col gap-4">
           <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-            <code class="text-blue-500">$ matlang compile your_script.py</code>
+            <code class="text-blue-500 fade-in">$ matlang compile your_script.py</code>
           </div>
+          <div
+            class="fade-in stylish-scrollbar bg-gray-800 text-sm font-medium py-1 px-4 rounded-lg border border-gray-700 shadow-md"
+            style="overflow-x: auto; white-space: nowrap;">
+            <code class="text-blue-500">
+            $ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/compilers/python/Codegenerator.js
+
+          </code>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- part2 -->
+
+    <div>
+
+
+      <div class="max-w-sm p-6 border border-gray-400 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
+        </svg>
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Include MatLang via CDN
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">Install the MatLang source JavaScript files using
+          npm. Please note that package-managed installations do not include documentation or the complete build
+          scripts. As MatLang is still in development, we recommend utilizing our robust CDN for the latest updates and
+          stability
+        </p>
+        <div class="flex flex-col gap-4">
           <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-            <code class="text-blue-500">$ matlang compile your_script.py</code>
+            <code class="text-blue-500 fade-in">$ matlang compile your_script.mat</code>
           </div>
+          <div
+            class="fade-in stylish-scrollbar bg-gray-800 text-sm font-medium py-1 px-4 rounded-lg border border-gray-700 shadow-md"
+            style="overflow-x: auto; white-space: nowrap;">
+            <code class="text-blue-500">
+              $ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs
+            </code>
+          </div>
+
         </div>
       </div>
 

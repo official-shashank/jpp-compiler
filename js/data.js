@@ -3752,7 +3752,7 @@ const exampleShowCaseMatLang = [
     href: "/docs.html",
     code: `
 
-mana <variable_name> = <value>;
+mana &ltvariable_name&gt = &ltvalue;
 
 mana age = 25;
 mana name = "John";
