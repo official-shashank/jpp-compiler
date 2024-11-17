@@ -13,8 +13,15 @@ const funcTitle = (title, subtitle) => {
             <p id="subtitle" class="mb-3 text-gray-300 dark:text-gray-400">${subtitle}
             
             </p>
-
             <hr class="w-full h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
+            
+            <button onclick="redirectToPage('https://github.com/official-shashank/jpp-compiler/tree/main/js/compilers/python')"
+                    class="relative inline-flex items-center w-40 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-blue-900 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                    <span
+                        class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        GitHub <i class="fa-brands fa-github mx-1 text-xl"></i>
+                    </span>
+                </button>
 </div>
     
     
