@@ -21,10 +21,9 @@
     <nav class="bg-transparent dark:bg-transparent shadow-2xl"
       style="box-shadow: 0 10px 25px 0 black;width: 100%;margin: -7px;">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/pages/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-src="../assets/logo.png"            class="h-24 bg-transparent dark:bg-transparent w-24" alt="Flowbite Logo" />
-    
+        <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../assets/logo.png" class="h-24 bg-transparent dark:bg-transparent w-24" alt="Flowbite Logo" />
+
         </a>
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button type="button"
@@ -32,32 +31,27 @@ src="../assets/logo.png"            class="h-24 bg-transparent dark:bg-transpare
             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
             data-dropdown-placement="bottom">
             <span class="sr-only">Open user menu</span>
-            <img class="w-8 h-8 rounded-full"
-src="../assets/logo.png"              alt="user photo">
+            <img id="user-avtar" class="hidden w-8 h-8 rounded-full" src="../assets/logo.png" alt="user photo">
+           <a href="./register.html">
+
+             <button type="button" id="login-btn"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-3xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login
+              or Register</button>
           </button>
+           </a>
           <!-- Dropdown menu -->
           <div
             class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
             id="user-dropdown">
-            <div class="px-4 py-3">
-              <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-              <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-            </div>
+          
             <ul class="py-2" aria-labelledby="user-menu-button">
               <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                <a href="./visualizer.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Visualize</a>
               </li>
+              
               <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-              </li>
-              <li>
-                <a href="#"
+                <a href="#" onclick="signOut()"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
                   out</a>
               </li>
@@ -77,16 +71,16 @@ src="../assets/logo.png"              alt="user photo">
           <ul
             class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-gray-900 dark:border-gray-700">
             <li class="bg-gray-700 p-2 rounded-lg">
-              <a href="/pages/index.html"
+              <a href="/index.html"
                 class="block py-2 px-3 text-white bg-blue-700 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:text-white md:p-0 hover:text-blue-700 md:hover:bg-magenta-500 md:dark:text-blue-500"
                 aria-current="page">Home</a>
             </li>
             <li class="bg-gray-700 p-2 rounded-lg text-white">
-              <a href="/pages/about.html"
+              <a href="./about.html"
                 class="block py-2 px-3 text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
             </li>
             <li class="bg-gray-700 p-2 rounded-lg">
-              <a href="/pages/pricing.html"
+              <a href="./pricing.html"
                 class="block py-2 px-3 text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
             </li>
             <li class="bg-gray-700 p-2 rounded-lg">
@@ -94,7 +88,7 @@ src="../assets/logo.png"              alt="user photo">
                 class="block py-2 px-3 text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
             </li>
             <li class="bg-gray-700 p-2 rounded-lg">
-              <a href="/pages/docs.html"
+              <a href="./docs.html"
                 class="block py-2 px-3 text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-magenta-500 md:bg-transparent md:hover:bg-magenta-500 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
             </li>
           </ul>
@@ -110,7 +104,7 @@ src="../assets/logo.png"              alt="user photo">
   <div class="background-icon bottom-20 left-1/4">📐</div>
 
   <section
-    class="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    class="relative hero flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
     <!-- Custom Language Icon -->
     <div class="flex items-center justify-center w-24 h-24 bg-white rounded-full mb-6 fade-in shadow-lg bounce">
       <img src="../assets/logo.png" alt="logo">
@@ -130,7 +124,8 @@ src="../assets/logo.png"              alt="user photo">
     <!-- Buttons -->
     <div class="flex items-center mt-10 space-x-4 fade-in">
       <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md text-white">
-        <code class="text-blue-500">$ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs</code>
+        <code
+          class="text-blue-500">$ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs</code>
       </div>
       <a href="#"
         class="px-6 py-2 font-semibold text-purple-700 bg-white rounded-lg hover:bg-gray-100 transition duration-200 transform hover:scale-105 shadow-md">
@@ -145,6 +140,7 @@ src="../assets/logo.png"              alt="user photo">
     </div>
   </section>
 
+  <hr class="w-[800px] m-auto h-px  mb-24 bg-gray-500 border-0 dark:bg-gray-700" />
   <!-- CDN links part -->
 
   <div class="flex flex-wrap justify-center gap-10">
@@ -152,26 +148,34 @@ src="../assets/logo.png"              alt="user photo">
     <div>
 
 
-      <div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
-        <svg class="w-7 h-7 text-gray-700 dark:text-gray-400 mb-3 fade-in" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" viewBox="0 0 20 20">
+      <div
+        class="relative max-w-sm p-6 border border-gray-400 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <button type="button"
+          class="absolute top-5 left-[250px] text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-full text-sm px-3 py-1 text-center me-2 mb-2">Comming
+          soon</button>
+        <svg class="w-7 h-7 text-gray-600 dark:text-gray-400 mb-3 fade-in" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path
             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
         </svg>
         <a href="#">
-          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-600 dark:text-white">Install via package manager
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-500 dark:text-white">Install via package
+            manager
           </h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Install Bootstrap's source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor. Package managed installs don't include documentation or our full build scripts. You can also use any demo from out Exanioles reng to quickly jumpstart Bootstrap projects.
+        <p class="mb-3 font-normal text-gray-400 dark:text-gray-400">Install the MatLang source JavaScript files using
+          npm. Please note that package-managed installations do not include documentation or the complete build
+          scripts. As MatLang is still in development, we recommend utilizing our robust CDN for the latest updates and
+          stability.
         </p>
         <div class="flex flex-col gap-4">
           <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-            <code class="text-gray-700">$ matlang compile your_script.py</code>
+            <code class="text-gray-500">$ npm intall matlang</code>
           </div>
           <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-            <code class="text-gray-700">$ matlang compile your_script.py</code>
+            <code class="text-gray-500">$ pip install matlang_lib</code>
           </div>
-          </div>
+        </div>
       </div>
 
     </div>
@@ -179,9 +183,9 @@ src="../assets/logo.png"              alt="user photo">
     <div>
 
 
-      <div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
-        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" viewBox="0 0 20 20">
+      <div class="max-w-sm p-6 border border-gray-400 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path
             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
         </svg>
@@ -189,15 +193,23 @@ src="../assets/logo.png"              alt="user photo">
           <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Include via CDN
           </h5>
         </a>
-        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">When you only need to include Bootstrap's compiled CSS or JS, you can use JsDelin See it in action with our simple quick start or browse the examples to jumpstart your next project. You can also choose to include Popper and our JS separetly.
+        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">TInstall the MatLang source JavaScript files using
+          npm. Please note that package-managed installations do not include documentation or the complete build
+          scripts. As MatLang is still in development, we recommend utilizing our robust CDN for the latest updates and
+          stability
         </p>
         <div class="flex flex-col gap-4">
-        <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-          <code class="text-blue-500 fade-in">$ matlang compile your_script.py</code>
-        </div>
-        <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-          <code class="text-blue-500">$ matlang compile your_script.py</code>
-        </div>
+          <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
+            <code class="text-blue-500 fade-in">$ matlang compile your_script.mat</code>
+          </div>
+          <div
+            class="fade-in stylish-scrollbar bg-gray-800 text-sm font-medium py-1 px-4 rounded-lg border border-gray-700 shadow-md"
+            style="overflow-x: auto; white-space: nowrap;">
+            <code class="text-blue-500">
+            $ https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler/blob/main/js/language/mat-lang/compiler.mjs
+          </code>
+          </div>
+
         </div>
       </div>
 
@@ -207,31 +219,34 @@ src="../assets/logo.png"              alt="user photo">
     <div>
 
 
-      <div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
-        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" viewBox="0 0 20 20">
+      <div class="max-w-sm p-6 border border-gray-400 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3 fade-in" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path
             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
         </svg>
         <a href="#">
-          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Include via CDN
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Learn and develope with
+            MatLang
           </h5>
         </a>
-        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">When you only need to include Bootstrap's compiled CSS or JS, you can use JsDelin See it in action with our simple quick start or browse the examples to jumpstart your next project. You can also choose to include Popper and our JS separetly.
-        </p>
+        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">Explore our latest in-built IDE and playground to
+          test MatLang effortlessly. You can also integrate MatLang syntax into your code editor by simply installing
+          the MatLib extension, enhancing your coding experience.
         <div class="flex flex-col gap-4">
-        <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-          <code class="text-blue-500">$ matlang compile your_script.py</code>
-        </div>
-        <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
-          <code class="text-blue-500">$ matlang compile your_script.py</code>
-        </div>
+          <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
+            <code class="text-blue-500">$ matlang compile your_script.py</code>
+          </div>
+          <div class="fade-in bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md">
+            <code class="text-blue-500">$ matlang compile your_script.py</code>
+          </div>
         </div>
       </div>
 
     </div>
-    
+
   </div>
+  <hr class="w-[800px] m-auto h-px  mb-8 mt-24 bg-gray-500 border-0 dark:bg-gray-700" />
 
   <!-- heading -->
 
@@ -243,7 +258,7 @@ src="../assets/logo.png"              alt="user photo">
       Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and
       drive economic growth.</p>
     <div class="flex gap-10">
-      <a href="/pages/docs.html"
+      <a href="/docs.html"
         class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900 mt-4">
         Learn more
         <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -335,41 +350,7 @@ src="../assets/logo.png"              alt="user photo">
         </div>
       </div>
 
-      <!-- Angular Card
-      <div
-        class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">
-        <div class="flex flex-col items-center pb-10">
-          <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover"
-            src="https://platri.de/wp-content/uploads/2024/01/Angular-Framework-e1649312852136.png"
-            alt="Angular logo" />
-          <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Angular</h5>
-          <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>
-        </div>
-      </div> -->
 
-      <!-- Java Card
-      <div
-        class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">
-        <div class="flex flex-col items-center pb-10">
-          <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTBl3CXRLySYth-OpzCMPGDGliuMU7VpwT2A&s"
-            alt="Java logo" />
-          <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Java</h5>
-          <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>
-        </div>
-      </div> -->
-
-      <!-- Golang Card
-      <div
-        class="w-full max-w-sm bg-white border border-gray-200 py-6 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:opacity-90 animate-fade-in">
-        <div class="flex flex-col items-center pb-10">
-          <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover"
-            src="https://imgcdn.stablediffusionweb.com/2024/4/25/12ec4739-4c1d-4357-9e17-4649103a400d.jpg"
-            alt="Golang logo" />
-          <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Golang</h5>
-          <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon...</span>
-        </div>
-      </div> -->
 
     </div>
   </div>
@@ -394,10 +375,12 @@ src="../assets/logo.png"              alt="user photo">
 
   </div>
   <div class="flex justify-center">
-    <a href="/pages/playground.html">
-  <button class="flex font-extrabold text-white justify-center px-32 py-2 bg-blue-600 rounded-lg transition-transform transform duration-300 ease-in-out hover:scale-110 animate-fade-in">TRY IT</button>
-</a>  
-</div>
+    <a href="/playground.html">
+      <button
+        class="flex font-extrabold text-white justify-center px-32 py-2 bg-blue-600 rounded-lg transition-transform transform duration-300 ease-in-out hover:scale-110 animate-fade-in">TRY
+        IT</button>
+    </a>
+  </div>
   <!-- contact -->
 
   <div class="min-h-screen flex items-center justify-center p-5" id="contact">
@@ -600,5 +583,6 @@ src="../assets/logo.png"              alt="user photo">
 <script defer src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 <script defer src="../js/data.js"></script>
 <script defer src="../js/script.js"></script>
+<script src="./js/auth.js"></script>
 
 </html>

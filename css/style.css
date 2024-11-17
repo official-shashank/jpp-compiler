@@ -173,6 +173,42 @@ body {
   background-color: #e0edff;
 }
 
+
+
+/* ---------------------------------------- */
+/* For get started matLang */
+
+.pink-code{
+  color: rgb(240, 145, 203);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.get-start-head{
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4em;
+}
+
+
+.copy-clip{
+  position: absolute;
+  top: 5%;
+  left:96%;
+  font-size: 1.4em;
+}
+
+.margin-butt{
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+/* ---------------------------------------- */
+.hero{
+  
+}
+
+
 @media (max-width: 1020px) {
   /* Tailwind's `sm` breakpoint */
   #code-parser {
