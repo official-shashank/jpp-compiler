@@ -137,11 +137,11 @@ MatLang simplifies programming for non-technical users by using familiar Hindi a
 - **Muthyam Sushmitha** - 
 - **Shivam Mishra** - 
 
-![1](https://i.ibb.co/M11VY64/Screenshot-2024-11-17-102158.png)
+![1](https://i.ibb.co/TT0qxcW/image.png)
 
 ## Home Page
 
-![1](https://i.ibb.co/M11VY64/Screenshot-2024-11-17-102158.png)
+![1](https://i.ibb.co/TT0qxcW/image.png)
 
 ## MatLang Syntax
 
