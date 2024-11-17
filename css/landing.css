@@ -13,6 +13,8 @@
 
 body {
     background-color: var(--bgc);
+    scroll-behavior: smooth;
+   
 }
 
 .bg-transparent {
@@ -96,4 +98,17 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
+  }
+
+
+  pre {  
+
+    white-space: pre-wrap;   /* Preserve whitespace and line breaks */
+    word-wrap: break-word;   /* Wrap long words if necessary */
+  }  
+
+
+  
+  code {  
+    font-family: 'Courier New', Courier, monospace; /* Consistent monospaced font */  
   }

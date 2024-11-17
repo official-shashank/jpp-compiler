@@ -1,6 +1,3 @@
-
-
-
 function getDataOfSelectedTab() {
   if (selectedLang === "python") {
     return PythonData[selectedTab];
@@ -9,41 +6,38 @@ function getDataOfSelectedTab() {
   }
 }
 
-
-
-document.getElementById("language").addEventListener("change",(e)=>{
-  if(e.target.value=="python"){
-    selectedLang=e.target.value;
+document.getElementById("language").addEventListener("change", (e) => {
+  if (e.target.value == "python") {
+    selectedLang = e.target.value;
     renderSidebar(pSidebar);
-    selectedTab=pSidebar[0];
+    selectedTab = pSidebar[0];
+    renderData(getDataOfSelectedTab());
+  } else if (e.target.value === "matlang") {
+    selectedLang = e.target.value;
+    renderSidebar(mSidebar);
+    selectedTab = mSidebar[0];
     renderData(getDataOfSelectedTab());
   }
-  else if(e.target.value==="matlang"){
-    selectedLang=e.target.value;
-    renderSidebar(mSidebar);
-    selectedTab=mSidebar[0];
-    renderData(getDataOfSelectedTab())
-  }
-})
+});
 
 const sideBar = document.getElementById("sidebarTarg");
 
 function renderSidebar(data) {
   const sidebarTarg = document.getElementById("sidebarTarg");
-  sidebarTarg.innerHTML = ""; 
-  
+  sidebarTarg.innerHTML = "";
+
   let lastSelectedItem = null; // Variable to keep track of the last selected item
-  
+
   data.forEach((item, idx) => {
     const listItem = document.createElement("li");
     listItem.classList.add("sidebar-item");
 
     listItem.innerHTML = `
       <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-700 group">
-        <span id="list${idx}" class="text-gray-400 ms-3">${item}</span>
+        <span id="list${idx}" class="text-gray-300 ms-3">${item}</span>
       </a>
     `;
-  
+
     sidebarTarg.appendChild(listItem);
 
     listItem.addEventListener("click", () => {
@@ -67,42 +61,40 @@ function renderSidebar(data) {
   });
 }
 
-
-
 function renderData(data) {
-  let finalResult="";
-  if(data["title"] || data["subtitle"]){
-    finalResult+=funcTitle(data["title"],data["subtitle"]);
-  }
+  let finalResult = "";
   
-  if(data["description"]){
-    finalResult+=funcDescription(data["description"]);
+  if(selectedTab == "Getting Started"){
+    finalResult+=data['data']
   }
+
+  if (data["title"] || data["subtitle"]) {
+    finalResult += funcTitle(data["title"], data["subtitle"]);
+  }
+
+  if (data["description"]) {
+    finalResult += funcDescription(data["description"]);
+  }
+
+  if (data["tableOfContents"]) {
+    finalResult += tableContent(data["tableOfContents"]);
+  }
+
+  if (data["syntax"]) {
+    finalResult += syntax(data["syntax"]);
+  }
+
+  if (data["example"]) {
+    finalResult += codeEditor(data["example"]);
+  }
+
+  if (data["Ques"]) {
+    finalResult += funcWithQuesEditor(data["Ques"]);
+  }
+
   
-  if(data["tableOfContents"]){
-    finalResult+=tableContent(data["tableOfContents"]);
-  }
 
-  if(data["syntax"]){
-    finalResult+=syntax(data["syntax"]);
-  }
-
-  if(data["example"]){
-     finalResult+=codeEditor(data["example"]);
-  }
-
-  if(data["Ques"]){
-     finalResult+=funcWithQuesEditor(data["Ques"])
-    
-  }
-
-  
- 
-
-  document.getElementById("data-container").innerHTML=finalResult;
+  document.getElementById("data-container").innerHTML = finalResult;
 }
 
 renderData(getDataOfSelectedTab());
-
-
-

@@ -5,18 +5,7 @@ const funcTitle = (title, subtitle) => {
             <h2 id="title" class="text-5xl mb-8 text-gray-200 font-bold dark:text-white">${title}</h2>
 
             <!-- navigation button -->
-            <div class="navigation w-full pt-8  flex  ">
-               <!-- Previous Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Home
-               </a>
-               <!-- Next Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Previous
-               </a>
-            </div>
+        
 
             <hr class="w-full h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
 
@@ -69,6 +58,7 @@ const syntax = (syntax) => {
         <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md text-white">
         <code>${syntax}</code>
       </div>
+
         
         
         `;
@@ -79,46 +69,40 @@ const codeEditor = (data) => {
 
   data.forEach((item) => {
     tempRes += `
-         <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
-               <div
-                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                  
+         <div class="grid mt-2 w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
-                  <!-- Dropdown menu -->
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
-${item.input}
-               </div>
-                  </div>
-                  <div class="flex w-full h-auto items-center justify-center ">
-                     <button type="button"
-                        class="text-gray-900 bg-white hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Run</button>
-                     <div class=" code p-1 w-full h-auto bg-gray-900 text-white">>>
-                     </div>
-                  </div>
-               </div>
-               <div
-                  class=" px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
-                
 
-                  <!-- Dropdown menu -->
-                  
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
-${item.output}
-               </div>
-                  </div>
-                  <div class="flex w-full h-auto items-center justify-center ">
-                     <button type="button"
-                        class="text-gray-900 bg-white hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Run</button>
-                     <div class=" code p-1 w-full h-auto bg-gray-900 text-white">>>
-                     </div>
+               <!-- Dropdown menu -->
+               <div
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.input}
                   </div>
                </div>
             </div>
+            <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+         </div>
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
+
+               <!-- Dropdown menu -->
+               <div
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.output}
+                  </div>
+               </div>
+            </div>
+     
+         </div>
+      </div>
             
         
         `;
@@ -127,31 +111,33 @@ ${item.output}
   return tempRes;
 };
 
-
-const funcWithQuesEditor=(data)=>{
-   let tempRes=""
-   data.forEach((item)=>{
-     tempRes+=`
+const funcWithQuesEditor = (data) => {
+  let tempRes = "";
+  data.forEach((item) => {
+    tempRes += `
       <div class="p-4 flex flex-col justify-center items-start gap-4 h-auto mb-4  dark:bg-gray-800">
             <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
             </h3>
             <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
-            
+             <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+         </div>
          </div>
      
-     `
-     item.code1.forEach((item)=>{
-      tempRes+=`
+     `;
+    item.code1.forEach((item) => {
+      tempRes += `
       
       <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
                <div
-                  class="px-4 py-4 flex flex-col justify-start items-start gap-4 rounded bg-gray-600 h-auto dark:bg-gray-800">
+                  class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded bg-gray-700 h-auto dark:bg-gray-800">
                   
 
                   <!-- Dropdown menu -->
                   <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-gray-800 h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
+                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200   bg-dull-black h-auto dark:bg-gray-800">
+                     <div class="code text-left bg-dull-black">
 ${item.code}
                </div>
                   </div>
@@ -161,14 +147,12 @@ ${item.code}
             </div>
 
       
-      `
-     })
-     
-   })
+      `;
+    });
+  });
 
-   
-   return tempRes;
-}
+  return tempRes;
+};
 const hr = `<hr class="w-full h-px my-0 mb-0 bg-gray-600 border-0 dark:bg-gray-700">`;
 
 const editorQues = `    `;
