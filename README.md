@@ -65,19 +65,18 @@ Fullstack: [Jpp Compiler](https://jpp-compiler.vercel.app/)
 │       └── mat-lang/
 │           ├── compiler.mjs
 │           └── README.MD
-├── pages/
-│   ├── about.html
-│   ├── contact.html
-│   ├── contacttest.html
-│   ├── docs.html
-│   ├── ide.html
-│   ├── index.html
-│   ├── login.html
-│   ├── playground.html
-│   ├── pricing.html
-│   ├── register.html
-│   ├── test.html
-│   └── visualizer.html
+├── about.html
+├── contact.html
+├── contacttest.html
+├── docs.html
+├── ide.html
+├── index.html
+├── login.html
+├── playground.html
+├── pricing.html
+├── register.html
+├── test.html
+└── visualizer.html
 
 ```
 
