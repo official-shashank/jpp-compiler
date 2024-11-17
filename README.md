@@ -7,7 +7,7 @@ MatLang is a high-level, beginner-friendly programming language that combines Hi
 Fullstack
 
 ## Deployed App
-Fullstack: [Jpp Compiler](https://.vercel.app/)
+Fullstack: [Jpp Compiler](https://jpp-compiler.vercel.app/)
 
 ## Directory Structure
 ```
