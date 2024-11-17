@@ -1,4 +1,4 @@
-export default class MatLangCompiler {
+ class MatLangCompiler {
     compile(code) {
         // Define replacements as an array of [regex, replacementFunction]
         const replacements = [
