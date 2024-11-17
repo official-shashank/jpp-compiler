@@ -3767,7 +3767,8 @@ let name = "John";`,
     title: "3. Data Types",
     exp: "MatLang supports several basic data types, including:",
     href: "/docs.html",
-    code: `Integer: Numbers (positive/negative)
+    code: `
+Integer: Numbers (positive/negative)
 Float: Decimal numbers
 String: Text enclosed in double quotes
 Boolean: True/False
