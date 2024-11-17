@@ -33,7 +33,7 @@ function createExampleCard(item) {
           <p class="text-sm">bash</p>  
         </div>  
         <div class="mt-4">  
-          <pre><code>${formatCode(item.code)}</code></pre>  
+          <pre>${item.code}</pre>  
         </div>  
       </aside>  
     </a>  
@@ -69,5 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
 //redirection to the playground
 function redirectToPlayground() {
   // Redirect to the playground.html page
-  window.location.href = "playground.html";
+  window.location.href = "../playground.html";
 }
