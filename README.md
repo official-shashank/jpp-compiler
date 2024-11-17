@@ -134,5 +134,31 @@ MatLang simplifies programming for non-technical users by using familiar Hindi a
 - **Shashank Vishwakarma (Team Leader)** - 
 - **Syed Amaan Ali** - 
 - **Sumit Audumbar Mali** - 
-- **Muth am Sushmitha** - 
+- **Muthyam Sushmitha** - 
 - **Shivam Mishra** - 
+
+![1](https://i.ibb.co/M11VY64/Screenshot-2024-11-17-102158.png)
+
+## Home Page
+
+![1](https://i.ibb.co/M11VY64/Screenshot-2024-11-17-102158.png)
+
+## MatLang Syntax
+
+![2](https://i.ibb.co/K5m15NL/Screenshot-2024-11-17-102323.png)
+
+## MatLang Documentation
+
+![3](https://i.ibb.co/FJ8mWb0/Screenshot-2024-11-17-102450.png)
+
+## Python Documentation
+
+![4](https://i.ibb.co/2h8y4Dd/Screenshot-2024-11-17-102534.png)
+
+## Visualizer
+
+![5](https://i.ibb.co/zsrq34J/Screenshot-2024-11-17-103046.png)
+
+## Playground
+
+![6](https://i.ibb.co/kgSHBVn/Screenshot-2024-11-17-103212.png)
