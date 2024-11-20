@@ -182,26 +182,35 @@
 
     // Run the code
     runCode.addEventListener('click', () => {
-      const code = editor.innerText.trim();
+      const code = editor.textContent.trim(); // Retrieve plain text from the editor
       if (currentLanguage === 'javascript') {
         try {
+          // Save the original console.log function
+          const originalLog = console.log;
+          output.textContent = ''; // Clear previous output
+          
+          // Intercept console.log
+          console.log = function (...args) {
+            const message = args.join(' ');
+            output.textContent += message + '\n'; // Append new log messages
+          };
+    
+          // Execute the user code
           const result = eval(code);
-          output.textContent = result;
+          if (result !== undefined) {
+            output.textContent += result + '\n'; // Append the result if not undefined
+          }
+    
+          // Restore the original console.log
+          console.log = originalLog;
         } catch (err) {
-          output.textContent = `Error: ${err.message}`;
+          output.textContent = `Error: ${err.message}`; // Display errors in the output section
         }
       } else {
         output.textContent = `Execution not supported for ${currentLanguage} yet!`;
       }
     });
-
-    // Change language
-    languageSelector.addEventListener('change', (e) => {
-      currentLanguage = e.target.value;
-      editor.innerText = '';
-      output.textContent = '';
-    });
-
+    
     // Hide suggestion box on clicking outside
     document.body.addEventListener('click', () => {
       suggestionBox.style.display = 'none';
