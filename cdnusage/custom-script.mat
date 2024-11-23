@@ -4,5 +4,7 @@ samasya greet(name = 'shashank') {
     
 }
 
-greet()
+greet(
+    name="aman"
+)
 
