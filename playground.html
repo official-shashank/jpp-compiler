@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Code Playground</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     #editorWrapper {
       position: relative;
-      height: 70vh; 
+      height: 70vh;
     }
     #codeEditor {
       white-space: pre-wrap;
@@ -46,7 +46,6 @@
   </style>
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans min-h-screen">
-
   <div class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="p-4 bg-gray-800 flex justify-between items-center">
@@ -54,8 +53,7 @@
       <select id="languageSelector" class="bg-gray-700 text-white p-2 rounded">
         <option value="javascript">JavaScript</option>
         <option value="python">Python</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
+        <option value="matlang">MatLang</option>
       </select>
     </header>
 
@@ -77,6 +75,11 @@
           class="bg-blue-600 text-white py-2 px-4 mb-4 rounded hover:bg-blue-700">
           Run Code
         </button>
+        <button 
+          id="downloadCode" 
+          class="bg-green-600 text-white py-2 px-4 mb-4 rounded hover:bg-green-700">
+          Download Code
+        </button>
         <div id="output" class="bg-gray-900 text-white p-4 rounded h-full overflow-auto">
           Output will appear here.
         </div>
@@ -84,30 +87,76 @@
     </div>
   </div>
 
+  <!-- Include MatLangCompiler -->
+  <script src="./js/language/mat-lang/compiler.js"></script>  <!-- Adjust the path to the actual file location -->
+
   <script>
     const editor = document.getElementById('codeEditor');
     const languageSelector = document.getElementById('languageSelector');
     const suggestionBox = document.getElementById('suggestionBox');
     const runCode = document.getElementById('runCode');
     const output = document.getElementById('output');
+    const downloadCode = document.getElementById('downloadCode');
 
     const languageDefinitions = {
       javascript: ['function', 'return', 'const', 'let', 'var', 'if', 'else', 'for', 'while', 'console.log', 'class'],
       python: ['def', 'return', 'if', 'else', 'elif', 'for', 'while', 'import', 'print', 'class'],
-      html: ['<div>', '<span>', '<p>', '<a>', '<html>', '<body>', '<head>', '<script>', '<style>'],
-      css: ['color', 'background', 'margin', 'padding', 'font-size', 'border', 'width', 'height'],
+      matlang: [
+        'mana', 'badlo', 'jod', 'ghatao', 'guna', 'vibhajit', 'mod', 'swap',
+        'dikhai', 'pucho', 'agar', 'jabtak', 'roko', 'aage_badho', 'samasya',
+        'kaam', 'lauto', 'soochi', 'jod_suchi_mein', 'hatana', 'vigyaan',
+        'barabar', 'bada', 'chhota', 'lambaai', 'kuch_bhi', 'khatam', 'naam'
+      ]
     };
 
     let currentLanguage = languageSelector.value;
 
-    // Position the suggestion box
-    const positionSuggestionBox = (box, range) => {
-      const rect = range.getBoundingClientRect();
-      box.style.top = `${rect.bottom + window.scrollY}px`;
-      box.style.left = `${rect.left + window.scrollX}px`;
-    };
+    // Compiler class to simulate execution
+    class Compiler {
+      execute(language, code) {
+        try {
+          if (language === 'javascript') {
+            return this.executeJavaScript(code);
+          } else if (language === 'python') {
+            return 'Python execution is not yet supported.';
+          } else if (language === 'matlang') {
+            return this.executeMatLang(code);
+          } else {
+            throw new Error('Unsupported language.');
+          }
+        } catch (err) {
+          return `Error: ${err.message}`;
+        }
+      }
 
-    // Extract the current word under cursor
+      executeJavaScript(code) {
+        const originalLog = console.log;
+        let result = '';
+        console.log = function (...args) {
+          result += args.join(' ') + '\n';
+        };
+        eval(code); // Execute code
+        console.log = originalLog; // Restore console.log
+        return result || 'Execution completed.';
+      }
+
+      executeMatLang(code) {
+        try {
+          console.log(code);
+          const compiler = new MatLangCompiler();  // Use the external MatLangCompiler
+          const compiledCode = compiler.compile(code);// Convert to JS using MatLangCompiler
+
+          console.log(compiledCode)
+          return this.executeJavaScript(compiledCode); // Run JS code
+        } catch (err) {
+          return `MatLang Error: ${err.message}`;
+        }
+      }
+    }
+
+    const compiler = new Compiler();
+
+    // Keyword suggestions
     const getCurrentWord = () => {
       const selection = window.getSelection();
       if (!selection.rangeCount) return '';
@@ -116,13 +165,11 @@
       const cursorPosition = range.startOffset;
       const beforeCursor = text.slice(0, cursorPosition);
       const afterCursor = text.slice(cursorPosition);
-
       const wordStart = beforeCursor.lastIndexOf(' ') + 1;
       const wordEnd = afterCursor.indexOf(' ') === -1 ? afterCursor.length : afterCursor.indexOf(' ');
       return beforeCursor.slice(wordStart) + afterCursor.slice(0, wordEnd);
     };
 
-    // Show suggestions
     const showSuggestions = () => {
       const word = getCurrentWord().trim();
       if (!word) {
@@ -137,16 +184,15 @@
           .map((s) => `<div class="suggestion-item">${s}</div>`)
           .join('');
         suggestionBox.style.display = 'block';
-
-        // Position suggestion box
         const range = window.getSelection().getRangeAt(0);
-        positionSuggestionBox(suggestionBox, range);
+        const rect = range.getBoundingClientRect();
+        suggestionBox.style.top = `${rect.bottom + window.scrollY}px`;
+        suggestionBox.style.left = `${rect.left + window.scrollX}px`;
       } else {
         suggestionBox.style.display = 'none';
       }
     };
 
-    // Handle input for suggestions
     editor.addEventListener('input', showSuggestions);
 
     // Apply suggestion on click
@@ -155,65 +201,41 @@
         const suggestion = e.target.textContent;
         const selection = window.getSelection();
         const range = selection.getRangeAt(0);
-
-        // Replace the current word with the suggestion
         const textNode = range.startContainer;
         const cursorPosition = range.startOffset;
         const text = textNode.textContent;
-
         const wordStart = text.lastIndexOf(' ', cursorPosition - 1) + 1;
-        const wordEnd = text.indexOf(' ', cursorPosition) === -1 ? text.length : text.indexOf(' ', cursorPosition);
-        const updatedText =
-          text.slice(0, wordStart) + suggestion + text.slice(wordEnd);
-
-        textNode.textContent = updatedText;
-
-        suggestionBox.style.display = 'none';
-
-        // Restore cursor position
-        const newCursorPosition = wordStart + suggestion.length;
-        const newRange = document.createRange();
-        newRange.setStart(textNode, newCursorPosition);
-        newRange.collapse(true);
-        selection.removeAllRanges();
-        selection.addRange(newRange);
+        const wordEnd = cursorPosition + suggestion.length;
+        textNode.textContent = text.slice(0, wordStart) + suggestion + text.slice(wordEnd);
+        selection.collapse(textNode, wordStart + suggestion.length);
+        showSuggestions();
       }
     });
 
     // Run the code
     runCode.addEventListener('click', () => {
-      const code = editor.textContent.trim(); // Retrieve plain text from the editor
-      if (currentLanguage === 'javascript') {
-        try {
-          // Save the original console.log function
-          const originalLog = console.log;
-          output.textContent = ''; // Clear previous output
-          
-          // Intercept console.log
-          console.log = function (...args) {
-            const message = args.join(' ');
-            output.textContent += message + '\n'; // Append new log messages
-          };
-    
-          // Execute the user code
-          const result = eval(code);
-          if (result !== undefined) {
-            output.textContent += result + '\n'; // Append the result if not undefined
-          }
-    
-          // Restore the original console.log
-          console.log = originalLog;
-        } catch (err) {
-          output.textContent = `Error: ${err.message}`; // Display errors in the output section
-        }
-      } else {
-        output.textContent = `Execution not supported for ${currentLanguage} yet!`;
-      }
+      const code = editor.textContent.trim();
+      output.textContent = compiler.execute(currentLanguage, code);
     });
-    
-    // Hide suggestion box on clicking outside
-    document.body.addEventListener('click', () => {
-      suggestionBox.style.display = 'none';
+
+    // Download code as a file
+    downloadCode.addEventListener('click', () => {
+      const code = editor.textContent.trim();
+      const blob = new Blob([code], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'code.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // Language selector change handler
+    languageSelector.addEventListener('change', (e) => {
+      currentLanguage = e.target.value;
+      suggestionBox.style.display = 'none'; // Hide suggestions when language changes
     });
   </script>
 </body>
