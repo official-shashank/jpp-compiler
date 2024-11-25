@@ -49,14 +49,6 @@ function createExampleCard(item) {
   `;
 }
 
-function formatCode(code) {
-  return code
-    .trim() // Remove any leading/trailing whitespace
-    .replace(/</g, "&lt;") // Escape HTML special characters
-    .replace(/>/g, "&gt;")
-    .replace(/&/g, "&amp;")
-    .replace(/\n/g, "<br/>"); // Each line in the code will now break to a new line
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   for (let item in MatLangData) {
@@ -70,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.location.href.includes("/docs.html")) {
     renderSidebar(mSidebar);
   }
-  if (window.location.href.includes("/index.html")) {
+ 
     showExampleMatlang();
-  }
+  
 });
 
 //redirection to the playground

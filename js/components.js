@@ -21,7 +21,7 @@ const funcTitle = (title, subtitle) => {
                         class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                         GitHub <i class="fa-brands fa-github mx-1 text-xl"></i>
                     </span>
-                </button>
+            </button>
 </div>
     
     
