@@ -22,150 +22,99 @@
             action!
         </p>
     </div>
-    <!-- User Code Edifor -->
-    <div class="grid grid-cols-1 sm:grid-cols-1 mb-10 md:grid-cols-2 lg:grid-cols-3 h-96 gap-4 p-4">
-        <!-- User Editor -->
-
-        <div
-            class="w-full border border-gray-500  min-h-full rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-3 py-2  bg-gray-700 dark:border-gray-600">
-                <div class="code-editor-v">
-                    <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown"
-                        class="flex items-center justify-center rounded-sm bg-gray-300 px-3 py-1.5 text-sm font-medium text-gray-900 hover:bg-gray-200 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-50 dark:bg-gray-600 dark:text-gray-400 dark:hover:bg-gray-500 dark:hover:text-white dark:focus:ring-gray-600"
-                        type="button">
-                        python
-                    </button>
-             
-                    <p class="text-gray-200 font-bold ">
-                        &lt;/&gt;
-                    </p>
-                    <button data-copy-to-clipboard-target="npm-install-copy-text"
-                        class=" text-gray-900 font-bold  dark:text-gray-400 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-sm py-2 px-2.5 inline-flex items-center justify-center bg-gray-300 border-gray-200 border">
-                        <span id="default-message" class="inline-flex items-center">
-                            <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 18 20">
-                                <path
-                                    d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
-                            </svg>
-                            <span class="text-xs font-semibold">Copy</span>
-                        </span>
-                        <span id="success-message" class="hidden inline-flex items-center">
-                            <svg class="w-3 h-3 text-blue-700 dark:text-blue-500 me-1.5" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
-                            </svg>
-                            <span class="text-xs font-semibold text-blue-700 dark:text-blue-500">Copied</span>
-                        </span>
-                    </button>
+    <div class="container mx-auto p-4">
+        <!-- Top Grid: Editor, Lexer, Parser -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <!-- Code Editor -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <div class="flex items-center justify-between">
+                        <button
+                            class="bg-gray-600 text-gray-400 px-3 py-1.5 rounded-sm text-sm hover:bg-gray-500 hover:text-white focus:ring-4 focus:ring-gray-600 transition-colors">
+                            python
+                        </button>
+                        <div class="flex items-center gap-2">
+                            <span class="text-gray-200 font-bold">&lt;/&gt;</span>
+                            <button
+                                class="bg-gray-300 text-gray-900 px-2.5 py-2 rounded-sm hover:bg-gray-200 flex items-center gap-1.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 18 20">
+                                    <path
+                                        d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z" />
+                                </svg>
+                                <span class="text-xs font-semibold">Copy</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-y-auto stylish-scrollbar p-4">
+                    <textarea id="visual-code"
+                        class=" code w-full h-80 bg-gray-800 text-gray-200 p-2 rounded-lg resize-none focus:ring-0 focus:outline-none"
+                        placeholder="// code here"></textarea>
                 </div>
             </div>
-            <div class="user-editor-v px-4 py-2 bg-gray-700 rounded-b-lg dark:bg-gray-800">
-                <label for="wysiwyg-typography-example" class="sr-only">Publish post</label>
-                <div id="wysiwyg-typography-example"
-                    class="block overflow-y-auto stylish-scrollbar w-full px-0 text-sm text-gray-200 bg-gray-800 bg-neutral-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-                    <textarea class=" code w-full outline-none h-80 border-0 bg-transparent " name=""
-                        placeholder="// code here" id="visual-code"></textarea>
+
+            <!-- Lexer -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">LEXER</h2>
+                </div>
+                <div class="p-4 h-80">
+                    <div class="overflow-y-auto stylish-scrollbar code h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="lexer" class="text-gray-200 text-sm"></pre>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- LEXER -->
-
-        <div class="w-full border bg-gray-700 border-gray-500 rounded-lg  dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-3 py-2  dark:border-gray-600">
-                <div class="flex flex-wrap items-center">
-                    <p class="text-gray-200 font-extrabold text-xl my-2">LEXER</p>
+            <!-- Parser -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">Parser</h2>
                 </div>
-            </div>
-            <div class="pl-4 py-2 mx-4 h-80 bg-gray-800 dark:bg-gray-800">
-                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
-                <div id="wysiwyg-alignment-example"
-                    class="block stylish-scrollbar  overflow-y-auto w-full px-0 text-sm text-gray-200 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-full">
-
-
-                    <pre class="overflow-x-auto" id="lexer">  
-                        
-                  
-
+                <div class="p-4 h-80">
+                    <div class="overflow-y-auto stylish-scrollbar code h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="parser" class="text-gray-200 text-sm"></pre>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Parser -->
-        <div id="code-parser"
-            class="w-full border bg-gray-700 border-gray-500 rounded-lg   dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-3 py-2  dark:border-gray-600">
-                <div class="flex flex-wrap items-center">
-                    <p class="text-gray-200 font-extrabold text-xl my-2">Parser</p>
+        <!-- Bottom Grid: Generated Script and Terminal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Generated Script -->
+            <div class="w-full border border-gray-700 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-200 font-extrabold text-xl flex items-center">
+                            Generated Script
+                            <i class="fa-brands fa-js ml-2 text-3xl"></i>
+                        </h2>
+                        <button id="runBtn"
+                            class="bg-gray-300 text-gray-900 px-3 py-2 rounded-sm hover:bg-gray-900 hover:text-gray-200 transition-colors flex items-center gap-2">
+                            <span class="text-xs font-semibold">Run Script</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4 h-72">
+                    <div class="overflow-y-auto stylish-scrollbar h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="generated-script" class=" code text-gray-200 text-sm"></pre>
+                    </div>
                 </div>
             </div>
-            <div class="pl-4  py-2 mx-4 h-80 bg-gray-800 dark:bg-gray-800">
-                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
-                <div id="wysiwyg-alignment-example1"
-                    class="block stylish-scrollbar  overflow-y-auto w-full px-0 text-sm text-gray-200 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-full">
 
-
-                    <pre class="overflow-x-auto" id="parser">  <pre>
-                    </pre>
-
+            <!-- Terminal -->
+            <div class="w-full border border-gray-700 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">Terminal _></h2>
+                </div>
+                <div class="overflow-y-auto stylish-scrollbar code p-4 h-72">
+                    <div class=" code h-full bg-black rounded-lg p-4 overflow-auto">
+                        <pre id="visualizer-terminal" class="text-white text-sm"></pre>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
-    <!-- For Terminal and Generated Code -->
-    <div class="grid grid-cols-2 mx-4 gap-4">
-
-        <div class="w-full border border-gray-700 rounded-lg bg-gray-700 dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-3 py-2 border-b dark:border-gray-600">
-                <div class="flex code-editor-v flex-wrap items-center">
-                    <p class="text-gray-200 font-extrabold text-xl my-2">Generated Script <i
-                            class="fa-brands fa-js mx-2 text-3xl text-center"></i></p>
-                    <button data-copy-to-clipboard-target="npm-install-copy-text"
-                        class=" text-gray-900 font-bold hover:text-white  border-gray-800 border bg-gray-300  hover:bg-gray-900  hover:text-gray-200 dark:text-gray-400  dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-sm py-2 px-2.5 inline-flex items-center justify-center">
-                        <span id="default-message" class="inline-flex items-center ">
-
-                            <span class="text-xs  font-semibold" id="runBtn">Run Script</span>
-                            <i class="fa-solid fa-arrow-right mx-2"></i>
-                        </span>
-
-                    </button>
-                </div>
-            </div>
-            <div class="px-2 py-2 bg-gary-700 h-72 rounded-b-lg dark:bg-gray-800">
-                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
-                <div id="wysiwyg-alignment-example"
-                    class="block stylish-scrollbar  overflow-y-auto  w-full h-full px-2 py-2 text-sm text-gray-200 bg-gray-800 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-                    <pre id="generated-script">
-
-                    </pre>
-                </div>
-            </div>
-        </div>
-
-        <!-- Terminal -->
-        <div class="w-full border border-gray-700 rounded-lg bg-gray-700 dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-3 py-2 border-b dark:border-gray-600">
-                <div class="flex code-editor-v flex-wrap items-center">
-                    <p class="text-gray-200 font-extrabold text-xl my-2">Terminal _></p>
-
-                </div>
-            </div>
-            <div class="px-2 py-2 bg-gray-800 h-72 rounded-b-lg dark:bg-gray-800">
-                <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
-                <div id="wysiwyg-alignment-example"
-                    class="block stylish-scrollbar bg-black  overflow-y-auto  w-full h-full px-2 py-2 text-sm text-gray-200  border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-                    <pre class="text-white " id="visualizer-terminal">
-                    </pre>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
     <!-- --------------------------------------------------------------------------------------------------- -->
     <!-- Flowbite attachments -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
@@ -173,7 +122,7 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
-    
+
     <script src="../js/compilers/python/lexer.js"></script>
     <script src="../js/compilers/python/parser.js"></script>
     <script src="../js/compilers/python/Codegenerator.js"></script>
