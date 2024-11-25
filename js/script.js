@@ -1,10 +1,10 @@
 // // --------------------------------------------------------------------------------
 // // -----------------------------Only for Documentation Sid-------------------------------
 
-let selectedLang = "matlang";
-let selectedTab = "Home";
-let mSidebar = [];
-let pSidebar = [];
+var selectedLang = "matlang";
+var selectedTab = "Home";
+var mSidebar = [];
+var pSidebar = [];
 
 // MatLangCodeExamples
 
