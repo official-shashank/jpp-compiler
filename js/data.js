@@ -4751,7 +4751,10 @@ const MatLangData = {
       {
         input: `
 mana x = 10;
-agar x bada 5 { dikhai 'x is greater than 5'; } nahi { dikhai 'x is less than or equal to 5'; }
+agar x bada 5 {
+   dikhai 'x is greater than 5'; }
+nahi {
+ dikhai 'x is less than or equal to 5'; }
 `,
         output: `
 if (x > 5) { console.log('x is greater than 5'); } else { console.log('x is less than or equal to 5'); }
@@ -4763,7 +4766,10 @@ mana day = 2;
 switch day { case 1: dikhai 'Monday'; break; case 2: dikhai 'Tuesday'; break; default: dikhai 'Weekend'; }
 `,
         output: `
-switch (day) { case 1: console.log('Monday'); break; case 2: console.log('Tuesday'); break; default: console.log('Weekend'); }
+switch (day) { \n
+case 1: console.log('Monday'); break;
+ case 2: console.log('Tuesday'); break;
+  default: console.log('Weekend'); }
 `,
       },
     ],
