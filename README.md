@@ -65,28 +65,27 @@ Fullstack: [Jpp Compiler](https://jpp-compiler.vercel.app/)
 │       └── mat-lang/
 │           ├── compiler.mjs
 │           └── README.MD
-├── pages/
-│   ├── about.html
-│   ├── contact.html
-│   ├── contacttest.html
-│   ├── docs.html
-│   ├── ide.html
-│   ├── index.html
-│   ├── login.html
-│   ├── playground.html
-│   ├── pricing.html
-│   ├── register.html
-│   ├── test.html
-│   └── visualizer.html
+├── about.html
+├── contact.html
+├── contacttest.html
+├── docs.html
+├── ide.html
+├── index.html
+├── login.html
+├── playground.html
+├── pricing.html
+├── register.html
+├── test.html
+└── visualizer.html
 
 ```
 
 
 ## Video Walkthrough of the Project
-[Video Walkthrough of Features](https://youtu.be/)
+[Video Walkthrough of Features](https://youtu.be/rQdgRvjVHok)
 
 ## Video Walkthrough of the Codebase
-[Video Walkthrough of Codebase](https://youtu.be/)
+[Video Walkthrough of Codebase](https://www.youtube.com/watch?v=X24AJz2_8sM)
 
 ## Features
 - Intuitive Syntax: Uses a blend of Hindi and English, making programming more relatable and easier to understand for non-technical users.

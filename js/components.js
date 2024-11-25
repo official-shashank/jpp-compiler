@@ -5,18 +5,7 @@ const funcTitle = (title, subtitle) => {
             <h2 id="title" class="text-5xl mb-8 text-gray-200 font-bold dark:text-white">${title}</h2>
 
             <!-- navigation button -->
-            <div class="navigation w-full pt-8  flex  ">
-               <!-- Previous Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Home
-               </a>
-               <!-- Next Button -->
-               <a href="#"
-                  class="flex items-center justify-center px-5 h-8 text-sm font-medium text-white bg-blue-700 border-blue-700 border-gray-300  hover:bg-blue-800 hover: dark:bg-blue-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Previous
-               </a>
-            </div>
+        
 
             <hr class="w-full h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
 
@@ -24,8 +13,15 @@ const funcTitle = (title, subtitle) => {
             <p id="subtitle" class="mb-3 text-gray-300 dark:text-gray-400">${subtitle}
             
             </p>
-
             <hr class="w-full h-px my-8 mb-10 bg-gray-400 border-0 dark:bg-gray-700">
+            
+            <button onclick="redirectToPage('https://github.com/official-shashank/jpp-compiler/tree/main/js/compilers/python')"
+                    class="relative inline-flex items-center w-40 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-blue-900 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                    <span
+                        class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        GitHub <i class="fa-brands fa-github mx-1 text-xl"></i>
+                    </span>
+                </button>
 </div>
     
     
@@ -69,6 +65,7 @@ const syntax = (syntax) => {
         <div class="bg-gray-800 text-sm font-medium py-2 px-4 rounded-lg border border-gray-700 shadow-md text-white">
         <code>${syntax}</code>
       </div>
+
         
         
         `;
@@ -80,28 +77,39 @@ const codeEditor = (data) => {
   data.forEach((item) => {
     tempRes += `
          <div class="grid mt-2 w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
-               <div
-                  class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
-                  
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
-                  <!-- Dropdown menu -->
-                  <div
-                     class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">                     <div class="code text-left ">
-${item.input}
-               </div>
-                  </div>
-               </div>
+
+               <!-- Dropdown menu -->
                <div
-                  class=" px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
-                  <div
-                     class=" p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
-                     <div class="code text-left ">
-${item.output}
-               </div>
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.input}
                   </div>
                </div>
             </div>
+            <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+         </div>
+         <div>
+            <div
+               class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded-lg bg-gray-600 h-auto dark:bg-gray-800">
 
+
+               <!-- Dropdown menu -->
+               <div
+                  class="p-4 flex flex-col justify-start items-start w-full text-gray-200 bg-dull-black h-auto dark:bg-gray-800">
+                  <div class="code text-left ">
+                     ${item.output}
+                  </div>
+               </div>
+            </div>
+     
+         </div>
+      </div>
             
         
         `;
@@ -118,14 +126,15 @@ const funcWithQuesEditor = (data) => {
             <h3 class="text-3xl font-bold text-gray-200 dark:text-white">${item.Ques}
             </h3>
             <p class="text-gray-200 dark:text-gray-400">${item.sol1}</p>
-            
+             
+         </div>
          </div>
      
      `;
     item.code1.forEach((item) => {
       tempRes += `
       
-      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mb-4 mt-4">
+      <div class="grid  w-full grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center  gap-4 mb-4 mt-4">
                <div
                   class="px-1 py-1 flex flex-col justify-start items-start gap-4 rounded bg-gray-700 h-auto dark:bg-gray-800">
                   
@@ -137,9 +146,14 @@ const funcWithQuesEditor = (data) => {
 ${item.code}
                </div>
                   </div>
+                  
              
                </div>
-               
+               <div>
+               <button type="button" onclick="redirectToPlayground()"
+               class=" mt-2 text-gray-300 hover:text-gray-900 border border-gray-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800  transition-colors duration-300 ">Try
+               it yourself <i class="fa-solid fa-arrow-right ml-3"></i></button>
+               </div>
             </div>
 
       

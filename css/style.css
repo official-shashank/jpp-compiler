@@ -204,6 +204,9 @@ body {
   margin-bottom: 4em;
 }
 /* ---------------------------------------- */
+.hero{
+  
+}
 
 
 @media (max-width: 1020px) {
@@ -221,5 +224,19 @@ body {
   }
   #default-sidebar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
+  }
+  .copy-clip{
+    background-color: gray;
+    top: 3%;
+    left:84%;
+    padding: .3em .5em;
+    opacity: 0.7;
+    border-radius: 50px;
+    z-index: 100;
+    font-size: 1em;
+    transition: opacity 0.3s ease-in;
+  }
+  .copy-clip:hover{
+    opacity: 1;
   }
 }

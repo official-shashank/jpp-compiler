@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualize your pyhton code compilation</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="stylish-scrollbar">
+    <!-- --------------------------------------------------------------------------------------------------- -->
+    <!-- headers and overview -->
+    <div class="flex flex-col items-center justify-center mt-4">
+        <h1
+            class=" visual-head mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white">
+            Visualizer</h1>
+        <p
+            class="mb-6 text-lg font-normal text-center font-bold text-gray-400 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            This visualizer will show you how execution flow works, giving you a peek under the hood to see each step in
+            action!
+        </p>
+    </div>
+    <div class="container mx-auto p-4">
+        <!-- Top Grid: Editor, Lexer, Parser -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <!-- Code Editor -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <div class="flex items-center justify-between">
+                        <button
+                            class="bg-gray-600 text-gray-400 px-3 py-1.5 rounded-sm text-sm hover:bg-gray-500 hover:text-white focus:ring-4 focus:ring-gray-600 transition-colors">
+                            python
+                        </button>
+                        <div class="flex items-center gap-2">
+                            <span class="text-gray-200 font-bold">&lt;/&gt;</span>
+                            <button
+                                class="bg-gray-300 text-gray-900 px-2.5 py-2 rounded-sm hover:bg-gray-200 flex items-center gap-1.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 18 20">
+                                    <path
+                                        d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z" />
+                                </svg>
+                                <span class="text-xs font-semibold">Copy</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-y-auto stylish-scrollbar p-4">
+                    <textarea id="visual-code"
+                        class=" code w-full h-80 bg-gray-800 text-gray-200 p-2 rounded-lg resize-none focus:ring-0 focus:outline-none"
+                        placeholder="// code here"></textarea>
+                </div>
+            </div>
+
+            <!-- Lexer -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">LEXER</h2>
+                </div>
+                <div class="p-4 h-80">
+                    <div class="overflow-y-auto stylish-scrollbar code h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="lexer" class="text-gray-200 text-sm"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parser -->
+            <div class="w-full border border-gray-500 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">Parser</h2>
+                </div>
+                <div class="p-4 h-80">
+                    <div class="overflow-y-auto stylish-scrollbar code h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="parser" class="text-gray-200 text-sm"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Grid: Generated Script and Terminal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Generated Script -->
+            <div class="w-full border border-gray-700 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-200 font-extrabold text-xl flex items-center">
+                            Generated Script
+                            <i class="fa-brands fa-js ml-2 text-3xl"></i>
+                        </h2>
+                        <button id="runBtn"
+                            class="bg-gray-300 text-gray-900 px-3 py-2 rounded-sm hover:bg-gray-900 hover:text-gray-200 transition-colors flex items-center gap-2">
+                            <span class="text-xs font-semibold">Run Script</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4 h-72">
+                    <div class="overflow-y-auto stylish-scrollbar h-full bg-gray-800 rounded-lg p-4 overflow-auto">
+                        <pre id="generated-script" class=" code text-gray-200 text-sm"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal -->
+            <div class="w-full border border-gray-700 rounded-lg bg-gray-700">
+                <div class="px-3 py-2 border-b border-gray-600">
+                    <h2 class="text-gray-200 font-extrabold text-xl">Terminal _></h2>
+                </div>
+                <div class="overflow-y-auto stylish-scrollbar code p-4 h-72">
+                    <div class=" code h-full bg-black rounded-lg p-4 overflow-auto">
+                        <pre id="visualizer-terminal" class="text-white text-sm"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------------------- -->
+    <!-- Flowbite attachments -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/90b32dcee6.js" crossorigin="anonymous"></script>
+
+    <script src="../js/compilers/python/lexer.js"></script>
+    <script src="../js/compilers/python/parser.js"></script>
+    <script src="../js/compilers/python/Codegenerator.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/render.js"></script>
+
+    <script src="../js/visuallizer.js"></script>
+</body>
+
+</html>

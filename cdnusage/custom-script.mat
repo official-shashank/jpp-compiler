@@ -1,7 +1,10 @@
-mana a=5;
-mana b=5;
-mana c=5;
+samasya greet(name = 'shashank') { 
+    
+    dikhai('Hello, ' + name); 
+    
+}
 
-dikhai(a);
-dikhai(b);
+greet(
+    name="aman"
+)
 

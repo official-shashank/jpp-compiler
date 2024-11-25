@@ -3731,7 +3731,6 @@ const PythonData = {
   /*****************************************************************************************************/
 };
 
-
 const exampleShowCaseMatLang = [
   {
     title: "1. Introduction",
@@ -3751,19 +3750,16 @@ const exampleShowCaseMatLang = [
     title: "2. Variable Declarations",
     exp: "In MatLang, variables are declared using the keyword mana which is the Hindi word for variable or assign. The syntax is simple and intuitive.",
     href: "/docs.html",
-    code: `Syntax:
-matlang
-Copy code
-mana <variable_name> = <value>;
-Example 1:
-matlang
-Copy code
+    code: `
+
+mana &ltvariable_name&gt = &ltvalue;
+
 mana age = 25;
 mana name = "John";
 
 Output (compiled JavaScript):
-javascript
-Copy code
+
+
 let age = 25;
 let name = "John";`,
   },
@@ -3771,7 +3767,8 @@ let name = "John";`,
     title: "3. Data Types",
     exp: "MatLang supports several basic data types, including:",
     href: "/docs.html",
-    code: `Integer: Numbers (positive/negative)
+    code: `
+Integer: Numbers (positive/negative)
 Float: Decimal numbers
 String: Text enclosed in double quotes
 Boolean: True/False
@@ -4095,8 +4092,7 @@ function add(x, y) {
 
 let result = add(x, y);
 console.log("The sum is " + result);`,
-  }
-  
+  },
 ];
 
 /***************************************************************************************************/
@@ -4106,7 +4102,7 @@ console.log("The sum is " + result);`,
 /***************************************************************************************************/
 const MatLangData = {
   "Getting Started": {
-    data:`
+    data: `
     <div id="main-core-div" class="p-4 ">
       
             <div class="p-4 code-editor-v mt-10 get-start-head">
@@ -4118,12 +4114,10 @@ const MatLangData = {
                     </h1>
 
                     <p class="mb-3 text-lg text-gray-300 leading-2 md:text-xl sm:text-lg dark:text-gray-400">
-                        Deliver great service experiences fast - without the complexity of
-                        traditional ITSM solutions.Accelerate critical development work
-                        and deploy.
+                       Add MatLang to your project using our CDN and explore its syntax. MatLang is a dynamic and comprehensive solution, offering an innovative alternative coding experience designed for simplicity and scalability.
                     </p>
                 </div>
-                <button
+                <button onclick="redirectToPage('https://github.com/official-shashank/jpp-compiler')"
                     class="relative inline-flex items-center w-40 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-blue-900 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                     <span
                         class="relative px-5 w-full py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -4361,14 +4355,7 @@ const MatLangData = {
                             https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
                         </td>
                     </tr>
-                    <tr class="dark:bg-gray-800 border-y border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-white">
-                            Script
-                        </th>
-                        <td class="px-6 py-4 pink-code">
-                            https://cdn.jsdelivr.net/gh/official-shashank/jpp-compiler@main/js/language/mat-lang/compiler.js
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
             <p class="mt-4 text-lg font-normal text-gray-200 dark:text-gray-400">
@@ -4611,7 +4598,7 @@ const MatLangData = {
     
     
     
-    `
+    `,
   },
   Home: {
     title: "Home",
@@ -4645,7 +4632,7 @@ const MatLangData = {
     subtitle: "Declaring Variables in MatLang",
     description:
       "In MatLang, variables are declared using the keyword 'mana', which is the Hindi word for 'variable' or 'assign'.",
-    syntax: `mana &gtvariable_name&lt = &gtvalue&lt;`,
+    syntax: `mana <variable_name>= <value>;`,
     example: [
       {
         input: `
